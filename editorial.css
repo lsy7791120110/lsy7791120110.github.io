@@ -226,3 +226,28 @@ h1,h2,h3,h4,.brand,.footer-name{font-weight:400}
 .hero-description,.hero-description strong{font-size:15px}
 .project-description{font-size:14px}
 }
+
+/* Screen readability and touch targets, checked at phone/tablet/desktop widths. */
+@media screen{
+.summary-label,.degree-label,.education-dossier .degree-label,.section-label,.dossier-top,.project-meta,.contents-number,.visual-top{font-size:11px;color:#756b7e}
+.recruiter-summary p{font-size:13px}
+.contents-heading p,.project-toolbar>span{font-size:11px}
+.project-bottom{font-size:12px}
+.section-head>p,.timeline-item p{font-size:14px}
+.header-tools a,.filters button{min-height:44px;display:inline-flex;align-items:center}
+}
+@media screen and (max-width:760px){
+.recruiter-summary{grid-template-columns:74px minmax(0,1fr)}
+.summary-label{font-size:11px;letter-spacing:0}
+.recruiter-summary p{font-size:13px;line-height:1.8}
+.education-dossier .dossier-education p,.education-dossier .dossier-education.bachelor p{font-size:14px}
+.education-dossier .dossier-education>span{font-size:12px}
+.hero-bottom p,.hero-bottom a{font-size:11px}
+.contents-nav a{font-size:14px;min-height:48px}
+.filters button{font-size:13px}
+.project-meta{flex-wrap:wrap;row-gap:5px}
+.project-subtitle,.section-head>p,.timeline-item p,.extra-grid p{font-size:14px}
+.project-bottom,.activity-card p,.skills-row .skills-tools,.skills-footnotes>p{font-size:12px}
+.skills-row dd{font-size:14px}
+.closing p{font-size:14px}
+}
