@@ -109,7 +109,7 @@ window.PUBLIC_PROFILE = {
       "id": "ai",
       "type": "digital",
       "tag": "생성형 AI · 교육 업무",
-      "period": "2025.12 – 현재",
+      "period": "2025.12 – 2026.12 (종료 예정)",
       "title": "AI for Everyday Teaching",
       "subtitle": "자료 제작부터 반복 업무 개선까지",
       "description": "문항 DB, PDF·HWPX 변환, 성적표 출력 도구와 교재 제작에 생성형 AI를 활용했습니다.",
@@ -145,7 +145,7 @@ window.PUBLIC_PROFILE = {
     {
       "organization": "미래탐구 목동 중등센터",
       "role": "과학 전임강사",
-      "period": "2025.12 – 현재",
+      "period": "2025.12 – 2026.12 (종료 예정)",
       "description": "중등 과학 수업과 수업자료 제작, 성적 및 정답률 관리. 생성형 AI를 활용한 교재·문항 DB·업무 도구 제작."
     },
     {

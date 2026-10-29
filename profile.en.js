@@ -109,7 +109,7 @@ window.PUBLIC_PROFILE = {
       "id": "ai",
       "type": "digital",
       "tag": "Applied AI · education",
-      "period": "2025.12 – Present",
+      "period": "2025.12 – 2026.12 (planned end)",
       "title": "AI for Everyday Teaching",
       "subtitle": "AI-assisted teaching workflows",
       "description": "Used generative AI to develop a question database, document workflows, score-report tools and teaching materials.",
@@ -145,7 +145,7 @@ window.PUBLIC_PROFILE = {
     {
       "organization": "Mirae Tamgu · Mokdong Middle School Center",
       "role": "Full-time Science Instructor",
-      "period": "2025.12 – Present",
+      "period": "2025.12 – 2026.12 (planned end)",
       "description": "Teach middle school science, create materials, and manage scores and answer rates. Develop teaching resources, a question database and workflow tools with generative AI."
     },
     {
