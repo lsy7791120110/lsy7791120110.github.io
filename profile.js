@@ -66,7 +66,7 @@ window.PUBLIC_PROFILE = {
       "sections": [
         {
           "title": "합성과 구조 확인",
-          "body": "박사과정 선배와 합성 대상을 정하고, Suzuki coupling과 보호기 제거로 C2 aryl 유도체 10종을 합성했습니다. ortho·para methyl 치환체를 다시 합성하고 phenyl 유도체를 추가했습니다. 직접 측정한 NMR과 외부 LRMS 결과로 구조를 확인했습니다."
+          "body": "공동연구자와 합성 대상을 정하고, Suzuki coupling과 보호기 제거로 C2 aryl 유도체 10종을 합성했습니다. ortho·para methyl 치환체를 다시 합성하고 phenyl 유도체를 추가했습니다. 직접 측정한 NMR과 외부 LRMS 결과로 구조를 확인했습니다."
         },
         {
           "title": "치환기에 따른 평가 결과",
@@ -74,7 +74,7 @@ window.PUBLIC_PROFILE = {
         },
         {
           "title": "결과 정리",
-          "body": "각 화합물의 구조와 A1, A2A, A2B, A3 수용체 평가 결과를 표로 정리해 박사과정 선배에게 전달했습니다."
+          "body": "각 화합물의 구조와 A1, A2A, A2B, A3 수용체 평가 결과를 표로 정리해 공동연구자에게 전달했습니다."
         }
       ],
       "scope": "유도체 합성과 구조 확인, 결과 정리를 담당했습니다. Binding assay는 외부 기관에서 수행했습니다.",

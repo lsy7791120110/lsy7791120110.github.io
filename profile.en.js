@@ -66,7 +66,7 @@ window.PUBLIC_PROFILE = {
       "sections": [
         {
           "title": "Synthesis and characterization",
-          "body": "Agreed on target compounds with a doctoral researcher and synthesized 10 C2-aryl analogues by Suzuki coupling and deprotection. Resynthesized ortho- and para-methyl analogues and added a phenyl analogue. Checked the structures using NMR spectra I acquired and external LRMS data."
+          "body": "Agreed on target compounds with a collaborator and synthesized 10 C2-aryl analogues by Suzuki coupling and deprotection. Resynthesized ortho- and para-methyl analogues and added a phenyl analogue. Checked the structures using NMR spectra I acquired and external LRMS data."
         },
         {
           "title": "Results by substituent",
@@ -74,7 +74,7 @@ window.PUBLIC_PROFILE = {
         },
         {
           "title": "Research records",
-          "body": "Prepared a table of compound structures and A1, A2A, A2B and A3 receptor results, then shared it with the doctoral researcher."
+          "body": "Prepared a table of compound structures and A1, A2A, A2B and A3 receptor results, then shared it with the collaborator."
         }
       ],
       "scope": "I carried out synthesis, structure verification and data organization. Binding assays were performed externally.",
