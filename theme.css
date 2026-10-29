@@ -1,3 +1,5 @@
-@font-face{font-family:'SUIT Variable';src:url('https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/variable/woff2/SUIT-Variable.woff2') format('woff2');font-weight:100 900;font-style:normal;font-display:swap}
-:root{--font:'SUIT Variable',sans-serif;--purple:#66547f;--purple-dark:#57466e;--lavender:#f3effa;--lavender-line:#e3daed;--sky:#edf3fa;--ink:#343342;--muted:#6d687b;--line:#e7e1ec}
+@font-face{font-family:'S-Core Dream';src:url('/assets/fonts/SCDream4.otf') format('opentype');font-weight:400;font-style:normal;font-display:swap}
+:root{--font:'S-Core Dream',sans-serif;--purple:#66547f;--purple-dark:#57466e;--lavender:#f3effa;--lavender-line:#e3daed;--sky:#edf3fa;--ink:#343342;--muted:#6d687b;--line:#e7e1ec}
 html,body,button,input,select,textarea{font-family:var(--font);font-synthesis:none}
+
+h1,h2,h3,h4,h5,h6,strong,b,button,dt{font-weight:400}
