@@ -1,0 +1,85 @@
+/* Editorial portfolio — restrained colour and consistent typography. */
+:root{--ink:#292b30;--muted:#6b6c72;--line:#dededc;--purple:#766b8b;--purple-dark:#5c526d}
+body{background:#fbfaf8;color:var(--ink)}
+.header{background:#fbfaf8f5;border-color:var(--line);backdrop-filter:blur(16px)}
+.header-inner{height:78px}.brand{gap:12px;font-size:15px;letter-spacing:-.4px}
+.brand-initials{display:grid;place-items:center;width:32px;height:32px;border:1px solid #bbb5c4;font-size:11px;font-weight:400;letter-spacing:1px;color:#766b8b}
+.portfolio-nav{font-size:12px;gap:28px}.cv-link{background:transparent;border-color:#c9c7cd;border-radius:2px;font-size:12px}
+.hero{padding-top:28px}.hero-top{padding-bottom:20px;border-bottom:1px solid var(--line)}
+.eyebrow{font-size:9px;letter-spacing:1.4px;color:#6b6c72}.hero-index{display:none}
+.hero-grid{padding:62px 0 52px;gap:8%;grid-template-columns:1.2fr 1fr}
+.intro-name{font-size:14px;color:#6b6c72;margin-bottom:16px}
+.hero h1{font-size:64px;line-height:1.15;letter-spacing:-2.8px;margin-bottom:26px}
+.hero-description{font-size:14px;line-height:1.95;color:#66676d}
+.hero-description strong{color:#35363b;line-height:1.8}
+.recruiter-summary{margin-top:26px}.summary-label{font-size:9px;color:#7b718b;letter-spacing:.8px}
+.recruiter-summary p{font-size:12px;color:#54565d;line-height:1.9;margin-bottom:12px}
+.hero-actions{margin-top:28px;gap:28px}
+.button{font-size:13px;font-weight:700;min-height:48px;padding:13px 20px}
+.button.primary{background:#e9e4ee;color:#4f455e;border:1px solid #d2cbdc;border-radius:3px;box-shadow:none}
+.button.primary:hover{background:#ded6e6}
+.text-link{font-size:13px;color:#53535b}
+.hero-dossier.education-dossier{background:#fff;border:1px solid #dedbdd;border-top:3px solid #a99bbd;border-radius:0;padding:30px 32px;box-shadow:none;transform:none}
+.profile-art{display:none}
+.dossier-top{font-size:9px;letter-spacing:1.8px;color:#80748e}
+.dossier-education{margin-top:28px}.dossier-education.bachelor{border-color:#e1dfdf;padding-top:24px;margin-top:26px}
+.education-dossier .dossier-education h2,.education-dossier .dossier-education h3{font-size:25px;color:#34343a;line-height:1.4;letter-spacing:-.8px;margin-top:9px}
+.education-dossier .dossier-education p,.education-dossier .dossier-education.bachelor p{font-size:13px;color:#626269;line-height:1.85}
+.education-dossier .dossier-education>span{font-size:11px;color:#727178}
+.education-dossier .degree-label{font-size:9px;color:#847c8c;letter-spacing:.7px}
+.hero-bottom{border-top:1px solid var(--line);padding-top:20px;padding-bottom:30px;color:#818087}.hero-bottom p,.hero-bottom a{font-size:11px}
+.contents-nav{background:#f3f1f5;border-color:#dedbe2;padding:26px 0}
+.contents-heading h2{font-size:18px}.contents-heading p{font-size:11px}
+.contents-nav a{font-size:13px;min-height:84px;padding-top:14px}.contents-number{color:#84788f}
+.section,.education-section{padding-top:76px;padding-bottom:76px}
+.section-label{font-size:10px;letter-spacing:1.5px;color:#83748f}
+.section-head h2{font-size:32px;line-height:1.4;letter-spacing:-1.3px;margin-top:12px}
+.section-head>p{font-size:13px;line-height:1.9;color:#727078}
+.timeline-item h3{font-size:19px;color:#36363d}
+.timeline-item p{font-size:13px;line-height:1.9;color:#6b6870}
+.timeline-item>span{font-size:11px;color:#837c88}
+.education-first .timeline-item{border-color:#dedbdc}
+.honor-note{font-size:11px;color:#807987}
+.project-grid{gap:56px 36px;margin-top:30px}
+.project{border-color:#dedbdd}
+.project h3{font-size:25px;line-height:1.45;letter-spacing:-.8px}
+.project-meta{font-size:10px;color:#827989}.project-subtitle{font-size:13px;color:#766e7d}
+.project-description{font-size:13px;line-height:1.95;color:#66636b}
+.project-bottom{font-size:11px;color:#6d6575}.round-arrow{border-color:#d1cad8;width:32px;height:32px;font-size:18px}
+.project-graphic .project-visual,.project:hover .project-visual{background:#f3f1f6;border:1px solid #e2dfe6;border-radius:3px}
+.project-graphic .sar-visual,.project:hover .sar-visual{background:#f1f3f6}
+.project-graphic .library-visual,.project:hover .library-visual{background:#f5f2f3}
+.project-graphic .ai-visual,.project:hover .ai-visual{background:#f4f2f6}
+.visual-top{color:#7c7484;font-size:9px}.bar.one{background:#dfd9e7}.bar.two{background:#c0b3d0}.bar.three{background:#9480ad}
+.bar{border:0}.bar-number{color:#51495a}.bar-label{color:#756b80}
+.binding-track{background:#e8e4ec;border-radius:1px}.binding-track>span{border-radius:1px;background:#b9abc8}
+.binding-bar-row:nth-child(-n+2) .binding-track>span{background:#9280a9}
+.about-band{background:#f4f3f2;border-block:1px solid #e3dfdf}
+.activity-card{border-color:#d8d3d8}.activity-card strong{font-size:32px;color:#56505f}
+.activity-card h3,.activity-card p{font-size:12px;color:#716a79}
+.extra-activities{border-color:#d8d3d8}.extra-grid h3{font-size:14px}.extra-grid p{font-size:12px;line-height:1.9}
+.skill-panel{border-radius:3px;background:#f3f1f5;border-color:#e0dce5}
+.skill-tabs button{font-size:13px}.skill-panel h3{font-size:24px}.skill-panel>p{font-size:13px;line-height:1.9}
+.skill-chips span{border-color:#dbd5e2;background:transparent;color:#6d6378}
+.ai-tool strong{font-size:15px}.ai-tool p{font-size:12px}
+.closing{border-top:1px solid var(--line);padding-block:48px}.closing h2{font-size:32px}
+.footer{border-color:var(--line)}.footer-bunny{display:none}.footer-name{font-size:20px}
+dialog{border-radius:3px;box-shadow:0 20px 80px #24202d22}.dialog-stat{background:#f1edf5}
+@media(max-width:760px){
+.wrap{width:calc(100% - 40px)}.header-inner{height:70px;gap:8px}.brand{font-size:13px;gap:9px}.brand-initials{width:27px;height:27px;font-size:9px}
+.header-tools{gap:13px}.cv-link{font-size:11px;padding:8px 10px}.cv-link span{padding-left:8px}
+.hero{padding-top:24px}.hero-top{padding-bottom:16px}.hero-top .eyebrow{font-size:8px;letter-spacing:.6px}
+.hero-grid{display:block;padding:32px 0}.hero h1{font-size:43px;letter-spacing:-1.8px;line-height:1.2}
+.hero-description{font-size:14px}.recruiter-summary p{font-size:12px}.hero-actions{gap:23px}
+.hero-dossier.education-dossier{padding:25px 23px;margin-top:36px;border-radius:0}
+.education-dossier .dossier-education h2,.education-dossier .dossier-education h3{font-size:23px;line-height:1.45}
+.education-dossier .dossier-education p,.education-dossier .dossier-education.bachelor p{font-size:13px}
+.education-dossier .dossier-education>span{font-size:11px}.hero-bottom{gap:20px}.hero-bottom p{max-width:70%}
+.contents-nav{padding:22px 0}.contents-heading h2{font-size:18px}.contents-nav a{font-size:13px;min-height:54px;padding:13px 0}
+.section,.education-section{padding-block:56px}.section-head h2{font-size:27px;letter-spacing:-1px}.section-head>p{font-size:12px;margin-top:16px}
+.project-grid{gap:35px;grid-template-columns:1fr}.project h3{font-size:24px}.project-description{font-size:13px}.project-subtitle{font-size:13px}
+.project-graphic .project-visual{padding:22px 20px}.activity-card{grid-template-columns:1fr;gap:14px}.activity-card strong{font-size:30px}
+.skill-panel{padding:24px 21px}.skill-panel h3{font-size:22px}.closing h2{font-size:28px}
+}
+@media(prefers-reduced-motion:no-preference){a,button{transition:background .18s,color .18s}}
+@media print{.contents-nav{display:none}body,.about-band{background:#fff}}
