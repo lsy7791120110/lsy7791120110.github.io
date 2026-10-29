@@ -1,0 +1,10 @@
+
+:root{--font:Pretendard,-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;--purple:#4e6aab;--purple-dark:#394f82;--lavender:#f0f3fb;--lavender-line:#dae1f1;--sky:#eff3fc;--ink:#212734;--muted:#6b717e;--line:#e5e8ef}
+html,body,button,input,select,textarea{font-family:var(--font)}
+.brand-switcher{display:flex;align-items:center;gap:4px;padding:5px;border:1px solid var(--lavender-line);border-radius:30px;background:#faf8fd;white-space:nowrap;font-size:12px;line-height:1.5}
+.brand-switcher a{padding:8px 17px;border-radius:22px;color:#747c8f;font-weight:550}
+.brand-switcher a[aria-current=page]{background:#fff;color:var(--purple-dark);box-shadow:0 2px 7px #3d4a6810;font-weight:700}
+.brand-switcher a:hover{color:var(--purple-dark)}
+.shared-links{display:flex;align-items:center;gap:12px;margin-top:12px;font-size:12px;color:var(--purple-dark)}
+@media(max-width:760px){.brand-switcher{font-size:10px;padding:3px;gap:1px}.brand-switcher a{padding:7px 11px}.shared-links{font-size:11px}}
+@media print{.brand-switcher,.shared-links{display:none!important}}
