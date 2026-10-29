@@ -1,7 +1,7 @@
 window.PUBLIC_PROFILE = {
   "name": "Soyeon Lee",
   "englishName": "Soyeon Lee",
-  "updated": "2026-10-29",
+  "updated": "2026-10-30",
   "master": {
     "school": "Seoul National University",
     "department": "Department of Pharmacy",
@@ -26,7 +26,7 @@ window.PUBLIC_PROFILE = {
       "period": "2024.03 – 2025.09",
       "title": "2',2'-Difluoro Carbocyclic Nucleoside",
       "subtitle": "Synthesis of carbocyclic nucleoside analogues",
-      "description": "Synthesized 10 final analogues and compared reaction conditions to address a challenging coupling step.",
+      "description": "Improved nucleobase coupling yield from 10% to 35% and characterized 10 final analogues.",
       "metric": "10",
       "metricLabel": "final analogues synthesized and characterized",
       "sections": [
@@ -37,7 +37,7 @@ window.PUBLIC_PROFILE = {
         {
           "title": "Comparing coupling conditions",
           "items": [
-            "Initial NaH/DMF and NaH/DMSO conditions did not readily afford the target product. I reviewed the literature on related substrates and reaction conditions.",
+            "When NaH/DMF and NaH/DMSO did not give the target product, I searched the literature for related coupling conditions.",
             "Adding 18-crown-6 under NaH conditions afforded the product in 10% yield.",
             "With 18-crown-6 held as an additive, Cs2CO3 gave 25% and K2CO3 gave 35% yield. I used K2CO3/18-crown-6 in subsequent synthesis."
           ]
@@ -47,8 +47,8 @@ window.PUBLIC_PROFILE = {
           "body": "Acquired and interpreted 1H, 13C and 19F NMR spectra, and compared externally measured HRMS results with calculated masses. Documented procedures, yields, structural characterization and external evaluation results in an English-language thesis."
         },
         {
-          "title": "External evaluation and next steps",
-          "body": "An external laboratory evaluated nine of the ten compounds against six human cancer cell lines. All IC50 values exceeded 20 µM, so the expected anticancer activity was not observed under the tested conditions. Based on precedent in the literature, I proposed antiviral evaluation as a possible follow-up; this was a proposal, not a completed study."
+          "title": "Anticancer assay results",
+          "body": "An external laboratory tested nine compounds against six human cancer cell lines. All IC50 values were above 20 μM. In a lab meeting, I proposed antiviral testing based on related literature."
         }
       ],
       "scope": "My contribution: literature review, synthesis, NMR acquisition and interpretation, comparison of MS results, and preparation of the thesis and poster. Biological evaluation was performed by an external laboratory."
@@ -59,25 +59,62 @@ window.PUBLIC_PROFILE = {
       "tag": "Collaborative research",
       "period": "2025.01 – 2025.09",
       "title": "A2A Adenosine Receptor",
-      "subtitle": "A2A adenosine receptor modulator analogues",
-      "description": "Synthesized 10 C2-aryl analogues and organized structures alongside externally measured receptor-binding data.",
-      "metric": "10",
-      "metricLabel": "C2-aryl analogues synthesized",
+      "subtitle": "C2-aryl analogue synthesis and receptor-binding results",
+      "description": "Synthesized 10 analogues. In external binding assays, the phenyl (13a) and meta-cyano (13h) analogues showed 90% hA2AAR binding inhibition at 10 μM.",
+      "metric": "90%",
+      "metricLabel": "hA2AAR binding inhibition for 13a / 13h at 10 μM",
       "sections": [
         {
-          "title": "My role in the collaboration",
-          "body": "Discussed target compounds with a doctoral researcher to compare substituent type, position and absence. Synthesized 10 final analogues, including ortho/para resynthesis and an unsubstituted phenyl analogue, using Suzuki coupling and deprotection."
+          "title": "Synthesis and characterization",
+          "body": "Agreed on target compounds with a doctoral researcher and synthesized 10 C2-aryl analogues by Suzuki coupling and deprotection. Resynthesized ortho- and para-methyl analogues and added a phenyl analogue. Checked the structures using NMR spectra I acquired and external LRMS data."
         },
         {
-          "title": "Connecting structures and binding data",
-          "body": "Compared acquired NMR spectra and externally measured LRMS results with the expected structures. Organized externally measured A1, A2A, A2B and A3 receptor-binding results in tables linked to each compound structure."
+          "title": "Results by substituent",
+          "body": "The methyl analogues showed 77% inhibition at meta (13b), 68% at para (13e), and 50% at ortho (13d). At the meta position, cyano (13h) gave 90% and formyl (13c) gave 45%. These results did not establish a consistent relationship between substituent electronics and binding."
         },
         {
-          "title": "Handover",
-          "body": "Prepared comparisons across substituent positions and the unsubstituted analogue. Avoided overinterpreting trends that the available data could not explain, and handed over the comparison tables and characterization records for further research."
+          "title": "Research records",
+          "body": "Prepared a table of compound structures and A1, A2A, A2B and A3 receptor results, then shared it with the doctoral researcher."
         }
       ],
-      "scope": "My contribution: discussion of synthetic targets, compound synthesis, structural characterization, and organization and handover of structures with external binding data."
+      "scope": "I carried out synthesis, structure verification and data organization. Binding assays were performed externally.",
+      "binding": {
+        "concentration": "10 μM",
+        "target": "hA2AAR",
+        "metric": "Binding inhibition (%)",
+        "rows": [
+          {
+            "compound": "13a",
+            "substituent": "phenyl",
+            "inhibition": 90
+          },
+          {
+            "compound": "13h",
+            "substituent": "meta-cyano",
+            "inhibition": 90
+          },
+          {
+            "compound": "13b",
+            "substituent": "meta-methyl",
+            "inhibition": 77
+          },
+          {
+            "compound": "13e",
+            "substituent": "para-methyl",
+            "inhibition": 68
+          },
+          {
+            "compound": "13d",
+            "substituent": "ortho-methyl",
+            "inhibition": 50
+          },
+          {
+            "compound": "13c",
+            "substituent": "meta-formyl",
+            "inhibition": 45
+          }
+        ]
+      }
     },
     {
       "id": "heterocycle",
@@ -100,7 +137,7 @@ window.PUBLIC_PROFILE = {
         },
         {
           "title": "Research records",
-          "body": "Synthesized approximately 50 compounds across the undergraduate project. Included synthetic conditions and analytical results for 21 compounds in my undergraduate thesis, connecting literature information with experimental observations."
+          "body": "Recorded the synthetic conditions and analytical results for 21 of the approximately 50 compounds in my undergraduate thesis."
         }
       ],
       "scope": "My contribution: analogue synthesis, purification, review of analytical data, experimental records and thesis preparation."
@@ -109,43 +146,38 @@ window.PUBLIC_PROFILE = {
       "id": "ai",
       "type": "digital",
       "tag": "Applied AI · education",
-      "period": "2025.12 – 2026.12 (planned end)",
+      "period": "2025.12 – 2026.12",
       "title": "AI for Everyday Teaching",
-      "subtitle": "AI-assisted teaching workflows",
+      "subtitle": "Question database, score reports and teaching materials",
       "description": "Used generative AI to develop a question database, document workflows, score-report tools and teaching materials.",
       "metric": "300+",
       "metricLabel": "teaching illustrations created with generative AI",
       "sections": [
         {
           "title": "Question management and documents",
-          "body": "Organized a question database to select problem types relevant to students’ needs. Worked with generative AI to build tools for question management and textbook editing, including PDF-to-HWPX conversion and question reconstruction."
+          "body": "Built a question database to select practice questions without retyping them. Used generative AI to create tools for question management and textbook editing, including PDF-to-HWPX conversion."
         },
         {
           "title": "Scores and student reports",
-          "body": "Organized scores and correct-answer rates in Excel and built a tool to format and print student score reports. Used it in weekly tests to support convenient data entry and consistent grading criteria."
+          "body": "Built an Excel tool to simplify score entry and apply consistent grading criteria. I use it in weekly tests to calculate scores and answer rates and print individual student reports."
         },
         {
           "title": "Textbooks and visual materials",
           "body": "Used generative AI to review a textbook of more than 100 pages for errors and content outside the curriculum. Created more than 300 teaching illustrations, along with Hangul templates and cover designs, to visualize concepts and solutions."
         },
         {
-          "title": "How I contributed",
-          "items": [
-            "Defined the features and outputs needed in real teaching and content-production workflows.",
-            "Specified requests and user flows for generative AI.",
-            "Checked outputs, used them in practice and iterated.",
-            "Refined conceptual explanations, solution tips and practical applications in teaching materials."
-          ]
+          "title": "Building the tools",
+          "body": "Specified the functions I needed, asked AI to build them, and checked the results. Tested the tools while entering scores and preparing materials, then revised the parts that were difficult to use."
         }
       ],
-      "scope": "My contribution: requirements and output definition, AI-assisted tool and material creation, review and iteration, and application in teaching. This work reflects practical AI use rather than a claim of professional software engineering experience."
+      "scope": "I specified the functions, built and revised the tools with AI, and used them in teaching and material preparation."
     }
   ],
   "jobs": [
     {
       "organization": "Mirae Tamgu · Mokdong Middle School Center",
       "role": "Full-time Science Instructor",
-      "period": "2025.12 – 2026.12 (planned end)",
+      "period": "2025.12 – 2026.12",
       "description": "Teach middle school science, create materials, and manage scores and answer rates. Develop teaching resources, a question database and workflow tools with generative AI."
     },
     {
@@ -205,5 +237,4 @@ window.PUBLIC_PROFILE = {
     "Pharmaceutical quality practice · 2021.08 · 14 h"
   ],
   "locale": "en"
-}
-;
+};
