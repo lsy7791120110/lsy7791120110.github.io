@@ -4,3 +4,6 @@
 
 sub{font-size:.7em;line-height:0;vertical-align:sub}
 body{font-family:var(--font);background:#f6f1f8;color:#343342}h1,h2,h3,strong{font-weight:700}.cv-toolbar button{background:#e6dcef;color:#514563;border-radius:10px}.cv-header{border-bottom-color:#b39bc8}.cv-sheet h2{color:#7b628f;border-color:#e7deed}.cv-sheet{box-shadow:0 8px 35px #8064960b}.cv-footer{border-color:#e7deed}
+
+/* Match portfolio typography. */
+body{font-weight:400}h1,h2,h3,.cv-item h3{font-weight:600}strong{font-weight:500}

@@ -211,3 +211,18 @@ body{background:#faf9f6;color:var(--ink)}
 .closing{padding-block:36px}.footer{padding-block:27px}
 }
 @media print{.project{display:block}.project-graphic{display:none}.hero-dossier.education-dossier{display:none!important}}
+
+/* SUIT: one family, restrained heading weights, readable body copy. */
+body{font-weight:400}
+h1,h2,h3,h4,.brand,.footer-name{font-weight:600}
+.hero h1{font-size:clamp(48px,5vw,66px);font-weight:600;letter-spacing:-.045em;line-height:1.18}
+.hero-description,.hero-description strong{font-size:16px;line-height:1.85}
+.hero-description strong{font-weight:500}
+.section-head h2,.project h3,.timeline-item h3,.education-dossier .dossier-education h2,.education-dossier .dossier-education h3{font-weight:600}
+.skills-row dt,.group-title,.contents-heading h2,.button,.cv-link{font-weight:500}
+.project-description{font-size:15px;line-height:1.85}
+@media(max-width:760px){
+.hero h1{font-size:clamp(38px,10vw,48px);letter-spacing:-.04em}
+.hero-description,.hero-description strong{font-size:15px}
+.project-description{font-size:14px}
+}
