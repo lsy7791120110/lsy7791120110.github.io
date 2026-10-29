@@ -147,9 +147,9 @@ window.PUBLIC_PROFILE = {
       "type": "digital",
       "tag": "생성형 AI · 교육 업무",
       "period": "2025.12 – 2026.12",
-      "title": "AI for Everyday Teaching",
-      "subtitle": "문항 DB·성적표·교재 제작",
-      "description": "문항 DB, PDF·HWPX 변환, 성적표 출력 도구와 교재 제작에 생성형 AI를 활용했습니다.",
+      "title": "AI로 만든 수업 업무 도구",
+      "subtitle": "문항 관리 · 성적표 출력 · 교재 제작",
+      "description": "문항을 다시 타이핑하지 않고 골라 자료를 만드는 DB와, 점수를 입력하면 학생별 성적표를 출력하는 도구를 만들었습니다. 매주 수업 준비와 주간테스트에 사용합니다.",
       "metric": "300종 이상",
       "metricLabel": "생성형 AI를 활용한 교재용 그림 제작",
       "sections": [
@@ -194,11 +194,11 @@ window.PUBLIC_PROFILE = {
     }
   ],
   "volunteer": {
-    "total": "107시간 2분",
+    "total": "107시간",
     "label": "공식 인정 봉사시간",
     "items": [
-      "동국대 사범대학 교육봉사 도반 · 30시간 6분",
-      "동국대 참사람봉사단(2022) · 34시간 56분",
+      "동국대 사범대학 교육봉사 도반 · 30시간",
+      "동국대 참사람봉사단(2022) · 34시간",
       "동국대 참사람봉사단(2023) · 42시간"
     ]
   },

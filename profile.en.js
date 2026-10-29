@@ -147,9 +147,9 @@ window.PUBLIC_PROFILE = {
       "type": "digital",
       "tag": "Applied AI · education",
       "period": "2025.12 – 2026.12",
-      "title": "AI for Everyday Teaching",
-      "subtitle": "Question database, score reports and teaching materials",
-      "description": "Used generative AI to develop a question database, document workflows, score-report tools and teaching materials.",
+      "title": "Teaching Tools Built with AI",
+      "subtitle": "Question selection · Score reports · Teaching materials",
+      "description": "Built a question database to prepare practice materials without retyping, and a tool that turns entered scores into individual student reports. I use these tools for lesson preparation and weekly tests.",
       "metric": "300+",
       "metricLabel": "teaching illustrations created with generative AI",
       "sections": [
@@ -194,11 +194,11 @@ window.PUBLIC_PROFILE = {
     }
   ],
   "volunteer": {
-    "total": "107 h 2 min",
+    "total": "107 h",
     "label": "Recognized volunteer service",
     "items": [
-      "Dongguk University DOban educational volunteering · 30 h 6 min",
-      "Dongguk University Chamsaram volunteers (2022) · 34 h 56 min",
+      "Dongguk University DOban educational volunteering · 30 h",
+      "Dongguk University Chamsaram volunteers (2022) · 34 h",
       "Dongguk University Chamsaram volunteers (2023) · 42 h"
     ]
   },
