@@ -5,7 +5,7 @@ window.PUBLIC_PROFILE = {
   "master": {
     "school": "Seoul National University",
     "department": "Department of Pharmacy",
-    "degree": "M.S. in Pharmaceutical Sciences",
+    "degree": "M.S. in Pharmacy",
     "field": "Research in medicinal chemistry",
     "period": "2024.03 – 2026.02",
     "gpa": "4.00 / 4.3"
@@ -49,10 +49,6 @@ window.PUBLIC_PROFILE = {
         {
           "title": "Anticancer assay results",
           "body": "An external laboratory tested nine compounds against six human cancer cell lines. All IC50 values were above 20 μM. In a lab meeting, I proposed antiviral testing based on related literature."
-        },
-        {
-          "title": "Related funded project",
-          "body": "Participated in the development of nucleoside derivatives with broad-spectrum antiviral activity, supported by the Korea Health Industry Development Institute (2025.01–2025.11). The anticancer assay results and proposed antiviral follow-up described above refer to my thesis study."
         }
       ],
       "scope": "My contribution: literature review, synthesis, NMR acquisition and interpretation, comparison of MS results, and preparation of the thesis and poster. Biological evaluation was performed by an external laboratory."
@@ -79,10 +75,6 @@ window.PUBLIC_PROFILE = {
         {
           "title": "Research records",
           "body": "Prepared a table of compound structures and A1, A2A, A2B and A3 receptor results, then shared it with the collaborator."
-        },
-        {
-          "title": "Related funded project",
-          "body": "Participated in a National Research Foundation of Korea project on selective A2A receptor antagonists and their potential for cancer immunotherapy (2025.03–2025.11). My work covered synthesis, characterization and organization of external assay results."
         }
       ],
       "scope": "I carried out synthesis, structure verification and data organization. Binding assays were performed externally.",
@@ -183,8 +175,8 @@ window.PUBLIC_PROFILE = {
   ],
   "jobs": [
     {
-      "organization": "Mirae Tamgu · Mokdong Middle School Center",
-      "role": "Full-time Science Instructor",
+      "organization": "Time Education — Mirae Tamgu",
+      "role": "Science Instructor, Mokdong Middle School Division",
       "period": "2025.12 – 2026.12",
       "description": "Teach middle school science, create materials, and manage scores and answer rates. Develop teaching resources, a question database and workflow tools with generative AI."
     },
@@ -205,14 +197,14 @@ window.PUBLIC_PROFILE = {
     "total": "107 h",
     "label": "Recognized volunteer service",
     "items": [
-      "Online science mentoring, Dongguk University (2021) · approx. 30 h",
-      "Online science mentoring, Dongguk University (2022) · approx. 35 h",
-      "Online science mentoring, Dongguk University (2023) · 42 h"
+      "Online science mentoring, Dongguk University · 2021",
+      "Online science mentoring, Dongguk University · 2022",
+      "Online science mentoring, Dongguk University · 2023"
     ]
   },
   "mentoring": {
     "total": "456 h",
-    "label": "Paid educational mentoring",
+    "label": "Educational mentoring",
     "items": [
       "Online mathematics/English mentoring, KT (2022–2023) · 256 h",
       "High-school science mentoring at a community child center (2022–2023) · 100 h",
@@ -220,8 +212,8 @@ window.PUBLIC_PROFILE = {
     ]
   },
   "credentials": [
-    "Secondary School Teacher Certificate, Grade II (Chemistry) · 2024.02",
-    "Computer Literacy Certificate, Level 2 (KCCI) · 2021.07",
+    "Secondary School Teacher Certificate, Grade 2 (Chemistry) · 2024.02",
+    "Computer Proficiency Certificate, Level 2 · 2021.07",
     "OPIc: Intermediate High (IH) · 2026.08"
   ],
   "honors": [
@@ -237,7 +229,6 @@ window.PUBLIC_PROFILE = {
   "otherActivities": [
     "Treasurer, Chemistry Student Council, Dongguk University · 2022.03–2023.02",
     "Education lead, sign-language club, Dongguk University · 2020.09–2021.12",
-    "Team lead, General Chemistry and Laboratory II study group, Dongguk University · 2020.09–2020.12",
     "University Student Consumer Panel, Orion · Blind taste and texture testing; packaging and purchase-intent feedback · 2021.02–2021.12"
   ],
   "training": [
@@ -245,13 +236,5 @@ window.PUBLIC_PROFILE = {
     "Gaussian DFT calculations · computational chemistry coursework",
     "Pharmaceutical & Biopharmaceutical Quality Training · QC/QA · 2021.08.08–08.09 · 14 h"
   ],
-  "locale": "en",
-  "additionalWork": [
-    {
-      "organization": "Mediformula (메디포뮬러)",
-      "role": "Part-time staff",
-      "period": "2022.11 – 2022.12",
-      "description": "Hospital management and marketing."
-    }
-  ]
+  "locale": "en"
 };
