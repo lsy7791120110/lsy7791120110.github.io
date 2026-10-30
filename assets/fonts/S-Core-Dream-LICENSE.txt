@@ -2,4 +2,4 @@ S-Core Dream. Copyright S-Core Co., Ltd.
 Source: https://s-core.co.kr/company/font/
 S-Core fonts are free for personal and corporate use and redistribution.
 The font files must not be modified or sold by themselves. Original font files are distributed unchanged.
-This website uses S-Core Dream 4 (Regular).
+This website uses S-Core Dream 5 (Medium) and S-Core Dream 6 (Bold).

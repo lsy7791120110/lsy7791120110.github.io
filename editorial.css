@@ -3,7 +3,7 @@
 body{background:#fbfaf8;color:var(--ink)}
 .header{background:#fbfaf8f5;border-color:var(--line);backdrop-filter:blur(16px)}
 .header-inner{height:78px}.brand{gap:12px;font-size:15px;letter-spacing:-.4px}
-.brand-initials{display:grid;place-items:center;width:32px;height:32px;border:1px solid #bbb5c4;font-size:11px;font-weight:400;letter-spacing:1px;color:#766b8b}
+.brand-initials{display:grid;place-items:center;width:32px;height:32px;border:1px solid #bbb5c4;font-size:11px;font-weight:500;letter-spacing:1px;color:#766b8b}
 .portfolio-nav{font-size:12px;gap:28px}.cv-link{background:transparent;border-color:#c9c7cd;border-radius:2px;font-size:12px}
 .hero{padding-top:28px}.hero-top{padding-bottom:20px;border-bottom:1px solid var(--line)}
 .eyebrow{font-size:9px;letter-spacing:1.4px;color:#6b6c72}.hero-index{display:none}
@@ -15,7 +15,7 @@ body{background:#fbfaf8;color:var(--ink)}
 .recruiter-summary{margin-top:26px}.summary-label{font-size:9px;color:#7b718b;letter-spacing:.8px}
 .recruiter-summary p{font-size:12px;color:#54565d;line-height:1.9;margin-bottom:12px}
 .hero-actions{margin-top:28px;gap:28px}
-.button{font-size:13px;font-weight:400;min-height:48px;padding:13px 20px}
+.button{font-size:13px;font-weight:500;min-height:48px;padding:13px 20px}
 .button.primary{background:#e9e4ee;color:#4f455e;border:1px solid #d2cbdc;border-radius:3px;box-shadow:none}
 .button.primary:hover{background:#ded6e6}
 .text-link{font-size:13px;color:#53535b}
@@ -88,12 +88,12 @@ dialog{border-radius:3px;box-shadow:0 20px 80px #24202d22}.dialog-stat{backgroun
 .skills-overview .section-head{margin-bottom:25px}
 .skills-summary{margin:0;border-top:1px solid #d9d5df}
 .skills-row{display:grid;grid-template-columns:190px 1fr;gap:24px;padding:23px 0;border-bottom:1px solid #e1dde5}
-.skills-row dt{font-size:15px;font-weight:400;color:#4f465b;line-height:1.8}
+.skills-row dt{font-size:15px;font-weight:500;color:#4f465b;line-height:1.8}
 .skills-row dd{margin:0;font-size:13px;line-height:1.9;color:#45434a}
 .skills-row .skills-tools{font-size:12px;color:#79717f;margin-top:3px}
 .skills-footnotes{display:grid;gap:9px;margin-top:22px}
 .skills-footnotes>p{display:grid;grid-template-columns:190px 1fr;gap:24px;font-size:11px;line-height:1.9;color:#77717c}
-.skills-footnotes strong{font-weight:400;color:#77717c}
+.skills-footnotes strong{font-weight:500;color:#77717c}
 @media(max-width:760px){.skills-overview{padding-block:44px}.skills-overview .section-head{margin-bottom:20px}.skills-row{grid-template-columns:1fr;gap:5px;padding:17px 0}.skills-row dt{font-size:14px}.skills-row dd{font-size:12px;line-height:1.85}.skills-row .skills-tools{font-size:11px}.skills-footnotes{margin-top:18px;gap:10px}.skills-footnotes>p{grid-template-columns:56px 1fr;gap:10px;font-size:10px}}
 
 /* A quieter editorial rhythm: open typography, margin notes and research spreads. */
@@ -111,7 +111,7 @@ body{background:#faf9f6;color:var(--ink)}
 .intro-name{color:#5f5867;font-size:15px;letter-spacing:.2px;margin-bottom:20px}
 .hero h1{font-size:clamp(62px,6.5vw,88px);letter-spacing:-4px;line-height:1.14;margin:0 0 33px}
 .hero-description{font-size:15px;line-height:1.95;margin-top:0;max-width:530px}
-.hero-description strong{font-size:14px;color:#4b454e;font-weight:400}
+.hero-description strong{font-size:14px;color:#4b454e;font-weight:500}
 .recruiter-summary{display:grid;grid-template-columns:76px 1fr;gap:9px 18px;margin-top:28px;padding-top:22px;border-top:1px solid #e0dadd;max-width:530px}
 .summary-label{font-size:10px;line-height:1.9;letter-spacing:0;color:#8c7d96;padding-top:1px}
 .recruiter-summary p{font-size:12px;line-height:1.85;margin:0;color:#5d5860}
@@ -163,18 +163,18 @@ body{background:#faf9f6;color:var(--ink)}
 .project-graphic .sar-visual,.project:hover .sar-visual{background:#eeeff3}
 .project-graphic .library-visual,.project:hover .library-visual{background:#f2edef}
 .project-graphic .ai-visual,.project:hover .ai-visual{background:#f0edf3;height:auto;min-height:280px}
-.bar-number{font-weight:400}.binding-chart{margin-top:22px;gap:10px}.binding-chart-note{margin-top:17px}
+.bar-number{font-weight:500}.binding-chart{margin-top:22px;gap:10px}.binding-chart-note{margin-top:17px}
 .about-band{background:#f3f0f3;border:0}
 .group-title{color:#8b7598;font-size:11px}
 .activity-card{border-color:#d9d0de}
-.activity-card strong{font-size:38px;letter-spacing:-1px;font-weight:400}
+.activity-card strong{font-size:38px;letter-spacing:-1px;font-weight:500}
 .activity-card p{font-size:12px}
 .skills-row{grid-template-columns:190px 1fr;padding:20px 0}
 .skills-row dt{font-size:14px}.skills-row dd{font-size:14px}
 .skills-row .skills-tools{font-size:12px}
 .closing{padding-block:50px;border-color:#ddd6e1}
 .closing h2{font-size:30px;margin-top:14px}.closing p{font-size:12px}
-.footer{padding-block:32px;border-color:#ddd6e1}.footer-name{font-size:18px;font-weight:400}.footer-name>span{display:none}
+.footer{padding-block:32px;border-color:#ddd6e1}.footer-name{font-size:18px;font-weight:500}.footer-name>span{display:none}
 @media(min-width:761px) and (max-width:1060px){.hero-grid{gap:7%;grid-template-columns:1.15fr 1fr}.hero h1{font-size:65px}.hero-dossier.education-dossier{padding-left:22px}.education-dossier .dossier-education h2,.education-dossier .dossier-education h3{font-size:24px}.project{gap:5%}.project h3{font-size:25px}.project-graphic .project-visual{padding:23px 20px}}
 @media(max-width:760px){
 .wrap{width:calc(100% - 44px)}
@@ -213,13 +213,13 @@ body{background:#faf9f6;color:var(--ink)}
 @media print{.project{display:block}.project-graphic{display:none}.hero-dossier.education-dossier{display:none!important}}
 
 /* S-Core Dream 4: consistent regular weight with size and spacing for hierarchy. */
-body{font-weight:400}
-h1,h2,h3,h4,.brand,.footer-name{font-weight:400}
-.hero h1{font-size:clamp(48px,5vw,66px);font-weight:400;letter-spacing:-.045em;line-height:1.18}
+body{font-weight:500}
+h1,h2,h3,h4,.brand,.footer-name{font-weight:500}
+.hero h1{font-size:clamp(48px,5vw,66px);font-weight:500;letter-spacing:-.045em;line-height:1.18}
 .hero-description,.hero-description strong{font-size:16px;line-height:1.85}
-.hero-description strong{font-weight:400}
-.section-head h2,.project h3,.timeline-item h3,.education-dossier .dossier-education h2,.education-dossier .dossier-education h3{font-weight:400}
-.skills-row dt,.group-title,.contents-heading h2,.button,.cv-link{font-weight:400}
+.hero-description strong{font-weight:500}
+.section-head h2,.project h3,.timeline-item h3,.education-dossier .dossier-education h2,.education-dossier .dossier-education h3{font-weight:500}
+.skills-row dt,.group-title,.contents-heading h2,.button,.cv-link{font-weight:500}
 .project-description{font-size:15px;line-height:1.85}
 @media(max-width:760px){
 .hero h1{font-size:clamp(38px,10vw,48px);letter-spacing:-.04em}
@@ -251,3 +251,14 @@ h1,h2,h3,h4,.brand,.footer-name{font-weight:400}
 .skills-row dd{font-size:14px}
 .closing p{font-size:14px}
 }
+
+/* S-Core Dream 5 body / 6 headings, with a modest contrast increase. */
+:root{--ink:#302b36;--muted:#605967}
+body{color:var(--ink)}
+h1,h2,h3,h4,.brand,.footer-name,.project h3,.timeline-item h3,.section-head h2,.hero h1,.education-dossier .dossier-education h2,.education-dossier .dossier-education h3,.skills-row dt{font-weight:600;color:#302b36}
+.hero-description,.hero-description strong,.project-description,.skills-row dd,.timeline-item p,.section-head>p,.extra-grid p,.closing p{color:#514b57}
+.hero-description strong{font-weight:600}
+.summary-label,.recruiter-summary p,.degree-label,.education-dossier .degree-label,.education-dossier .dossier-education p,.education-dossier .dossier-education>span,.section-label,.dossier-top,.project-meta,.project-subtitle,.project-bottom,.contents-number,.contents-heading p,.visual-top,.hero-bottom p,.hero-bottom a,.skills-tools,.skills-row .skills-tools,.skills-footnotes>p,.skills-footnotes strong,.timeline-item>span,.honor-note,.group-title,.activity-card p,.activity-card h3,.bar-label,.binding-chart-note,.detail-note,.dialog-eyebrow{color:#69616f}
+.detail-section p,.detail-section li,.dialog-intro{color:#514b57}
+.filters button{color:#69616f}.filters button.active{color:#493754;font-weight:600}
+.button,.cv-link{font-weight:600}
