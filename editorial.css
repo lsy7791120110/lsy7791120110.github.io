@@ -288,3 +288,17 @@ h1,h2,h3,h4,.brand,.footer-name,.project h3,.timeline-item h3,.section-head h2,.
 .timeline-item .education-honors{display:grid;gap:7px;margin-top:18px;padding-top:14px;border-top:1px solid #ccdef3}
 .timeline-item .education-honors p{margin:0;font-size:12px;line-height:1.8;color:#52647c}
 .ai-visual .ai-tool{padding-block:16px}.ai-visual .ai-tool-list{margin-top:12px}
+
+/* One white background; numbered sections are separated with blue rules. */
+body,.hero,.contents-nav,.education-section,#work,.about-band,#about>.section,#skills,.closing{background:#fff}
+.about-band{border:0}
+#education,#work,#about>.section,#skills{border-top:2px solid #9dc6f5;padding-top:64px}
+.section-label{font-size:12px;font-weight:600;letter-spacing:1.2px;color:#285f9d}
+.activity-card strong{color:#273448;font-weight:600}
+.activity-card .mini-label,.activity-card h3,.activity-card p{color:#43556c}
+.skills-row dt,.skills-row dd{font-size:14px}
+.skills-row .skills-tools{font-size:14px;color:#43556c}
+@media(max-width:760px){
+#education,#work,#about>.section,#skills{padding-top:40px}
+.skills-row dt,.skills-row dd,.skills-row .skills-tools{font-size:14px}
+}
