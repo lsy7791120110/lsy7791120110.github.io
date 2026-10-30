@@ -16,7 +16,7 @@ window.PUBLIC_PROFILE = {
     "degree": "이학사",
     "period": "2020.03 – 2024.02",
     "gpa": "4.38 / 4.5",
-    "honor": "최우등졸업"
+    "honor": ""
   },
   "research": [
     {

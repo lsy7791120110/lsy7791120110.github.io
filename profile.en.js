@@ -12,11 +12,11 @@ window.PUBLIC_PROFILE = {
   },
   "bachelor": {
     "school": "Dongguk University",
-    "department": "Chemistry · teacher education program",
+    "department": "Teacher education program completed",
     "degree": "B.S. in Chemistry",
     "period": "2020.03 – 2024.02",
     "gpa": "4.38 / 4.5",
-    "honor": "Graduated with highest honors"
+    "honor": ""
   },
   "research": [
     {
