@@ -267,3 +267,19 @@ h1,h2,h3,h4,.brand,.footer-name,.project h3,.timeline-item h3,.section-head h2,.
 body,.header,dialog{background:#fff}
 .about-band{background:#f6f4f8}
 sup{font-size:.7em;line-height:0;vertical-align:super}
+
+/* Clear blue accents: white canvas, sky-blue sections and figures. */
+:root{--ink:#273448;--muted:#52647c;--purple:#3767aa;--purple-dark:#28538e;--line:#d5e3f3}
+body,.header,dialog,.dialog-top{background:#fff;color:#273448}
+.about-band{background:#edf5ff;border-color:#d0e3fa}
+.project-graphic .project-visual,.project:hover .project-visual,.project-graphic .sar-visual,.project:hover .sar-visual,.project-graphic .library-visual,.project:hover .library-visual,.project-graphic .ai-visual,.project:hover .ai-visual,.dialog-stat{background:#edf5ff;border-color:#c8ddf5}
+.button.primary{background:#e4f0ff;border-color:#b7d4f5;color:#28538e}
+.button.primary:hover{background:#d3e6ff}
+.bar.one{background:#c2ddff}.bar.two{background:#88b8f0}.bar.three{background:#4b8dd8}
+.binding-track{background:#d9eaff}.binding-track>span{background:#88b8f0}.binding-bar-row:nth-child(-n+2) .binding-track>span{background:#4b8dd8}
+h1,h2,h3,h4,.brand,.footer-name,.project h3,.timeline-item h3,.section-head h2,.hero h1,.education-dossier .dossier-education h2,.education-dossier .dossier-education h3,.skills-row dt{color:#273448}
+.hero-description,.hero-description strong,.project-description,.skills-row dd,.timeline-item p,.section-head>p,.extra-grid p,.closing p,.detail-section p,.detail-section li,.dialog-intro{color:#43556c}
+.summary-label,.recruiter-summary p,.degree-label,.education-dossier .degree-label,.education-dossier .dossier-education p,.education-dossier .dossier-education>span,.section-label,.dossier-top,.project-meta,.project-subtitle,.project-bottom,.contents-number,.contents-heading p,.visual-top,.hero-bottom p,.hero-bottom a,.skills-row .skills-tools,.skills-footnotes>p,.skills-footnotes strong,.timeline-item>span,.honor-note,.group-title,.activity-card p,.activity-card h3,.bar-label,.binding-chart-note,.detail-note,.dialog-eyebrow,.filters button{color:#52647c}
+.section-label,.contents-heading h2,.round-arrow,.filters button.active,.dialog-stat strong{color:#3767aa}
+.hero-dossier.education-dossier,.dossier-education.bachelor,.hero-bottom,.contents-nav,.contents-nav li,.project-toolbar,.project,.activity-card,.extra-activities,.skills-summary,.skills-row,.closing,.footer,.dialog-top,.ai-tool,.library-row{border-color:#ccdef3}
+.binding-results th{background:#e4f0ff;color:#28538e}

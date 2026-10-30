@@ -1,5 +1,5 @@
 @font-face{font-family:'S-Core Dream';src:url('https://cdn.jsdelivr.net/gh/fonts-archive/S-CoreDream@863d09265c6e18c18a80a4b796f0b1da4c10d909/SCDreamMedium.otf') format('opentype');font-weight:400 500;font-style:normal;font-display:swap}
 @font-face{font-family:'S-Core Dream';src:url('https://cdn.jsdelivr.net/gh/fonts-archive/S-CoreDream@863d09265c6e18c18a80a4b796f0b1da4c10d909/SCDreamBold.otf') format('opentype');font-weight:600 900;font-style:normal;font-display:swap}
-:root{--font:'S-Core Dream',sans-serif;--purple:#66547f;--purple-dark:#57466e;--lavender:#f3effa;--lavender-line:#d9d0e0;--sky:#edf3fa;--ink:#302b36;--muted:#605967;--line:#ded7e3}
+:root{--font:'S-Core Dream',sans-serif;--purple:#3767aa;--purple-dark:#28538e;--lavender:#edf5ff;--lavender-line:#c8ddf5;--sky:#edf5ff;--ink:#273448;--muted:#52647c;--line:#d5e3f3}
 html,body,button,input,select,textarea{font-family:var(--font);font-synthesis:none;font-weight:500}
 h1,h2,h3,h4,h5,h6,strong,b,dt{font-weight:600}

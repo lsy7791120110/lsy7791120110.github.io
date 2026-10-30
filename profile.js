@@ -4,7 +4,7 @@ window.PUBLIC_PROFILE = {
   "updated": "2026-10-30",
   "master": {
     "school": "서울대학교 대학원",
-    "department": "약학과 · 약학전공",
+    "department": "약학과",
     "degree": "약학석사",
     "field": "의약화학 연구",
     "period": "2024.03 – 2026.02",

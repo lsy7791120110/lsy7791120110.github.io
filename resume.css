@@ -29,3 +29,5 @@ body{font-weight:500}h1,h2,h3,.cv-item h3{font-weight:500}strong{font-weight:500
 
 /* Stronger on-screen text without a download or print action. */
 body{color:#302b36;font-weight:500}h1,h2,h3,.cv-item h3,strong{font-weight:600}.cv-sheet p,.cv-item p{color:#514b57}.cv-item .muted,.cv-item-head>span,.cv-note,.cv-footer,.cv-subtitle{color:#69616f}
+
+body{background:#edf5ff;color:#273448}.cv-sheet{background:#fff}.cv-header{border-color:#7aa9e2}.cv-sheet h2{color:#3767aa;border-color:#ccdef3}.cv-sheet p,.cv-item p{color:#43556c}.cv-item .muted,.cv-item-head>span,.cv-note,.cv-footer,.cv-subtitle{color:#52647c}.cv-footer{border-color:#ccdef3}
