@@ -3,7 +3,11 @@ const profile=window.PUBLIC_PROFILE;
 const en=document.documentElement.lang==='en';
 const t=(ko,english)=>en?english:ko;
 const escapeHTML=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const scienceHTML=value=>escapeHTML(value).replace(/\b(h?)A(2A|2B|1|3)(AR)?\b/g,(_,human,suffix,receptor)=>`${human}A<sub>${suffix}</sub>${receptor||''}`);
+const scienceHTML=value=>escapeHTML(value)
+ .replace(/\b(h?)A(2A|2B|1|3)(AR)?\b/g,(_,human,suffix,receptor)=>`${human}A<sub>${suffix}</sub>${receptor||''}`)
+ .replace(/\b(Cs2CO3|K2CO3)\b/g,formula=>formula.replace(/(\d+)/g,'<sub>$1</sub>'))
+ .replace(/\b(1|13|19)(H|C|F)\b/g,'<sup>$1</sup>$2')
+ .replace(/\bIC50\b/g,'IC<sub>50</sub>');
 const $=selector=>document.querySelector(selector);
 const fillLines=(selector,lines)=>{$(selector).innerHTML=lines.map(line=>`<p>${escapeHTML(line)}</p>`).join('');};
 const visuals={

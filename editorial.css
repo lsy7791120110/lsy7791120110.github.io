@@ -262,3 +262,8 @@ h1,h2,h3,h4,.brand,.footer-name,.project h3,.timeline-item h3,.section-head h2,.
 .detail-section p,.detail-section li,.dialog-intro{color:#514b57}
 .filters button{color:#69616f}.filters button.active{color:#493754;font-weight:600}
 .button,.cv-link{font-weight:600}
+
+/* Neutral white page and detail surfaces. */
+body,.header,dialog{background:#fff}
+.about-band{background:#f6f4f8}
+sup{font-size:.7em;line-height:0;vertical-align:super}
