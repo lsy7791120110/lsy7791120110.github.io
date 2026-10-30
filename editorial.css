@@ -302,3 +302,24 @@ body,.hero,.contents-nav,.education-section,#work,.about-band,#about>.section,#s
 #education,#work,#about>.section,#skills{padding-top:40px}
 .skills-row dt,.skills-row dd,.skills-row .skills-tools{font-size:14px}
 }
+
+/* Navy and neutral accents; equal section title typography including CV. */
+:root{--ink:#252d38;--muted:#596371;--purple:#344962;--purple-dark:#23374e;--line:#d1d6dd}
+body,.header,dialog,.dialog-top{background:#fff;color:#252d38}
+.hero,.contents-nav,.education-section,#work,.about-band,#about>.section,#skills,.closing{background:#fff}
+#education,#work,#about>.section,#skills,#cv{border-top:2px solid #536273}
+.section-label{color:#344962;font-size:12px;font-weight:600}
+.section-head h2,.closing h2{font-family:var(--font);font-size:33px;font-weight:600;font-style:normal;line-height:1.45;letter-spacing:-1.2px;margin-top:15px;color:#252d38}
+h1,h2,h3,h4,.brand,.footer-name,.project h3,.timeline-item h3,.hero h1,.education-dossier .dossier-education h2,.education-dossier .dossier-education h3,.skills-row dt,.activity-card strong{color:#252d38}
+.hero-description,.hero-description strong,.project-description,.skills-row dd,.timeline-item p,.section-head>p,.extra-grid p,.closing p,.detail-section p,.detail-section li,.dialog-intro,.activity-card h3,.activity-card p,.skills-row .skills-tools{color:#414b58}
+.summary-label,.recruiter-summary p,.degree-label,.education-dossier .degree-label,.education-dossier .dossier-education p,.education-dossier .dossier-education>span,.dossier-top,.project-meta,.project-subtitle,.project-bottom,.contents-number,.contents-heading p,.visual-top,.hero-bottom p,.hero-bottom a,.timeline-item>span,.honor-note,.timeline-item .education-honors p,.group-title,.activity-card .mini-label,.bar-label,.binding-chart-note,.detail-note,.dialog-eyebrow,.filters button,.ai-tool p,.library-caption,.chart-note{color:#596371}
+.contents-heading h2,.round-arrow,.filters button.active,.dialog-stat strong,.text-link,.cv-link{color:#344962}
+.hero-dossier.education-dossier,.dossier-education.bachelor,.hero-bottom,.contents-nav,.contents-nav li,.project-toolbar,.project,.activity-card,.extra-activities,.skills-summary,.skills-row,.footer,.dialog-top,.ai-tool,.library-row,.education-honors{border-color:#d1d6dd}
+.button.primary{background:#edf0f4;border-color:#aeb8c5;color:#23374e}
+.button.primary:hover{background:#e1e6ec}
+.project-graphic .project-visual,.project:hover .project-visual,.project-graphic .sar-visual,.project:hover .sar-visual,.project-graphic .library-visual,.project:hover .library-visual,.project-graphic .ai-visual,.project:hover .ai-visual,.dialog-stat{background:#f3f4f6;border-color:#d4d9df}
+.bar.one{background:#c7cfd9}.bar.two{background:#94a2b4}.bar.three{background:#536a86}
+.binding-track{background:#e1e5eb}.binding-track>span{background:#94a2b4}.binding-bar-row:nth-child(-n+2) .binding-track>span{background:#536a86}
+.binding-results th{background:#edf0f4;color:#344962}
+a:focus-visible,button:focus-visible{outline-color:#344962}
+@media(max-width:760px){.section-head h2,.closing h2{font-size:28px;letter-spacing:-1px}}
