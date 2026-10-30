@@ -283,3 +283,8 @@ h1,h2,h3,h4,.brand,.footer-name,.project h3,.timeline-item h3,.section-head h2,.
 .section-label,.contents-heading h2,.round-arrow,.filters button.active,.dialog-stat strong{color:#3767aa}
 .hero-dossier.education-dossier,.dossier-education.bachelor,.hero-bottom,.contents-nav,.contents-nav li,.project-toolbar,.project,.activity-card,.extra-activities,.skills-summary,.skills-row,.closing,.footer,.dialog-top,.ai-tool,.library-row{border-color:#ccdef3}
 .binding-results th{background:#e4f0ff;color:#28538e}
+
+/* Keep Dongguk honors attached to the degree they belong to. */
+.timeline-item .education-honors{display:grid;gap:7px;margin-top:18px;padding-top:14px;border-top:1px solid #ccdef3}
+.timeline-item .education-honors p{margin:0;font-size:12px;line-height:1.8;color:#52647c}
+.ai-visual .ai-tool{padding-block:16px}.ai-visual .ai-tool-list{margin-top:12px}

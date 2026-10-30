@@ -4,7 +4,7 @@ window.PUBLIC_PROFILE = {
   "updated": "2026-10-30",
   "master": {
     "school": "서울대학교 대학원",
-    "department": "약학과",
+    "department": "약학과 · 약화학전공",
     "degree": "약학석사",
     "field": "의약화학 연구",
     "period": "2024.03 – 2026.02",
@@ -147,15 +147,15 @@ window.PUBLIC_PROFILE = {
       "type": "digital",
       "tag": "생성형 AI · 교육 업무",
       "period": "2025.12 – 2026.12",
-      "title": "AI로 만든 수업 업무 도구",
-      "subtitle": "문항 관리 · 성적표 출력 · 교재 제작",
-      "description": "문항을 다시 타이핑하지 않고 골라 자료를 만드는 DB와, 점수를 입력하면 학생별 성적표를 출력하는 도구를 만들었습니다. 매주 수업 준비와 주간테스트에 사용합니다.",
+      "title": "수업 자료와 성적 관리",
+      "subtitle": "문항 DB · PDF→HWPX 변환 · 성적표",
+      "description": "생성형 AI로 문항 DB, PDF→HWPX 변환 도구, Excel 성적표를 제작했습니다. 수업자료 편집과 매주 주간테스트의 성적 관리에 사용합니다.",
       "metric": "300종 이상",
       "metricLabel": "생성형 AI를 활용한 교재용 그림 제작",
       "sections": [
         {
           "title": "문항 관리와 문서 작업",
-          "body": "학생에게 필요한 문제를 매번 다시 입력하지 않고 골라 제공하려고 문항 DB를 만들었습니다. 생성형 AI로 문항 관리와 교재 편집 도구를 만들고, PDF 문항을 HWPX로 옮기는 작업에도 활용했습니다."
+          "body": "문항을 유형별로 분류해 학생별 연습자료를 구성하는 DB와, 시험지 PDF를 편집 가능한 HWPX로 변환하는 도구를 제작했습니다."
         },
         {
           "title": "성적 입력과 채점 관리",

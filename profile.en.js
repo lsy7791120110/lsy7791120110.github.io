@@ -4,7 +4,7 @@ window.PUBLIC_PROFILE = {
   "updated": "2026-10-30",
   "master": {
     "school": "Seoul National University",
-    "department": "Department of Pharmacy",
+    "department": "Department of Pharmacy · Medicinal Chemistry",
     "degree": "M.S. in Pharmaceutical Sciences",
     "field": "Medicinal chemistry research",
     "period": "2024.03 – 2026.02",
@@ -147,15 +147,15 @@ window.PUBLIC_PROFILE = {
       "type": "digital",
       "tag": "Applied AI · education",
       "period": "2025.12 – 2026.12",
-      "title": "Teaching Tools Built with AI",
-      "subtitle": "Question selection · Score reports · Teaching materials",
-      "description": "Built a question database to prepare practice materials without retyping, and a tool that turns entered scores into individual student reports. I use these tools for lesson preparation and weekly tests.",
+      "title": "Teaching Materials & Score Management",
+      "subtitle": "Question database · PDF-to-HWPX conversion · Score reports",
+      "description": "Used generative AI to build a question database, a PDF-to-HWPX converter and Excel score reports. I use them to edit teaching materials and manage weekly test results.",
       "metric": "300+",
       "metricLabel": "teaching illustrations created with generative AI",
       "sections": [
         {
           "title": "Question management and documents",
-          "body": "Built a question database to select practice questions without retyping them. Used generative AI to create tools for question management and textbook editing, including PDF-to-HWPX conversion."
+          "body": "Built a database to organize questions by topic and prepare practice materials for individual students, plus a tool to convert PDF exam papers into editable HWPX documents."
         },
         {
           "title": "Scores and student reports",
