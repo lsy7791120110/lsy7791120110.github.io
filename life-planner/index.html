@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#f6f3fa"><title>LIFE PLANNER · 연간 라이프 플래너</title><style>
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#f7f6f2;color:#242940;font:16px/1.57 system-ui,-apple-system,"Malgun Gothic",sans-serif;word-break:keep-all}button,input,textarea,select{font:inherit}button,a{touch-action:manipulation}a{color:inherit;text-decoration:none}button{cursor:pointer;color:inherit}header,footer,main{width:min(900px,calc(100% - 36px));margin:auto}header,footer,.headrow,.backrow{display:flex;justify-content:space-between;align-items:center;gap:12px}header{padding:20px 0;border-bottom:1px solid #d9d7d0}header>span,footer,.micro,.num,.label{font:600 10px/1.5 system-ui;letter-spacing:.15em;color:#686779}.brand{font-weight:800;font-size:20px;letter-spacing:-.06em}.brand i{font-style:normal;color:#82749a}.brand i,header b{margin-right:6px}header b{color:#373751;margin-left:5px}main{padding:24px 0 30px;min-height:70vh}.hero{position:relative;isolation:isolate;overflow:hidden;border-radius:22px;background:#222a42;color:#fbf9f1;padding:clamp(25px,5vw,47px)}.hero .micro{color:#d0c4e0}.sky{position:absolute;z-index:-1;right:-8%;top:0;width:65%;height:100%;opacity:.88}.year{font:italic clamp(46px,9vw,84px)/1 Georgia,serif;letter-spacing:-.065em;color:#d5c4e8}.hero h1{font:600 clamp(27px,5vw,44px)/1.2 system-ui;letter-spacing:-.06em;margin:4px 0 12px}.hero p{margin:0 0 18px;color:#e1e2eb;font-size:14px;max-width:70%}.btn,.pill{border:1px solid #d8d4dc;border-radius:99px;padding:9px 16px;background:white;font-weight:650;display:inline-block}.hero .btn{background:#eee7f3;color:#303046;border:0}.headrow{margin:24px 0 10px}.headrow h2,.headrow h3{font-size:21px;letter-spacing:-.06em;margin:0}.headrow small,.sub{color:#686b78;font-size:13px}.summary,.card,.editor{border-radius:17px;background:#fff;border:1px solid #dfddd8}.summary{display:grid;grid-template-columns:1fr 1fr;overflow:hidden}.summary>div{padding:16px 18px;min-width:0}.summary>div+div{border-left:1px solid #e5e1dc}.summary strong{display:block;font-size:15px;margin:5px 0;overflow-wrap:anywhere}.summary ul{padding:0;list-style:none;margin:6px 0}.summary li{font-size:14px;display:flex;gap:8px}.summary li:before{content:'○';color:#9a839e}.faint{color:#767782}.chapters{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.card{display:flex;gap:14px;align-items:center;padding:16px;transition:background .2s}.card:hover{background:#f2edf6}.icon{display:grid;place-items:center;width:43px;height:43px;flex:none;border-radius:14px;background:#ede8f3;color:#554970;font:27px/1 Georgia}.card b{display:block;font-size:17px}.card small{font-size:12px;color:#6b6b79}.arrow{margin-left:auto;font-size:20px;color:#797282}.backrow{margin-bottom:19px;font-size:14px}.backrow a{padding:5px 0}.bookhead h1{font-size:clamp(27px,6vw,39px);letter-spacing:-.07em;margin:5px 0}.bookhead p{color:#636273;margin:5px 0 17px}.tabs,.chips{display:flex;flex-wrap:wrap;gap:7px}.tabs{margin-bottom:16px}.tabs button,.chips button,.plain{border:1px solid #d6d2d8;background:#fff;border-radius:99px;padding:8px 12px;font-size:14px}.tabs button.active,.chips button.on,.controls .active{background:#353752;color:white;border-color:#353752}.editor{padding:clamp(16px,4vw,32px);margin:12px 0}.editor h2{font-size:20px;margin:0 0 8px;letter-spacing:-.05em}.editor p{color:#646675;font-size:14px;margin:6px 0 15px}.field{display:block;margin:16px 0 0;font-weight:650;font-size:15px}.field span{display:block;margin-bottom:6px}.field input,.field textarea,.inline input,.field select{width:100%;padding:12px;border-radius:10px;border:1px solid #d5d2da;background:#faf9fc;color:#262739;font-size:16px;font-weight:400}.field textarea{resize:vertical;min-height:82px;line-height:1.6}.field input:focus,.field textarea:focus,.inline input:focus{outline:2px solid #9987ab}.inline{display:flex;gap:8px}.inline input{min-width:0}.plain{flex:none}.orb{display:block;width:min(270px,100%);margin:0 auto}.orb [role=button]{cursor:pointer}.orb text{font:600 11px system-ui;pointer-events:none}.orb [role=button]:focus{outline:0;stroke:#5f4b79;stroke-width:3}.controls{display:flex;flex-wrap:wrap;gap:7px;margin:12px 0}.controls button{background:#f7f5f8;border-radius:9px;border:1px solid #ddd7e0;padding:8px 10px;font-size:13px}.chiptitle{margin:20px 0 7px;color:#595569;font-size:14px}.footnav{display:flex;justify-content:space-between;gap:8px;margin-top:18px}.footnav .btn:last-child{background:#30344c;color:white}.empty{font-size:14px;color:#797886}.coretag{display:inline-block;padding:3px 9px;background:#f1ebf6;color:#584b68;border-radius:12px;font-size:13px;margin:4px 3px 0 0}.tools{margin:22px 0 0;font-size:13px;color:#626271}.tools summary{cursor:pointer}.tools button,.tools label{display:inline-block;cursor:pointer;margin:4px 5px 0 0}.tools input{display:none}footer{border-top:1px solid #d9d7d0;padding:15px 0 23px}#save{letter-spacing:0}#toast{position:fixed;left:50%;bottom:20px;transform:translateX(-50%);background:#292c41;color:white;border-radius:15px;padding:9px 16px;font-size:14px;display:none;z-index:2;max-width:92vw}button:focus-visible,a:focus-visible{outline:3px solid #9678a8;outline-offset:2px}@media(max-width:600px){.chapters{grid-template-columns:1fr}.hero{border-radius:17px}.hero p{max-width:75%}.sky{right:-17%;width:75%}.summary{grid-template-columns:1fr}.summary>div+div{border-left:0;border-top:1px solid #e5e1dc}.summary>div{padding:12px 15px}.card{padding:11px 14px}.headrow{margin-top:20px}header{padding:13px 0}main{padding-top:15px}.tabs{gap:5px}.tabs button{font-size:13px;padding:7px 10px}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+/* A light paper palette, with graphite ink throughout. */
+:root{--ink:#37344a;--paper:#fbf9f7;--lilac:#ebe4f5;--blush:#f6e5e8;--sky:#e3edf7;--peach:#faebdb;--line:#e5dee6}
+body{background:var(--paper);color:var(--ink);overflow-wrap:anywhere}
+header,footer,.workspace{width:min(1280px,calc(100% - 40px));margin-inline:auto}
+header{border-color:var(--line)}header .brand{color:#4d4259}.brand i{color:#9b7eae}
+.workspace{padding-block:24px 32px}.workspace main{width:100%;margin:0;padding:0;min-width:0}
+#sidebar{display:none}.year-select{display:flex;align-items:center;gap:9px;font-size:12px;color:#646072}.year-select select{border:1px solid #d9ccdf;border-radius:20px;background:#f1eaf6;color:#463951;padding:6px 10px;font:650 14px system-ui}
+.hero{color:#332d45;background:linear-gradient(114deg,#ece1f5 0%,#f5e6ec 54%,#e1ebf7 100%);border:1px solid #e6dce8}.hero .micro{color:#6f617d}.hero .year{color:#695878}.hero p{color:#524c60}.hero .btn{background:#fff9ff;color:#473650;box-shadow:0 1px 3px #55446615;border:1px solid #d6c9dd}.sky{opacity:.92}.sky g:first-child{stroke:#a295ba}.sky g:last-child{fill:#aa7794}
+.editor,.card,.summary{border-color:var(--line);box-shadow:0 3px 15px #53425605}.card:nth-child(5n+2) .icon{background:var(--blush)}.card:nth-child(5n+3) .icon{background:var(--sky)}.card:nth-child(5n+4) .icon{background:var(--peach)}.card:nth-child(5n) .icon{background:#eee6ee}
+.tabs button.active,.chips button.on,.controls .active,.footnav .btn:last-child{background:#e6d9f1;color:#453449;border:1px solid #bba4ca}.chips button.on:before{content:'✓ ';font-weight:800}.field textarea,.field input,.inline input{background:#fcfaff}
+.sourcegroup{padding:13px 14px;background:#f5eff9;border-radius:14px;margin-bottom:8px}.sourcegroup:nth-child(2){background:#f0f5fa}.sourcegroup:nth-child(3){background:#faf0ed}.sourcegroup h3{font-size:14px;margin:0 0 7px}.sourcegroup a{font-size:13px;color:#5e516d}.chips button{max-width:100%;overflow-wrap:anywhere}
+dialog{width:min(370px,calc(100% - 30px));border:1px solid var(--line);border-radius:22px;background:#fffafc;color:var(--ink);padding:24px;box-shadow:0 12px 50px #3d314729}dialog::backdrop{background:#2d23354d}dialog h2{margin:6px 0}dialog p{font-size:14px;color:#6c6475}dialog input{margin-left:8px;width:120px;font:inherit;padding:8px 12px;border:1px solid #cfc1d6;border-radius:8px}
+@media(min-width:880px){
+ header{padding-block:19px}.workspace{display:grid;grid-template-columns:210px minmax(0,1fr);gap:clamp(26px,4vw,64px);padding-block:32px 45px}
+ #sidebar{display:block;position:sticky;top:24px;align-self:start;padding:16px 14px 12px 0;border-right:1px solid var(--line)}
+ .sideyear{font:italic 54px/1.18 Georgia,serif;letter-spacing:-.05em;color:#806889}.sideyear small{display:block;font:650 14px system-ui;color:#51465a;letter-spacing:0;margin:4px 0 22px}
+ #sidebar nav{display:grid;gap:5px}#sidebar nav a{padding:10px 12px;border-radius:10px;font-size:15px;font-weight:600;color:#585064}#sidebar nav a span{font:italic 13px Georgia;color:#88778e;margin-right:12px}#sidebar nav a[aria-current]{background:#eae1f2;color:#403149}#sidebar nav a:hover{background:#f0eaf3}.refnote{margin:28px 10px 0;padding-top:15px;border-top:1px solid var(--line);font-size:12px;color:#776e80}
+ .home-index{display:none}.homeview .summary{grid-template-columns:1fr 1fr}.homeview .hero{min-height:260px}.bookhead{padding:18px 24px;background:linear-gradient(110deg,#f0e9f6,#f4f2f9 60%,#eaf0f7);border-radius:17px;margin:10px 0 18px}.bookhead p{margin-bottom:2px}.editor{padding:22px 28px}.editor h2{font-size:21px}.field textarea{min-height:92px}.sources{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px}.sourcegroup{min-width:0}.backrow{margin-bottom:8px}.homeview .headrow{margin-top:25px}
+}
+@media(max-width:879px){header,footer,.workspace{width:min(730px,calc(100% - 32px))}.workspace{padding:16px 0 24px}.year-select{gap:5px}footer{flex-wrap:wrap}}
+@media(max-width:380px){header,footer,.workspace{width:calc(100% - 24px)}.brand{font-size:18px}.hero{padding:20px}.tabs button{min-height:40px}.orb{width:min(240px,100%)}}
+@font-face{font-family:LifeDream;src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-4Regular.woff') format('woff');font-weight:400;font-display:swap}
+@font-face{font-family:LifeDream;src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-5Medium.woff') format('woff');font-weight:500;font-display:swap}
+@font-face{font-family:LifeDream;src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-6Bold.woff') format('woff');font-weight:600;font-display:swap}
+@font-face{font-family:LifeDream;src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-7ExtraBold.woff') format('woff');font-weight:700;font-display:swap}
+body,body *{font-family:LifeDream,"Malgun Gothic",sans-serif!important;font-synthesis:none}
+body{font-weight:400}.brand,.hero h1,.bookhead h1,.sideyear,.year,.declaration h2{font-weight:700}.hero h1{letter-spacing:-.055em}.hero .year{font-size:clamp(32px,5vw,53px);font-style:normal}.field,button,.label,.tabs,.headrow h2{font-weight:500}h2,h3,.active,.field>span,.btn{font-weight:600}
+.quicklinks{display:flex;gap:12px;flex-wrap:wrap;margin:15px 0}.quicklinks a{font-size:14px;color:#69547d;padding:6px 10px;background:#eee8f3;border-radius:8px}.form-grid,.spiral-layout{display:grid;gap:10px 18px;grid-template-columns:repeat(auto-fit,minmax(min(100%,235px),1fr))}.form-grid>*{min-width:0}.fold,.record{padding:14px 0;border-top:1px solid #e8e2e9}.fold summary{cursor:pointer;font-weight:500}.calculation{background:#eef2f8;padding:11px 14px;border-radius:9px}.record+button{margin-top:9px}.calgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(195px,1fr));gap:12px}.calgrid section,.declaration{background:white;border:1px solid #e6dfea;border-radius:16px;padding:20px}.month{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;text-align:center;font-size:12px}.month b{color:#816d85}.declaration{padding:clamp(20px,4vw,42px);line-height:1.65}.declaration section{border-top:1px solid #e8e3ed;padding-top:14px}.declaration p{white-space:pre-wrap}.declaration small{color:#67566e}.declaration h3{margin:5px 0}.declaration h2{font-size:clamp(25px,4vw,39px)}#spiral-map{width:min(100%,380px);display:block;cursor:crosshair}#spiral-map text{font-size:10px;fill:#605262}.point circle{fill:#d9c9dd;stroke:#816d87}.point.selected circle{fill:#685078}.point.selected text{fill:white!important}.point text{text-anchor:middle;pointer-events:none}.point{cursor:pointer}.year-select select{font-family:LifeDream,sans-serif}
+@media(min-width:880px){#sidebar{max-height:calc(100vh - 42px);overflow:auto}#sidebar nav a{padding:7px 10px}}
+@media print{@page{size:A4;margin:15mm}body.print-statement{background:white}body.print-statement header,body.print-statement footer,body.print-statement #sidebar,body.print-statement main>:not(.declaration),body.print-statement #toast{display:none!important}body.print-statement .workspace,body.print-statement main{display:block;width:100%;padding:0;margin:0}body.print-statement .declaration{box-shadow:none;border:0;padding:0}body.print-statement .declaration section{break-inside:avoid}}
+
+</style></head>
+<body><header><a href="#home" class="brand"><i>✦</i> LIFE PLANNER</a><label class="year-select">기록 연도 <select id="years" aria-label="기록 연도 선택"></select></label></header>
+<div class="workspace"><aside id="sidebar" aria-label="기록 목차"></aside><main id="app"></main></div>
+<footer><span id="footyear">LIFE PLANNER</span><span id="save" role="status">이 브라우저에 자동 저장</span></footer><div id="toast" role="status"></div>
+<dialog id="year-dialog"><form id="year-form"><span class="micro">ANNUAL JOURNAL</span><h2>다른 연도 열기</h2><p>기록이 있는 해는 이어 쓰고, 새해는 빈 플래너로 시작해요.</p><label>연도 <input id="newyear" type="number" min="1000" max="9999" step="1" required inputmode="numeric"></label><div class="footnav"><button class="btn" type="button" id="cancel-year">취소</button><button class="btn">플래너 열기</button></div></form></dialog><script>
+const GROUPS={"관계와 사람": ["사려깊음", "너그러움", "감사", "경청", "관심", "사랑", "존경", "공감", "친밀감", "믿음", "자비심", "신뢰", "공동체", "배려", "친절", "소통", "요청", "협력", "연결", "나눔", "가족", "만남", "우정", "돌봄", "헌신", "봉사"], "배움과 성장": ["관찰", "지혜", "성장", "다양성", "진리", "창의", "훈련", "변화", "통찰", "알아차림", "배움", "혁신", "분석", "성찰", "전문성", "발전", "가능성", "적응", "개선", "문제해결", "유연성"], "삶의 태도": ["겸손", "긍정", "용기", "참여", "목적의식", "명예", "소신", "진정성", "원칙", "선택", "자율", "한결같음", "결단", "독립", "자유", "끈기", "성실", "신중", "절제", "윤리의식", "인내", "단호함", "책임", "열정"], "일과 성취": ["통합", "탁월함", "전략", "몰입", "투자", "규율", "초점", "효과성", "효율성", "예측", "위험감수", "준비성", "계획", "실천", "구조", "근면", "성취", "영향력", "품질", "성과", "유산", "힘"], "마음과 일상": ["고요함", "내려놓음", "현존", "희망", "충만", "단순", "풍요", "여유", "건강", "치유", "여행", "균형", "청결함", "활력", "즐거움", "놀이", "아름다움", "매력", "회복력", "휴식", "평온함", "행복", "모험", "조화로움", "안전", "평화", "예술"]}
+'use strict';
+const lifeAreas=['학습','마음','관계','돈','시간','일','건강','여가'];
+const areaNotes=['배우고 성장한 경험','마음을 움직인 생각과 태도','사람들과 맺은 관계','수입과 지출, 자산','시간을 쓴 방식','내가 한 일과 성과','몸과 생활 습관','즐거움과 취미'];
+const management=['마음','건강','돈','관계','일','여가','학습','시간'];
+let selectedArea=0,selectedPoint=0,calendarOffset=0;
+function numberBox(id,label,min=0,max='',step='any'){
+ return '<label class="field"><span>'+E(label)+'</span><input type="number" min="'+min+'" '+(max!==''?'max="'+max+'"':'')+' step="'+step+'" data-field="'+id+'" value="'+E(f(id))+'"></label>';
+}
+function selectBox(id,label,options){
+ return '<label class="field"><span>'+E(label)+'</span><select data-field="'+id+'">'+['',...options].map(v=>'<option '+(v===f(id)?'selected':'')+' value="'+E(v)+'">'+E(v||'선택하기')+'</option>').join('')+'</select></label>';
+}
+function grid(...items){return '<div class="form-grid">'+items.join('')+'</div>'}
+function inputGroup(prefix,labels){return grid(...labels.map((label,i)=>field(prefix+i,label)))}
+function rowCount(key){return Math.max(1,parseInt(f('rows.'+key),10)||1)}
+function repeated(key,title,make){
+ const count=rowCount(key);
+ return panel(title,Array.from({length:count},(_,i)=>'<div class="record"><small class="num">기록 '+(i+1)+'</small>'+make(key+'.'+i+'.',i)+'</div>').join('')+'<button class="plain" data-more="'+key+'">＋ 항목 추가</button>');
+}
+function reviewView(n){
+ const prefix='review.'+selectedArea+'.',area=lifeAreas[selectedArea];
+ if(n===2)return repeated('links','영역 사이의 영향',(k)=>grid(selectBox(k+'from','출발 영역',lifeAreas),selectBox(k+'to','영향을 받은 영역',lifeAreas),selectBox(k+'effect','영향의 방향',['도움','방해']),field(k+'why','어떻게 이어졌나요?'),field(k+'change','어디를 바꾸면 흐름이 달라질까요?')));
+ const pick=toggle('reviewArea',lifeAreas,selectedArea);
+ if(!n)return panel((year-1)+'년 회고',pick+'<h3>'+area+'</h3>'+grid(field(prefix+'good','잘한 일과 그 영향'),field(prefix+'hard','아쉬웠던 일과 그 영향'),numberBox(prefix+'score','나의 만족도 (0~10점)',0,10,1)),areaNotes[selectedArea]+'을 떠올려요. 점수는 비워도 돼요.');
+ const scene=f('scene'+selectedArea);
+ return panel(year+'년 스케치',pick+'<h3>'+area+'</h3>'+(scene?'<p>미래 자서전에 쓴 장면 · '+E(scene)+'</p>':'')+grid(field(prefix+'vision','이 영역에서 원하는 변화'),field(prefix+'new','작년과 다르게 시도할 방법'),field(prefix+'cycle','끊고 싶은 악순환 또는 이어갈 선순환')));
+}
+function areaView(n){
+ const intro=(title,labels,key)=>panel(title,inputGroup(key,labels));
+ switch(n){
+ case 0:return repeated('mind','사고방식 바꾸기',k=>grid(field(k+'old','나를 가로막는 생각'),field(k+'new','대신 연습할 생각')))+intro('올해 곁에 둘 문장',['필요할 때 다시 읽을 문장들'],'say');
+ case 1:return panel('건강 습관 돌아보기',['식생활','운동','수면','그 밖의 습관','건강을 위한 학습'].map((x,i)=>'<details class="fold"><summary>'+x+'</summary>'+inputGroup('health'+i,['잘하고 있는 점','바꾸고 싶은 점'])+'</details>').join(''))+repeated('healthplan','건강 실천계획',k=>grid(numberBox(k+'rank','우선순위',1,'',1),field(k+'goal','나의 결심'),field(k+'action','구체적으로 할 일')));
+ case 2:return panel('돈을 다루는 습관',['수입','고정 지출','변동 지출','저축','투자'].map((x,i)=>'<details class="fold"><summary>'+x+'</summary>'+grid(numberBox('money'+i+'score','만족도 (0~10)',0,10,1),...['점수를 준 이유','잘하고 있는 점','개선할 점'].map((l,j)=>field('money'+i+'f'+j,l)))+'</details>').join(''))+
+ panel('자산 목표',grid(...['현재','1년 후','3년 후','5년 후','10년 후','30년 후'].map((x,i)=>numberBox('asset'+i,x+' (만원)'))))+
+ repeated('expense','줄이고 싶은 지출',k=>grid(numberBox(k+'rank','우선순위',1),field(k+'name','지출 항목','',true),numberBox(k+'cost','월평균 지출 (원)'),numberBox(k+'cut','줄일 금액 (원)'),field(k+'how','지출을 줄일 장치')))+
+ '<p class="calculation" data-totals="money"></p>'+panel('돈을 위한 연간 행동',['돈 공부','저축','투자'].map((x,i)=>'<h3>'+x+'</h3>'+grid(numberBox('fin'+i+'rank','우선순위',1),field('fin'+i+'goal','목표'),field('fin'+i+'action','실행계획'))).join(''));
+ case 3:return intro('관계에서의 나',['나의 강점','강점을 살릴 방법','개선하고 싶은 점','주의하고 연습할 행동'],'rel')+
+ repeated('people','소중한 사람과의 약속',k=>grid(numberBox(k+'rank','우선순위',1),field(k+'who','소중한 사람','',true),field(k+'role','그 사람에게 나의 역할','',true),field(k+'what','누가 언제 어디서 무엇을 어떻게 왜 할까요?'),selectBox(k+'done','실천 여부',['예정','실천함'])))+
+ intro('나를 지지하는 사람',['힘을 얻는 사람','어려울 때 조언을 구할 사람'],'support')+repeated('boundary','거리를 두고 싶은 관계',k=>grid(field(k+'who','대상','',true),field(k+'why','이유'),field(k+'how','실행계획'),selectBox(k+'done','실천 여부',['예정','실천함'])));
+ case 4:return intro('내 일이 만드는 가치',['누구를 위해 일하나요?','어떤 일을 하나요?','그 일로 전하는 가치는?','보람을 느끼는 순간'],'workMeaning')+intro('일과 역할',['조직과 산업 분야','직무와 가장 중요한 책임','나의 기여를 평가하는 사람'],'workRole')+intro('올해 일하는 방식',['지키고 싶은 태도','더 기를 역량','집중할 핵심 업무','만들고 싶은 성과'],'workNext');
+ case 5:return intro('즐거웠던 장면',['즐거운 시간','좋아하는 장소','함께하고 싶은 사람'],'leisure')+repeated('leisurePlan','여가 계획',k=>grid(field(k+'title','해보고 싶은 일','',true),field(k+'when','언제, 어디서, 누구와'),field(k+'what','구체적인 활동')));
+ case 6:return panel('영역마다 필요한 배움',[...management.filter(x=>x!=='학습'),'배우는 방법'].map((x,i)=>'<details class="fold"><summary>'+x+'</summary>'+grid(numberBox('learn'+i+'rank','우선순위',1),field('learn'+i+'what','배울 내용'),field('learn'+i+'how','누구에게 어떻게 배울까요?'),field('learn'+i+'use','어디에 적용할까요?'))+'</details>').join(''));
+ case 7:return ['지난해 줄이고 싶었던 시간','목표를 위해 확보할 시간'].map((t,i)=>repeated('time'+i,t,(k)=>grid(field(k+'name','활동','',true),numberBox(k+'mins','하루 평균 (분)'))+'<p class="calculation" data-time="'+k+'"></p>')).join('')+intro('시간을 만드는 방법',['자동화할 일','다른 사람에게 맡길 일','하지 않기로 정할 일'],'timeFix');
+ }
+}
+function goalRows(){return Array.from({length:rowCount('goals')},(_,i)=>'goals.'+i+'.').filter(k=>f(k+'goal').trim()).sort((a,b)=>(Number(f(a+'rank'))||Infinity)-(Number(f(b+'rank'))||Infinity))}
+function planView(){return repeated('goals','올해 이루고 싶은 목표',(k)=>grid(numberBox(k+'rank','우선순위',1,'',1),field(k+'category','영역 (복수 입력 가능)','',true),field(k+'goal','달성하고 싶은 구체적인 결과'),field(k+'reason','이 목표가 중요한 이유'),field(k+'barrier','지금까지 막혔던 원인'),field(k+'change','원인을 바꿀 방법'),field(k+'action','언제 무엇을 얼마나 할까요?'),selectBox(k+'type','실행 방식',['P · 끝이 있는 프로젝트','H · 반복할 습관','P + H · 둘 다'])));}
+function statementView(n){
+ const rows=goalRows(),chosen=rows.filter(k=>f(k+'omit')!=='제외');
+ if(!n)return panel('선언문에 남길 목표',rows.length?rows.map(k=>'<div class="record"><h3>'+E(f(k+'goal'))+'</h3>'+grid(selectBox(k+'omit','선언문에 표시 (기본 포함)',['포함','제외']),numberBox(k+'weight','중요도 비중 (%)',0,100),field(k+'short','선언문용 목표 요약 (선택)','원래 목표를 쓰려면 비워 두세요.'),field(k+'steps','선언문용 행동 요약 (선택)','원래 행동을 쓰려면 비워 두세요.'))+'</div>').join(''):'<a class="btn" href="#plan/0">첫 목표 적기 →</a>','중요한 목표만 남기고 비중의 합을 100%로 맞춰 보세요.')+'<p class="calculation" data-totals="weight"></p>'+panel('나의 다짐',field('declaration','올해 내가 지킬 약속')+grid(field('signName','이름 또는 서명','',true),'<label class="field"><span>작성일</span><input type="date" data-field="signDate" value="'+E(f('signDate'))+'"></label>'));
+ return '<article class="declaration"><p class="micro">PERSONAL STATEMENT　/　'+year+'</p><h2>'+year+' 목표 선언문</h2><small>나의 목적</small><p>'+E(f('purpose')||'아직 작성 전이에요.')+'</p><small>나의 핵심가치</small><p>'+E(data.three.join('　·　')||'아직 선택 전이에요.')+'</p>'+chosen.map((k,i)=>'<section><small>순위 '+E(f(k+'rank')||String(i+1))+'　·　'+E(f(k+'weight')||'0')+'%　'+E(f(k+'type'))+'</small><h3>'+E(f(k+'short')||f(k+'goal'))+'</h3><p>'+E(f(k+'steps')||f(k+'action'))+'</p></section>').join('')+'<p data-totals="weight"></p><hr><p>'+E(f('declaration'))+'</p><p>'+E([f('signDate'),f('signName')].filter(Boolean).join('　 /　'))+'</p></article><div class="footnav"><button class="btn" data-print>선언문 인쇄 / PDF 저장</button></div>';
+}
+function updateTotals(){
+ const sum=(keys,suffix)=>keys.reduce((a,k)=>a+(Number(f(k+suffix))||0),0);
+ const weight=app.querySelector('[data-totals="weight"]');
+ if(weight)weight.textContent='중요도 합계　'+Math.round(sum(goalRows().filter(k=>f(k+'omit')!=='제외'),'weight')*100)/100+' / 100%';
+ const money=app.querySelector('[data-totals="money"]');
+ if(money){const keys=Array.from({length:rowCount('expense')},(_,i)=>'expense.'+i+'.');money.textContent='월 지출 합계　'+sum(keys,'cost').toLocaleString()+'원　 /　절감 목표　'+sum(keys,'cut').toLocaleString()+'원'}
+ for(const el of app.querySelectorAll('[data-time]')){const minutes=Number(f(el.dataset.time+'mins'))||0;el.textContent='월 '+(minutes*30/60).toLocaleString()+'시간　·　연 '+(minutes*360/60).toLocaleString()+'시간 (30일 × 12개월)'}
+}
+function annualContent(id,n){
+ if(id==='review')return reviewView(n);
+ if(id==='areas')return areaView(n);
+ return id==='plan'?planView():statementView(n)
+}
+function calendarView(){
+ const y=year+calendarOffset;
+ const months=Array.from({length:12},(_,m)=>{const first=(new Date(y,m,1).getDay()+6)%7,end=new Date(y,m+1,0).getDate();return '<section><h3>'+(m+1)+'월</h3><div class="month">'+['월','화','수','목','금','토','일'].map(d=>'<b>'+d+'</b>').join('')+'<i></i>'.repeat(first)+Array.from({length:end},(_,i)=>'<span>'+(i+1)+'</span>').join('')+'</div></section>'}).join('');
+ return '<a href="#home">← 한눈에 보기</a><h1>3개년 달력</h1>'+toggle('calYear',[year-1,year,year+1],calendarOffset+1)+'<div class="calgrid">'+months+'</div>'
+}
+function pointOnSpiral(t){const a=t*Math.PI*6-Math.PI/2,r=107*t;return [150+r*Math.cos(a),150+r*Math.sin(a)]}
+function pointPos(i){
+ const k='point.'+i+'.';
+ if(f(k+'x')&&f(k+'y'))return [Number(f(k+'x')),Number(f(k+'y'))];
+ return pointOnSpiral(Math.min(.98,.055+i*.094));
+}
+function spiralView(){
+ const count=rowCount('point');selectedPoint=Math.min(selectedPoint,count-1);
+ const k='point.'+selectedPoint+'.',pos=pointPos(selectedPoint);
+ const line=Array.from({length:241},(_,i)=>(i?'L':'M')+pointOnSpiral(i/240).map(x=>x.toFixed(2)).join(' ')).join(' ');
+ const markers=Array.from({length:count},(_,i)=>{const [x,y]=pointPos(i);return '<g transform="translate('+x+' '+y+')" class="point '+(i===selectedPoint?'selected':'')+'" data-point="'+i+'"><circle r="8"/><text y="3">'+(i+1)+'</text></g>'}).join('');
+ const options=Array.from({length:count},(_,i)=>'<option value="'+i+'" '+(i===selectedPoint?'selected':'')+'>'+(i+1)+'. '+E(f('point.'+i+'.name')||'새 대상')+'</option>').join('');
+ const outside=Math.hypot(pos[0]-150,pos[1]-150)>111;
+ const previous=[0,1,2,3].filter(i=>f('ring'+i));
+ return '<div class="spiral-layout"><div><svg id="spiral-map" viewBox="0 0 300 300" aria-label="선택한 대상의 위치를 누르는 나선 지도"><rect width="300" height="300" rx="18" fill="#faf3ed"/><circle cx="150" cy="150" r="112" fill="#f2ecf8" stroke="#b9a9bd" stroke-dasharray="3 4"/><path d="'+line+'" fill="none" stroke="#a38cae" stroke-width="1.7"/><text x="15" y="23">경계 밖 · 멀리 둘 것</text>'+markers+'</svg><p class="sub">선택한 대상의 위치를 그림에서 눌러 옮길 수 있어요.</p></div><div><label class="field"><span>편집할 대상</span><select id="point-select">'+options+'</select></label>'+field(k+'name','대상 이름','',true)+field(k+'axis','직접 정한 분류','사람, 취향, 장소 등',true)+'<div class="controls"><button data-place="center">중심 가까이</button><button data-place="edge">가장자리</button><button data-place="outside">경계 밖</button></div><small>현재 위치　'+(outside?'경계 밖':'나선 안')+'</small><p><button class="plain" data-more="point">＋ 대상 추가</button></p></div></div>'+
+ (previous.length?'<details class="fold"><summary>기존에 적은 답</summary>'+previous.map(i=>field('ring'+i,rings[i])).join('')+'</details>':'');
+}
+function placePoint(x,y){const k='point.'+selectedPoint+'.';data.fields[k+'x']=String(Math.max(9,Math.min(291,x)));data.fields[k+'y']=String(Math.max(9,Math.min(291,y)));persist();render()}
+function annualClick(ev){
+ const el=ev.target.closest('[data-more],[data-point],[data-place],[data-print],#spiral-map');
+ if(!el)return false;
+ if(el.hasAttribute('data-print')){window.print();return true}
+ if(el.dataset.more){const k=el.dataset.more,n=rowCount(k);data.fields['rows.'+k]=String(n+1);if(k==='point')selectedPoint=n;persist();render();return true}
+ if(el.dataset.point!==undefined){selectedPoint=Number(el.dataset.point);render();return true}
+ if(el.dataset.place){const pos={center:pointOnSpiral(.07),edge:pointOnSpiral(.96),outside:[265,75]}[el.dataset.place];placePoint(...pos);return true}
+ const pt=new DOMPoint(ev.clientX,ev.clientY).matrixTransform(el.getScreenCTM().inverse());placePoint(pt.x,pt.y);return true
+}
+
+'use strict';
+const $=s=>document.querySelector(s),app=$('#app');
+const chapters=[
+ ['direction','◉','나의 방향','삶의 목적과 내가 좋아하는 세계',['나의 목적','좋아하는 세계','존경하는 사람']],
+ ['values','✧','가치 고르기','마음이 가는 단어에서 아홉 가지까지',['관심 있는 가치','우선 가치 9']],
+ ['core','✳','나의 핵심가치','여섯 개를 추리고 마지막 세 개 고르기',['후보 6개','핵심 3개']],
+ ['dreams','☾','꿈과 버킷리스트','2027년의 소망과 더 먼 미래',['2027년','더 먼 미래']],
+ ['story','✎','미래 자서전','미래의 내가 돌아보는 여덟 장면',['표지','나의 이야기','다시 2027년으로']],
+ ['review','◫','회고와 새해 스케치','지난해 경험을 돌아보고 바꾸고 싶은 점을 찾아요.',['지난해 회고','올해 스케치','영역 간 연결']],
+ ['areas','✎','영역별 설계','필요한 영역부터 열어 한 해의 행동을 정해요.',['마음','건강','돈','관계','일','여가','학습','시간']],
+ ['plan','▤','연간 실행계획','목표를 가로막는 원인과 내가 할 일을 연결해요.',['목표 설계']],
+ ['statement','✧','목표 선언문','올해 집중할 목표와 행동을 한 장에 모아요.',['목표 선택','선언문 보기']]
+];
+const initial=()=>({fields:{},interest:[],prior:[],six:[],three:[],custom:[],extra:[],last:'direction/0'});
+function valid(x){return x&&x.fields&&typeof x.fields==='object'&&!Array.isArray(x.fields)&&Object.values(x.fields).every(v=>typeof v==='string')&&['interest','prior','six','three','custom','extra'].every(k=>Array.isArray(x[k])&&x[k].every(v=>typeof v==='string'))&&x.prior.length<=9&&x.six.length<=6&&x.three.length<=3&&x.custom.length<=8&&x.prior.every(v=>x.interest.includes(v))&&x.three.every(v=>x.six.includes(v))}
+let data=initial(),ring=0,era=0,story=0,person=0,bucket=0,saveOK=true;
+const defaultYear=2027;
+const yearKey=y=>'orbit-journal-'+y+'-v1';
+const yearOK=y=>Number.isInteger(y)&&y>=1000&&y<=9999;
+let year=defaultYear;
+function loadYear(y){
+  const raw=localStorage.getItem(yearKey(y));
+  if(raw===null)return initial();
+  const result=JSON.parse(raw);
+  if(!valid(result))throw Error('invalid record');
+  return result;
+}
+let readable=true;
+try{
+  const recent=Number(localStorage.getItem('orbit-active-year'));
+  year=yearOK(recent)?recent:defaultYear;
+  data=loadYear(year);
+}catch{readable=false;saveOK=false;$('#save').textContent='기존 저장소를 읽을 수 없어요'}
+function refreshYears(){
+  const found=new Set([year,defaultYear]);
+  try{for(let i=0;i<localStorage.length;i++){
+    const hit=/^orbit-journal-([1-9][0-9]{3})-v1$/.exec(localStorage.key(i));
+    if(hit)found.add(Number(hit[1]));
+  }}catch{}
+  $('#years').replaceChildren(...[...found].sort((a,b)=>a-b).map(y=>new Option(y+'년',y)),new Option('＋ 다른 연도 열기','new'));
+  $('#years').value=year;
+  $('#footyear').textContent='LIFE PLANNER　/　'+year;
+  document.title=year+' LIFE PLANNER · 연간 라이프 플래너';
+  chapters[3][3]=year+'년의 소망과 더 먼 미래';
+  chapters[3][4][0]=year+'년';
+  chapters[4][4][2]='다시 '+year+'년으로';
+}
+function activate(y,replacement){
+  if(!yearOK(y))return;
+  try{
+    const next=replacement||loadYear(y);
+    localStorage.setItem(yearKey(y),JSON.stringify(next));
+    localStorage.setItem('orbit-active-year',String(y));
+    data=next;year=y;readable=true;saveOK=true;
+    selectedPoint=selectedArea=calendarOffset=ring=era=story=person=bucket=0;
+    refreshYears();location.hash='home';render();window.scrollTo(0,0);
+    $('#save').textContent=y+'년 기록 열림';
+  }catch{notice('이 연도의 기록을 열 수 없어요. 기존 기록은 보관돼요.');refreshYears()}
+}
+const E=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const f=k=>Object.hasOwn(data.fields,k)?data.fields[k]:'';
+function persist(){if(!readable)return;try{localStorage.setItem(yearKey(year),JSON.stringify(data));saveOK=true;$('#save').textContent='이 브라우저에 저장됨'}catch{saveOK=false;$('#save').textContent='저장 실패 · 백업을 내려받아 주세요';notice('저장 공간을 사용할 수 없어요. 첫 화면에서 백업해 주세요.')}}
+let timer;function notice(msg){const el=$('#toast');el.textContent=msg;el.style.display='block';clearTimeout(timer);timer=setTimeout(()=>el.style.display='none',2800)}
+function field(id,label,hint='',short=false){return '<label class="field"><span>'+E(label)+'</span>'+(short?'<input data-field="'+E(id)+'" value="'+E(f(id))+'" placeholder="'+E(hint)+'">':'<textarea data-field="'+E(id)+'" rows="3" placeholder="'+E(hint)+'">'+E(f(id))+'</textarea>')+'</label>'}
+const panel=(t,body,lead='')=>'<section class="editor"><h2>'+E(t)+'</h2>'+(lead?'<p>'+E(lead)+'</p>':'')+body+'</section>';
+const toggle=(action,labels,current)=>'<div class="controls">'+labels.map((v,i)=>'<button data-act="'+action+'" data-index="'+i+'" class="'+(i===current?'active':'')+'" aria-pressed="'+(i===current)+'">'+E(v)+'</button>').join('')+'</div>';
+const chip=(k,v)=>'<button class="'+(data[k].includes(v)?'on':'')+'" aria-pressed="'+data[k].includes(v)+'" data-list="'+k+'" data-word="'+E(v)+'">'+E(v)+'</button>';
+const chipbox=(k,arr)=>'<div class="chips">'+arr.map(v=>chip(k,v)).join('')+'</div>';
+const counts=k=>data[k].length+' / '+({prior:9,six:6,three:3}[k]);
+const sky='<svg class="sky" viewBox="0 0 360 240" aria-hidden="true"><g fill="none" stroke="#aaa0bd" opacity=".64" transform="rotate(-27 220 120)"><ellipse cx="220" cy="120" rx="140" ry="60"/><ellipse cx="220" cy="120" rx="166" ry="82" stroke-dasharray="2 6"/><ellipse cx="220" cy="120" rx="110" ry="40"/></g><g fill="#e4cfa5"><path d="M228 80q2 21 19 23-17 3-19 23-3-20-21-23 18-3 21-23Z"/><circle cx="95" cy="153" r="5"/><circle cx="290" cy="52" r="3"/><circle cx="142" cy="43" r="2"/><circle cx="269" cy="162" r="2"/><path d="m307 184 2 6 6 2-6 2-2 6-2-6-6-2 6-2Z"/></g></svg>';
+function route(){const [id,n]=location.hash.slice(1).split('/'),ch=chapters.find(c=>c[0]===id);return ch?[ch,Math.min(Math.max(parseInt(n)||0,0),ch[4].length-1)]:[null,0]}
+function home(){
+ const list=[0,1,2].map(i=>f('goal'+i)).filter(x=>x.trim());
+ const resume=typeof data.last==='string'&&chapters.some(c=>data.last?.startsWith(c[0]+'/'))?data.last:'direction/0';
+ const started=Object.values(data.fields).some(x=>x.trim())||data.interest.length;
+ return '<section class="hero">'+sky+'<div class="micro">ANNUAL WORKBOOK</div><div class="year">'+year+'</div><h1>LIFE PLANNER</h1><p>내가 아끼는 것부터 올해 실천할 일까지.</p><a class="btn" href="#'+E(resume)+'">'+(started?'이어서 쓰기':'첫 기록 시작하기')+'　→</a></section><div class="headrow"><h2>올해의 나</h2><small>한눈에 보기</small></div><div class="summary"><div><span class="label">나의 목적</span><strong>'+E(f('purpose')||'어떤 사람에게 힘이 되고 싶나요?')+'</strong><div>'+(data.three.length?data.three.map(v=>'<span class="coretag">'+E(v)+'</span>').join(''):'<a class="sub" href="#core/0">나의 핵심가치 고르기　↗</a>')+'</div></div><div><span class="label">버킷리스트</span>'+(list.length?'<ul>'+list.map(v=>'<li>'+E(v)+'</li>').join('')+'</ul>':'<strong>올해 꼭 해보고 싶은 일은?</strong><a class="sub" href="#dreams/0">버킷리스트 쓰기　↗</a>')+'</div></div>'+(f('tagline')?'<p class="sub">미래의 나　'+E(f('tagline'))+'</p>':'')+'<div class="quicklinks"><a href="#calendar">3개년 달력 ↗</a><a href="#statement/1">올해의 선언문 ↗</a></div><div class="home-index"><div class="headrow"><h2>기록 목차</h2><small>09 CHAPTERS</small></div><div class="chapters">'+chapters.map((c,i)=>'<a class="card" href="#'+c[0]+'/0"><span class="icon">'+c[1]+'</span><div><span class="num">0'+(i+1)+'</span><b>'+c[2]+'</b><small>'+c[3]+'</small></div><span class="arrow">›</span></a>').join('')+'</div></div><details class="tools"><summary>기록 보관 및 기기 이동</summary><p>답은 지금 쓰는 브라우저에 저장돼요. 다른 기기나 사이트로 옮길 때는 연도별 백업을 내려받아 새 주소에서 불러오세요.</p><button class="plain" data-act="backup">'+year+'년 백업 내려받기</button><label class="plain">백업 불러오기<input type="file" id="restore" accept=".json,application/json"></label></details>'
+}
+const rings=['가장 소중한 것','가까이 두고 싶은 것','그다음으로 좋아하는 것','멀리 두고 싶은 것'];
+const scenes=['배움과 성장','마음과 신념','관계','재산과 부','시간관리','일과 업적','건강','즐거움과 취미'];
+const prompts=['무엇을 배우며 달라졌나요?','어떤 믿음으로 마음을 지켜왔나요?','누구와 어떤 시간을 쌓았나요?','무엇을 마련해 어떻게 썼나요?','무엇에 기꺼이 시간을 내주었나요?','어떤 일을 해냈고 무엇을 남겼나요?','몸과 마음을 어떻게 돌봤나요?','어떤 순간이 가장 즐거웠나요?'];
+function content(id,n){
+ if(['review','areas','plan','statement'].includes(id))return annualContent(id,n);
+ if(id==='direction'){
+ if(!n)return panel('내가 힘이 되고 싶은 사람',field('who','누구를 떠올렸나요?','한 사람이나 집단을 떠올려 보세요.')+field('give','그 사람에게 무엇을 전하고 싶나요?')+field('purpose','나의 목적을 한 문장으로','나는 …에게 …을 전하는 사람이고 싶다.'));
+ if(n===1)return panel('내가 좋아하는 세계',spiralView(),'가장 좋아하는 대상은 중심 가까이에, 덜 좋아하는 대상은 바깥쪽에 놓으세요. 싫어하는 대상은 경계 밖에 둘 수 있어요.')+panel('그 안에서 찾은 가치',field('likeValue','좋아하는 것들에서 발견한 가치는?','여러 가치는 쉼표로 구분해요.')+field('dislikeValue','멀리 두고 싶은 것은 나의 어떤 가치를 해치나요?','여러 가치는 쉼표로 구분해요.'));
+ return panel('내가 존경하는 사람',toggle('person',['첫 번째','두 번째','세 번째'],person)+field('person'+person,'누구인가요?','이름 또는 나와의 관계',true)+field('why'+person,'어떤 말이나 행동이 기억에 남나요?')+field('pv'+person,'그 모습에서 찾은 가치는?','예를 들면 배려, 성실',true),'가까이에서 만난 사람도 좋아요.')
+ }
+ if(id==='values'){
+ if(n)return panel('우선 가치　'+counts('prior'),data.interest.length?chipbox('prior',data.interest):'<a class="btn" href="#values/0">관심 있는 단어 고르기　→</a>','앞에서 표시한 단어 중 특히 소중한 아홉 가지를 골라요.');
+ return panel('마음이 가는 단어',Object.entries(GROUPS).map(([g,vs])=>'<h3 class="chiptitle">'+g+'</h3>'+chipbox('interest',vs)).join('')+'<h3 class="chiptitle">내가 더한 단어　'+data.custom.length+' / 8</h3>'+chipbox('interest',data.custom)+addbox('custom'),'좋아하는 단어를 가볍게 눌러 보세요. 한 번 더 누르면 선택이 풀려요.')
+ }
+ if(id==='core'){
+ if(n===0){
+   const terms=keys=>[...new Set(keys.flatMap(k=>f(k).split(/[,，、;·\n]+/).map(v=>v.trim()).filter(Boolean)))];
+   const sets=[
+     ['좋아하는 세계',terms(['likeValue','dislikeValue']),'direction/1'],
+     ['가치 목록의 우선 9개',data.prior,'values/1'],
+     ['존경하는 사람',terms(['pv0','pv1','pv2']),'direction/2']
+   ];
+   const seen=new Set(sets.flatMap(x=>x[1]));
+   const other=[...new Set([...data.extra,...data.six])].filter(v=>!seen.has(v));
+   const choices=sets.map(([title,items,link])=>'<div class="sourcegroup"><h3>'+title+'</h3>'+(items.length?chipbox('six',items):'<a href="#'+link+'">가치 찾으러 가기　↗</a>')+'</div>').join('');
+   return panel('남기고 싶은 여섯 가지　'+counts('six'),'<div class="sources">'+choices+'</div><h3 class="chiptitle">내 표현 더하기</h3>'+chipbox('six',other)+addbox('extra'),'세 곳에서 찾은 가치를 비교하고, 남길 단어를 눌러요.');
+ }
+ return panel('나의 핵심가치　'+counts('three'),(data.six.length?chipbox('three',data.six):'<a class="btn" href="#core/0">후보 고르기　→</a>')+data.three.map(v=>field('meaning:'+v,v+'  ·  내 삶에서 어떤 뜻인가요?')).join(''),'끝까지 지키고 싶은 세 가지를 고르세요.')
+ }
+ if(id==='dreams'){
+ if(!n)return panel(year+'년 12월의 나',field('vision','어떤 하루를 보내고 싶나요?'))+panel('올해의 버킷리스트',toggle('bucket',['버킷 01','버킷 02','버킷 03'],bucket)+field('goal'+bucket,'꼭 해보고 싶은 일은?','하고 싶은 일 한 가지')+field('due'+bucket,'언제까지 어떤 모습이면 이뤘다고 느낄까요?'));
+ return panel('더 먼 미래',toggle('era',['3년 이내','5년 이내','10년 이내','언젠가'],era)+field('vision'+era,'어떤 삶을 살고 싶나요?')+field('plan'+era,'무엇을 언제까지 이루고 싶나요?'),'오늘을 기준으로 떠올려 보세요.')
+ }
+ if(!n)return panel('미래의 내가 쓴 책',field('book','자서전 제목','나의 이야기에 제목을 붙인다면',true)+field('tagline','그때의 나를 표현하는 한마디')+field('author','지은이','이름 또는 필명',true));
+ if(n===1)return panel('내가 살아온 장면들',toggle('story',scenes,story)+field('scene'+story,prompts[story],'원하는 삶을 살았다고 상상하며 써보세요.'));
+ return panel('다시 '+year+'년으로',field('revise','이 삶에 가까워지려면 어떤 목표를 바꾸고 싶나요?')+'<p><a href="#dreams/0">올해의 버킷리스트 다시 보기　↗</a></p>')
+}
+function addbox(k){return '<div class="inline" style="margin-top:12px"><input id="newword" aria-label="내 가치 단어" maxlength="30" placeholder="내 가치 단어"><button class="plain" data-act="add" data-key="'+k+'">추가</button></div>'}
+function render(){const [c,n]=route();
+ $('#sidebar').innerHTML='<span class="micro">ANNUAL JOURNAL</span><div class="sideyear">'+year+'<small>나의 기록장</small></div><nav><a href="#home" '+(!c?'aria-current="page"':'')+'>✦　한눈에 보기</a>'+chapters.map((ch,i)=>'<a href="#'+ch[0]+'/0" '+(ch===c?'aria-current="page"':'')+'><span>0'+(i+1)+'</span>'+ch[2]+'</a>').join('')+'</nav><div class="refnote"><span class="micro">WORKBOOK</span><br><a href="#calendar">3개년 달력　↗</a></div>';
+ app.classList.toggle('homeview',!c);document.body.classList.toggle('print-statement',c?.[0]==='statement'&&n===1);if(!c){app.innerHTML=location.hash==='#calendar'?calendarView():home();return}data.last=c[0]+'/'+n;const idx=chapters.indexOf(c),next=({'direction/1':'values/0','values/1':'direction/2','direction/2':'core/0'})[c[0]+'/'+n]||(n<c[4].length-1?c[0]+'/'+(n+1):idx<chapters.length-1?chapters[idx+1][0]+'/0':'home');
+ app.innerHTML='<div class="backrow"><a href="#home">← 한눈에 보기</a><span class="num">CHAPTER　0'+(idx+1)+' / 09</span></div><div class="bookhead"><h1>'+c[2]+'</h1><p>'+c[3]+'</p></div><nav class="tabs" aria-label="기록 단계">'+c[4].map((t,i)=>'<button class="'+(i===n?'active':'')+'" data-hash="'+c[0]+'/'+i+'">'+t+'</button>').join('')+'</nav>'+content(c[0],n)+'<div class="footnav"><a class="btn" href="#home">목차</a><a class="btn" href="#'+next+'">'+(next==='home'?'나의 기록 보기':'다음 단계')+'　→</a></div>'
+ updateTotals();
+}
+function switchWord(k,v){const arr=data[k],max={prior:9,six:6,three:3}[k];if(arr.includes(v)){data[k]=arr.filter(w=>w!==v);if(k==='interest')data.prior=data.prior.filter(w=>w!==v);if(k==='six')data.three=data.three.filter(w=>w!==v)}else{if(max&&arr.length>=max){notice(max+'개까지 고를 수 있어요. 다른 단어를 먼저 해제해 주세요.');return}arr.push(v)}persist();render()}
+app.addEventListener('input',e=>{if(e.target.dataset.field){data.fields[e.target.dataset.field]=e.target.value;persist();updateTotals();if(e.target.dataset.field==='point.'+selectedPoint+'.name'&&$('#point-select'))$('#point-select').selectedOptions[0].textContent=(selectedPoint+1)+'. '+(e.target.value||'새 대상')}});
+app.addEventListener('click',e=>{if(annualClick(e))return;const t=e.target.closest('[data-act],[data-list],[data-hash]');if(!t)return;const d=t.dataset;
+ if(d.hash){location.hash=d.hash;return}if(d.list){switchWord(d.list,d.word);return}
+ if(d.act==='backup'){const u=URL.createObjectURL(new Blob([JSON.stringify({format:'orbit-annual-v1',year,data},null,2)],{type:'application/json'}));const a=document.createElement('a');a.href=u;a.download='LIFE-PLANNER-'+year+'.json';a.click();setTimeout(()=>URL.revokeObjectURL(u),1000);return}
+ if(d.act==='add'){const v=$('#newword').value.trim();if(!v)return;const k=d.key;if(k==='custom'&&(data.custom.length>=8||Object.values(GROUPS).flat().includes(v))){notice('이미 목록에 있거나 추가 가능한 여덟 칸이 찼어요.');return}if(!data[k].includes(v))data[k].push(v);if(k==='custom'&&!data.interest.includes(v))data.interest.push(v);if(k==='extra'&&data.six.length<6&&!data.six.includes(v))data.six.push(v);persist();render();return}
+ const i=Number(d.index);if(d.act==='reviewArea')selectedArea=i;if(d.act==='calYear')calendarOffset=i-1;if(d.act==='ring')ring=i;if(d.act==='bucket')bucket=i;if(d.act==='person')person=i;if(d.act==='era')era=i;if(d.act==='story')story=i;render()
+});
+app.addEventListener('keydown',e=>{if(e.target.matches('.orb [role=button]')&&['Enter',' '].includes(e.key)){e.preventDefault();e.target.dispatchEvent(new MouseEvent('click',{bubbles:true}))}if(e.target.id==='newword'&&e.key==='Enter')app.querySelector('[data-act=add]').click()});
+app.addEventListener('change',async e=>{if(e.target.id==='point-select'){selectedPoint=Number(e.target.value);render();return}if(e.target.id!=='restore'||!e.target.files[0])return;try{const x=JSON.parse(await e.target.files[0].text());const target=x.format==='orbit2027'?defaultYear:x.year;if(!['orbit2027','orbit-annual-v1'].includes(x.format)||!yearOK(target)||!valid(x.data))throw Error();if(!confirm(target+'년 기록을 이 백업 파일의 내용으로 바꿀까요?'))return;activate(target,x.data)}catch{notice('이 플래너에서 내보낸 백업 파일을 골라 주세요.')}finally{e.target.value=''}});
+$('#years').addEventListener('change',e=>{
+  if(e.target.value!=='new'){activate(Number(e.target.value));return}
+  e.target.value=year;$('#newyear').value=Math.min(year+1,9999);$('#year-dialog').showModal();$('#newyear').select()
+});
+$('#cancel-year').onclick=()=>$('#year-dialog').close();
+$('#year-form').onsubmit=e=>{e.preventDefault();const y=Number($('#newyear').value);if(yearOK(y)){$('#year-dialog').close();activate(y)}};
+window.addEventListener('storage',e=>{if(e.key===yearKey(year)&&e.newValue){try{const updated=JSON.parse(e.newValue);if(valid(updated)){data=updated;render()}}catch{}}});
+window.addEventListener('hashchange',()=>{render();if(route()[0])persist();window.scrollTo(0,0)});
+refreshYears();render()
+
+</script></body></html>
