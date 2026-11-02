@@ -35,6 +35,8 @@ body{font-weight:400}.brand,.hero h1,.bookhead h1,.sideyear,.year,.declaration h
 .spiral-stage{width:min(100%,790px);margin:10px auto 0}.spiral-stage #spiral-map{width:100%;height:auto;display:block;touch-action:manipulation}.spoke{fill:none;stroke:#a69eac;stroke-width:.48}.axis-label{cursor:pointer}.axis-label rect{fill:#fffafc;stroke:#c8b9ce;stroke-width:.45}.axis-label:focus rect,.axis-label:hover rect{fill:#e9ddef;stroke:#6c547d}.axis-label text{font-size:5.55px!important;font-weight:600;fill:#4a3b52!important}.point-index{font-size:4.1px!important}.point-name{font-size:5.1px!important;fill:#493851!important;paint-order:stroke;stroke:#fff;stroke-width:1.45;stroke-linejoin:round;font-weight:600}.point.selected .point-name{fill:#493851!important}.point-editor{border-top:1px solid #e8e1eb;padding:4px 0 10px}.maptoolbar,.ratings{display:flex;flex-wrap:wrap;gap:6px}.maptoolbar button,.ratings button{font-size:14px;background:#fff;border:1px solid #d7cedc;border-radius:9px;padding:8px 12px}.maptoolbar [aria-pressed=true],.ratings [aria-pressed=true]{background:#e8dfef;color:#392c42;border-color:#967da7}.mapguide{margin:10px 0!important}.life-map{position:relative;width:min(100%,690px);aspect-ratio:360/250;margin:4px auto 16px;border-radius:16px;background:linear-gradient(140deg,#f5f2f8,#f9f6f1)}.life-map svg{width:100%;height:100%;display:block}.life-node{position:absolute;transform:translate(-50%,-50%);width:16.7%;height:16%;border:1px solid #d5c9dc;border-radius:12px;background:#fffdfd;color:#44394e;display:grid;align-content:center;gap:1px}.life-node.picked{background:#eee3f6;border:2px solid #8b729b}.life-node b{font-size:clamp(13px,2vw,19px)}.life-node small{font-size:clamp(10px,1.4vw,13px)}.ratings{border:0;padding:0;margin:14px 0}.ratings legend{margin-bottom:8px;font-weight:600}.ratings button{min-width:32px;padding:7px}.recap{background:#f1f3f8;padding:12px 16px;border-radius:12px}.edge-row{padding:9px 0;border-top:1px solid #e4dfe9}.edge-row summary{cursor:pointer}.edge-row b{font-size:12px;padding:3px 7px;border-radius:6px}.plus{background:#e8f0fb;color:#376d9c}.minus{background:#fbe8ec;color:#963d51}.jumpstage{margin-top:18px}
 @media(max-width:600px){.editor:has(.spiral-stage),.editor:has(.life-map){padding-inline:10px}.axis-label text{font-size:6.9px!important}.point-name{font-size:6.6px!important}.life-node{border-radius:8px;min-height:38px}.ratings button{min-height:39px}.maptoolbar button{padding:8px;font-size:13px}}
 .carry-link{display:flex;gap:8px;align-items:center;flex-wrap:wrap;background:#f0f4f8;border-radius:9px;margin:8px 0;padding:8px 12px;font-size:14px}.field:has([data-field$=".good"])>span{color:#376d9c}.field:has([data-field$=".hard"])>span{color:#984558}
+@media(max-width:600px){.point-editor button,.maptoolbar button,.chips button,.controls button,.life-node,.ratings button,.tabs button{min-height:44px}.word-group .chips{gap:6px}}
+.word-group [hidden],.word-group[hidden]{display:none!important}
 
 </style></head>
 <body><header><a href="#home" class="brand"><i>✦</i> LIFE PLANNER</a><label class="year-select">기록 연도 <select id="years" aria-label="기록 연도 선택"></select></label></header>
@@ -193,11 +195,11 @@ function spiralView(){
    const a=i*angleStep-Math.PI/2,[x,y]=polar(a,114),[lx,ly]=polar(a+.13,128);
    axes+='<path class="spoke" d="M150 150L'+x+' '+y+'"/><g class="axis-label" data-axis-edit="'+i+'" tabindex="0" role="button" aria-label="'+E(axisLabel(i))+' 분류명 편집" transform="translate('+lx+' '+ly+')"><rect x="-18" y="-6" width="36" height="12" rx="5"/><text text-anchor="middle" y="2">'+E(shortLabel(axisLabel(i),6))+'</text><title>'+E(axisLabel(i))+'</title></g>';
  }
- const markers=Array.from({length:count},(_,i)=>{const [x,y]=pointPos(i),name=f('point.'+i+'.name'),left=x>230;return '<g transform="translate('+x+' '+y+')" class="point '+(i===selectedPoint?'selected':'')+'" data-point="'+i+'"><circle r="4.4"/><text class="point-index" y="1.6">'+(i+1)+'</text>'+(name?'<text class="point-name" x="'+(left?-6:6)+'" y="1.9" style="text-anchor:'+(left?'end':'start')+'">'+E(shortLabel(name,12))+'</text>':'')+'</g>'}).join('');
+ const markers=Array.from({length:count},(_,i)=>{const [x,y]=pointPos(i),name=f('point.'+i+'.name'),left=x>230;return '<g transform="translate('+x+' '+y+')" class="point '+(i===selectedPoint?'selected':'')+'" data-point="'+i+'"><circle r="4.4"/><text class="point-index" y="1.6">'+(i+1)+'</text>'+'<text class="point-name" x="'+(left?-6:6)+'" y="1.9" style="text-anchor:'+(left?'end':'start')+'">'+E(shortLabel(name,12))+'</text></g>'}).join('');
  const options=Array.from({length:count},(_,i)=>'<option value="'+i+'" '+(i===selectedPoint?'selected':'')+'>'+(i+1)+'. '+E(f('point.'+i+'.name')||'새 대상')+'</option>').join('');
  const axisOptions=defaultAxes.map((_,i)=>'<option value="'+i+'" '+(i===sector?'selected':'')+'>'+E(axisLabel(i))+'</option>').join('');
  const previous=[0,1,2,3].filter(i=>f('ring'+i));
- return '<div class="spiral-stage"><svg id="spiral-map" viewBox="0 0 300 300" aria-label="여덟 개 분류와 선호 거리 나선"><rect width="300" height="300" rx="7" fill="#fcf8f5"/><circle cx="150" cy="150" r="112" fill="#f5eff7" stroke="#b9a9bd" stroke-width=".5" stroke-dasharray="2 2"/><path d="'+line+'" fill="none" stroke="#a98eb6" stroke-width=".8"/>'+axes+markers+'</svg><p class="sub">분류 이름을 누르면 바꿀 수 있어요. 빈 곳을 누르면 선택한 대상이 그 위치로 이동해요.</p></div><div class="point-editor">'+grid('<label class="field"><span>편집할 대상</span><select id="point-select">'+options+'</select></label>',field(k+'name','대상 이름','',true),'<label class="field"><span>현재 분류</span><select id="point-sector">'+axisOptions+'</select></label>')+(f(k+'axis')?'<p class="sub">이전에 적은 분류 · '+E(f(k+'axis'))+'</p>':'')+'<div class="controls"><button data-place="center">중심 가까이</button><button data-place="edge">가장자리</button><button data-place="outside">경계 밖</button><button data-more="point">＋ 대상 추가</button></div><small>'+E(axisLabel(sector))+' · '+(currentRadius()>112?'경계 밖':'나선 안')+'</small></div>'+(previous.length?'<details class="fold"><summary>기존에 적은 답</summary>'+previous.map(i=>field('ring'+i,rings[i])).join('')+'</details>':'');
+ return '<div class="spiral-stage"><svg id="spiral-map" viewBox="0 0 300 300" aria-label="여덟 개 분류와 선호 거리 나선"><rect width="300" height="300" rx="7" fill="#fcf8f5"/><circle cx="150" cy="150" r="112" fill="#f5eff7" stroke="#b9a9bd" stroke-width=".5" stroke-dasharray="2 2"/><path d="'+line+'" fill="none" stroke="#a98eb6" stroke-width=".8"/>'+axes+markers+'</svg><p class="sub">분류 이름을 누르면 바꿀 수 있어요. 빈 곳을 누르면 선택한 대상이 그 위치로 이동해요.</p></div><div class="point-editor">'+grid('<label class="field"><span>편집할 대상</span><select id="point-select" aria-label="편집할 대상">'+options+'</select></label>',field(k+'name','대상 이름','',true),'<label class="field"><span>현재 분류</span><select id="point-sector" aria-label="현재 분류">'+axisOptions+'</select></label>')+(f(k+'axis')?'<p class="sub">이전에 적은 분류 · '+E(f(k+'axis'))+'</p>':'')+'<div class="controls"><button data-place="center">중심 가까이</button><button data-place="edge">가장자리</button><button data-place="outside">경계 밖</button><button data-more="point">＋ 대상 추가</button></div><small>'+E(axisLabel(sector))+' · '+(currentRadius()>112?'경계 밖':'나선 안')+'</small></div>'+(previous.length?'<details class="fold"><summary>기존에 적은 답</summary>'+previous.map(i=>field('ring'+i,rings[i])).join('')+'</details>':'');
 }
 function shortLabel(value,max){return value.length>max?value.slice(0,max-1)+'…':value}
 function placePoint(x,y){const k='point.'+selectedPoint+'.';data.fields[k+'x']=String(Math.max(9,Math.min(291,x)));data.fields[k+'y']=String(Math.max(9,Math.min(291,y)));persist();render()}
@@ -216,7 +218,7 @@ function annualClick(ev){
  const el=ev.target.closest('[data-more],[data-point],[data-place],[data-print],#spiral-map');
  if(!el)return false;
  if(el.hasAttribute('data-print')){window.print();return true}
- if(el.dataset.more){const k=el.dataset.more,n=rowCount(k);data.fields['rows.'+k]=String(n+1);if(k==='point')selectedPoint=n;persist();render();return true}
+ if(el.dataset.more){const k=el.dataset.more,n=rowCount(k);data.fields['rows.'+k]=String(n+1);if(k==='point')selectedPoint=n;persist();render();if(k==='point')app.querySelector('[data-field="point.'+n+'.name"]')?.focus();return true}
  if(el.dataset.point!==undefined){selectedPoint=Number(el.dataset.point);render();return true}
  if(el.dataset.place){const i=sectorFor(...pointPos(selectedPoint));placePoint(...sectorPos(i,{center:16,edge:103,outside:135}[el.dataset.place]));return true}
  const pt=new DOMPoint(ev.clientX,ev.clientY).matrixTransform(el.getScreenCTM().inverse());placePoint(pt.x,pt.y);return true
@@ -275,7 +277,7 @@ function activate(y,replacement){
     const next=replacement||loadYear(y);
     localStorage.setItem(yearKey(y),JSON.stringify(next));
     localStorage.setItem('orbit-active-year',String(y));
-    data=next;year=y;mapMode='기록';linkSource=activeLink=null;readable=true;saveOK=true;
+    data=next;year=y;wordQuery='';mapMode='기록';linkSource=activeLink=null;readable=true;saveOK=true;
     selectedPoint=selectedArea=calendarOffset=ring=era=story=person=bucket=0;
     refreshYears();location.hash='home';render();window.scrollTo(0,0);
     $('#save').textContent=y+'년 기록 열림';
@@ -311,7 +313,10 @@ function content(id,n){
  }
  if(id==='values'){
  if(n)return panel('우선 가치　'+counts('prior'),data.interest.length?chipbox('prior',data.interest):'<a class="btn" href="#values/0">관심 있는 단어 고르기　→</a>','앞에서 표시한 단어 중 특히 소중한 아홉 가지를 골라요.');
- return panel('마음이 가는 단어',Object.entries(GROUPS).map(([g,vs])=>'<h3 class="chiptitle">'+g+'</h3>'+chipbox('interest',vs)).join('')+'<h3 class="chiptitle">내가 더한 단어　'+data.custom.length+' / 8</h3>'+chipbox('interest',data.custom)+addbox('custom'),'좋아하는 단어를 가볍게 눌러 보세요. 한 번 더 누르면 선택이 풀려요.')
+ const search='<label class="field"><span>가치 찾기</span><input id="word-filter" type="search" placeholder="단어나 주제를 입력하세요" value="'+E(wordQuery)+'"></label><p id="word-status" role="status"></p>';
+ const groups=[...Object.entries(GROUPS),['직접 추가한 단어',data.custom]].map(([group,words])=>'<section class="word-group"><h3 class="chiptitle">'+E(group)+'</h3>'+chipbox('interest',words)+'</section>').join('');
+ return panel('마음이 가는 단어',search+groups+'<h3 class="chiptitle">내 단어 추가　'+data.custom.length+' / 8</h3>'+addbox('custom'),'원하는 단어를 찾아 누르면 선택돼요. 여러 개를 골라도 좋아요.');
+
  }
  if(id==='core'){
  if(n===0){
@@ -337,14 +342,28 @@ function content(id,n){
  return panel('다시 '+year+'년으로',field('revise','이 삶에 가까워지려면 어떤 목표를 바꾸고 싶나요?')+'<p><a href="#dreams/0">올해의 버킷리스트 다시 보기　↗</a></p>')
 }
 function addbox(k){return '<div class="inline" style="margin-top:12px"><input id="newword" aria-label="내 가치 단어" maxlength="30" placeholder="내 가치 단어"><button class="plain" data-act="add" data-key="'+k+'">추가</button></div>'}
+let wordQuery='';
+function filterValues(){
+ const input=$('#word-filter');if(!input)return;
+ const q=input.value.trim();let matches=0;
+ for(const group of app.querySelectorAll('.word-group')){
+   const topic=group.querySelector('h3').textContent.includes(q);
+   let count=0;
+   for(const chip of group.querySelectorAll('[data-word]')){
+     chip.hidden=!(topic||chip.dataset.word.includes(q));if(!chip.hidden)count++;
+   }
+   group.hidden=!count;matches+=count;
+ }
+ $('#word-status').textContent=(q?(matches?'검색 결과 '+matches+'개':'일치하는 단어가 없어요.')+'　·　':'')+'선택한 가치 '+data.interest.length+'개';
+}
 function render(){const [c,n]=route();
  $('#sidebar').innerHTML='<span class="micro">ANNUAL JOURNAL</span><div class="sideyear">'+year+'<small>나의 기록장</small></div><nav><a href="#home" '+(!c?'aria-current="page"':'')+'>✦　한눈에 보기</a>'+chapters.map((ch,i)=>'<a href="#'+ch[0]+'/0" '+(ch===c?'aria-current="page"':'')+'><span>0'+(i+1)+'</span>'+ch[2]+'</a>').join('')+'</nav><div class="refnote"><span class="micro">WORKBOOK</span><br><a href="#calendar">3개년 달력　↗</a></div>';
  app.classList.toggle('homeview',!c);document.body.classList.toggle('print-statement',c?.[0]==='statement'&&n===1);if(!c){app.innerHTML=location.hash==='#calendar'?calendarView():home();return}data.last=c[0]+'/'+n;const idx=chapters.indexOf(c),next=({'direction/1':'values/0','values/1':'direction/2','direction/2':'core/0'})[c[0]+'/'+n]||(n<c[4].length-1?c[0]+'/'+(n+1):idx<chapters.length-1?chapters[idx+1][0]+'/0':'home');
  app.innerHTML='<div class="backrow"><a href="#home">← 한눈에 보기</a><span class="num">CHAPTER　0'+(idx+1)+' / 09</span></div><div class="bookhead"><h1>'+c[2]+'</h1><p>'+c[3]+'</p></div><nav class="tabs" aria-label="기록 단계">'+c[4].map((t,i)=>'<button class="'+(i===n?'active':'')+'" data-hash="'+c[0]+'/'+i+'">'+t+'</button>').join('')+'</nav>'+content(c[0],n)+'<div class="footnav"><a class="btn" href="#home">목차</a><a class="btn" href="#'+next+'">'+(next==='home'?'나의 기록 보기':'다음 단계')+'　→</a></div>'
- updateTotals();
+ updateTotals();filterValues();
 }
 function switchWord(k,v){const arr=data[k],max={prior:9,six:6,three:3}[k];if(arr.includes(v)){data[k]=arr.filter(w=>w!==v);if(k==='interest')data.prior=data.prior.filter(w=>w!==v);if(k==='six')data.three=data.three.filter(w=>w!==v)}else{if(max&&arr.length>=max){notice(max+'개까지 고를 수 있어요. 다른 단어를 먼저 해제해 주세요.');return}arr.push(v)}persist();render()}
-app.addEventListener('input',e=>{if(e.target.dataset.field){data.fields[e.target.dataset.field]=e.target.value;persist();updateTotals();if(e.target.dataset.field==='point.'+selectedPoint+'.name'&&$('#point-select')){$('#point-select').selectedOptions[0].textContent=(selectedPoint+1)+'. '+(e.target.value||'새 대상');const svg=$('#spiral-map');const tmp=document.createElement('div');tmp.innerHTML=spiralView();svg.replaceWith(tmp.querySelector('svg'))}}});
+app.addEventListener('input',e=>{if(e.target.id==='word-filter'){wordQuery=e.target.value;filterValues();return}if(e.target.dataset.field){data.fields[e.target.dataset.field]=e.target.value;persist();updateTotals();if(e.target.dataset.field==='point.'+selectedPoint+'.name'&&$('#point-select')){$('#point-select').selectedOptions[0].textContent=(selectedPoint+1)+'. '+(e.target.value||'새 대상');const name=app.querySelector('.selected .point-name');if(name)name.textContent=shortLabel(e.target.value,12)}}});
 app.addEventListener('click',e=>{if(annualClick(e))return;const t=e.target.closest('[data-act],[data-list],[data-hash]');if(!t)return;const d=t.dataset;
  if(d.hash){location.hash=d.hash;return}if(d.list){switchWord(d.list,d.word);return}
  if(d.act==='backup'){const u=URL.createObjectURL(new Blob([JSON.stringify({format:'orbit-annual-v1',year,data},null,2)],{type:'application/json'}));const a=document.createElement('a');a.href=u;a.download='LIFE-PLANNER-'+year+'.json';a.click();setTimeout(()=>URL.revokeObjectURL(u),1000);return}
