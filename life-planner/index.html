@@ -32,6 +32,9 @@ body{font-weight:400}.brand,.hero h1,.bookhead h1,.sideyear,.year,.declaration h
 .quicklinks{display:flex;gap:12px;flex-wrap:wrap;margin:15px 0}.quicklinks a{font-size:14px;color:#69547d;padding:6px 10px;background:#eee8f3;border-radius:8px}.form-grid,.spiral-layout{display:grid;gap:10px 18px;grid-template-columns:repeat(auto-fit,minmax(min(100%,235px),1fr))}.form-grid>*{min-width:0}.fold,.record{padding:14px 0;border-top:1px solid #e8e2e9}.fold summary{cursor:pointer;font-weight:500}.calculation{background:#eef2f8;padding:11px 14px;border-radius:9px}.record+button{margin-top:9px}.calgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(195px,1fr));gap:12px}.calgrid section,.declaration{background:white;border:1px solid #e6dfea;border-radius:16px;padding:20px}.month{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;text-align:center;font-size:12px}.month b{color:#816d85}.declaration{padding:clamp(20px,4vw,42px);line-height:1.65}.declaration section{border-top:1px solid #e8e3ed;padding-top:14px}.declaration p{white-space:pre-wrap}.declaration small{color:#67566e}.declaration h3{margin:5px 0}.declaration h2{font-size:clamp(25px,4vw,39px)}#spiral-map{width:min(100%,380px);display:block;cursor:crosshair}#spiral-map text{font-size:10px;fill:#605262}.point circle{fill:#d9c9dd;stroke:#816d87}.point.selected circle{fill:#685078}.point.selected text{fill:white!important}.point text{text-anchor:middle;pointer-events:none}.point{cursor:pointer}.year-select select{font-family:LifeDream,sans-serif}
 @media(min-width:880px){#sidebar{max-height:calc(100vh - 42px);overflow:auto}#sidebar nav a{padding:7px 10px}}
 @media print{@page{size:A4;margin:15mm}body.print-statement{background:white}body.print-statement header,body.print-statement footer,body.print-statement #sidebar,body.print-statement main>:not(.declaration),body.print-statement #toast{display:none!important}body.print-statement .workspace,body.print-statement main{display:block;width:100%;padding:0;margin:0}body.print-statement .declaration{box-shadow:none;border:0;padding:0}body.print-statement .declaration section{break-inside:avoid}}
+.spiral-stage{width:min(100%,790px);margin:10px auto 0}.spiral-stage #spiral-map{width:100%;height:auto;display:block;touch-action:manipulation}.spoke{fill:none;stroke:#a69eac;stroke-width:.48}.axis-label{cursor:pointer}.axis-label rect{fill:#fffafc;stroke:#c8b9ce;stroke-width:.45}.axis-label:focus rect,.axis-label:hover rect{fill:#e9ddef;stroke:#6c547d}.axis-label text{font-size:5.55px!important;font-weight:600;fill:#4a3b52!important}.point-index{font-size:4.1px!important}.point-name{font-size:5.1px!important;fill:#493851!important;paint-order:stroke;stroke:#fff;stroke-width:1.45;stroke-linejoin:round;font-weight:600}.point.selected .point-name{fill:#493851!important}.point-editor{border-top:1px solid #e8e1eb;padding:4px 0 10px}.maptoolbar,.ratings{display:flex;flex-wrap:wrap;gap:6px}.maptoolbar button,.ratings button{font-size:14px;background:#fff;border:1px solid #d7cedc;border-radius:9px;padding:8px 12px}.maptoolbar [aria-pressed=true],.ratings [aria-pressed=true]{background:#e8dfef;color:#392c42;border-color:#967da7}.mapguide{margin:10px 0!important}.life-map{position:relative;width:min(100%,690px);aspect-ratio:360/250;margin:4px auto 16px;border-radius:16px;background:linear-gradient(140deg,#f5f2f8,#f9f6f1)}.life-map svg{width:100%;height:100%;display:block}.life-node{position:absolute;transform:translate(-50%,-50%);width:16.7%;height:16%;border:1px solid #d5c9dc;border-radius:12px;background:#fffdfd;color:#44394e;display:grid;align-content:center;gap:1px}.life-node.picked{background:#eee3f6;border:2px solid #8b729b}.life-node b{font-size:clamp(13px,2vw,19px)}.life-node small{font-size:clamp(10px,1.4vw,13px)}.ratings{border:0;padding:0;margin:14px 0}.ratings legend{margin-bottom:8px;font-weight:600}.ratings button{min-width:32px;padding:7px}.recap{background:#f1f3f8;padding:12px 16px;border-radius:12px}.edge-row{padding:9px 0;border-top:1px solid #e4dfe9}.edge-row summary{cursor:pointer}.edge-row b{font-size:12px;padding:3px 7px;border-radius:6px}.plus{background:#e8f0fb;color:#376d9c}.minus{background:#fbe8ec;color:#963d51}.jumpstage{margin-top:18px}
+@media(max-width:600px){.editor:has(.spiral-stage),.editor:has(.life-map){padding-inline:10px}.axis-label text{font-size:6.9px!important}.point-name{font-size:6.6px!important}.life-node{border-radius:8px;min-height:38px}.ratings button{min-height:39px}.maptoolbar button{padding:8px;font-size:13px}}
+.carry-link{display:flex;gap:8px;align-items:center;flex-wrap:wrap;background:#f0f4f8;border-radius:9px;margin:8px 0;padding:8px 12px;font-size:14px}.field:has([data-field$=".good"])>span{color:#376d9c}.field:has([data-field$=".hard"])>span{color:#984558}
 
 </style></head>
 <body><header><a href="#home" class="brand"><i>✦</i> LIFE PLANNER</a><label class="year-select">기록 연도 <select id="years" aria-label="기록 연도 선택"></select></label></header>
@@ -57,13 +60,73 @@ function repeated(key,title,make){
  const count=rowCount(key);
  return panel(title,Array.from({length:count},(_,i)=>'<div class="record"><small class="num">기록 '+(i+1)+'</small>'+make(key+'.'+i+'.',i)+'</div>').join('')+'<button class="plain" data-more="'+key+'">＋ 항목 추가</button>');
 }
+let mapMode='기록',linkSource=null,activeLink=null;
+const nodePositions=[[62,37],[180,31],[298,37],[42,123],[318,123],[62,209],[180,215],[298,209]];
+const graphColors={도움:'#376d9c',방해:'#ac4d60'};
+function reviewLinks(stage){
+ return Array.from({length:rowCount('links')},(_,i)=>'links.'+i+'.').filter(k=>f(k+'deleted')!=='1'&&(f(k+'stage')||'review')===stage&&['from','to','why','change','effect'].some(p=>f(k+p)));
+}
+function arrowPath(a,b){
+ const [x,y]=nodePositions[a],[u,v]=nodePositions[b],dx=u-x,dy=v-y,len=Math.hypot(dx,dy);
+ if(!len)return '';
+ const stop=Math.min(30/Math.max(Math.abs(dx/len),.01),21/Math.max(Math.abs(dy/len),.01))+3;
+ const ox=-dy/len*12,oy=dx/len*12;
+ return 'M '+(x+dx/len*stop)+' '+(y+dy/len*stop)+' Q '+((x+u)/2+ox)+' '+((y+v)/2+oy)+' '+(u-dx/len*stop)+' '+(v-dy/len*stop);
+}
+const graphScore=(i,stage)=>f('review.'+i+'.'+(stage==='review'?'score':'targetScore'));
+function scoreText(i,stage){
+ const last=f('review.'+i+'.score'),target=graphScore(i,'sketch');
+ if(stage==='sketch')return (last===''?'–':last)+' → '+(target===''?'–':target)+'점';
+ return last===''?'미입력':last+'점';
+}
+function relationshipMap(stage){
+ const edit=mapMode==='기록';
+ const modeButtons=['기록','도움','방해'].map(m=>'<button data-map-mode="'+m+'" aria-pressed="'+(mapMode===m)+'">'+({기록:'영역 기록',도움:'＋ 도움 연결',방해:'− 방해 연결'}[m])+'</button>').join('');
+ const defs=Object.entries(graphColors).map(([kind,color],i)=>'<marker id="tip'+i+'" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="'+color+'"/></marker>').join('');
+ const edges=reviewLinks(stage).map(k=>{
+   const a=lifeAreas.indexOf(f(k+'from')),b=lifeAreas.indexOf(f(k+'to')),bad=f(k+'effect')==='방해';
+   return a<0||b<0||a===b?'':'<path d="'+arrowPath(a,b)+'" fill="none" stroke="'+graphColors[bad?'방해':'도움']+'" stroke-width="2" '+(bad?'stroke-dasharray="5 3"':'')+' marker-end="url(#tip'+Number(bad)+')"/>';
+ }).join('');
+ const nodes=nodePositions.map(([x,y],i)=>'<button class="life-node '+(i===(edit?selectedArea:linkSource)?'picked':'')+'" data-life-node="'+i+'" style="left:'+x/3.6+'%;top:'+y/2.5+'%" aria-label="'+lifeAreas[i]+' '+scoreText(i,stage)+'"><b>'+lifeAreas[i]+'</b><small data-node-score="'+i+'">'+E(scoreText(i,stage))+'</small></button>').join('');
+ const guide=edit?'영역을 눌러 점수와 기록을 편집하세요.':linkSource===null?'① 영향을 준 영역을 눌러요.':'② '+lifeAreas[linkSource]+'에서 영향을 받은 영역을 눌러요.';
+ return '<div class="maptoolbar">'+modeButtons+'</div><p class="mapguide" aria-live="polite">'+guide+'</p><div class="life-map"><svg viewBox="0 0 360 250" preserveAspectRatio="none" aria-hidden="true"><defs>'+defs+'</defs>'+edges+'</svg>'+nodes+'</div>';
+}
+function edgeRecords(stage){
+ const links=reviewLinks(stage);
+ if(!links.length)return '<p class="empty">아직 연결이 없어요.</p>';
+ return links.map(k=>'<details class="edge-row" '+(k===activeLink?'open':'')+'><summary><b class="'+(f(k+'effect')==='방해'?'minus':'plus')+'">'+E(f(k+'effect')||'영향')+'</b> '+E(f(k+'from')||'출발 미정')+' → '+E(f(k+'to')||'도착 미정')+'</summary>'+grid(selectBox(k+'from','출발 영역',lifeAreas),selectBox(k+'to','도착 영역',lifeAreas),selectBox(k+'effect','영향',['도움','방해']),field(k+'why','어떻게 이어지나요?'),field(k+'change','유지하거나 바꿀 행동'))+'<button class="plain" data-remove-edge="'+k+'">연결 삭제</button></details>').join('');
+}
+function scorePicker(stage){
+ const label=stage==='review'?'지난해 만족도':'올해 목표 만족도',val=graphScore(selectedArea,stage);
+ return '<fieldset class="ratings"><legend>'+label+' · 10점 만점</legend>'+Array.from({length:11},(_,i)=>'<button data-rating="'+i+'" aria-pressed="'+(val===String(i))+'">'+i+'</button>').join('')+'<button class="unrate" data-rating="">비우기</button></fieldset>';
+}
 function reviewView(n){
- const prefix='review.'+selectedArea+'.',area=lifeAreas[selectedArea];
- if(n===2)return repeated('links','영역 사이의 영향',(k)=>grid(selectBox(k+'from','출발 영역',lifeAreas),selectBox(k+'to','영향을 받은 영역',lifeAreas),selectBox(k+'effect','영향의 방향',['도움','방해']),field(k+'why','어떻게 이어졌나요?'),field(k+'change','어디를 바꾸면 흐름이 달라질까요?')));
- const pick=toggle('reviewArea',lifeAreas,selectedArea);
- if(!n)return panel((year-1)+'년 회고',pick+'<h3>'+area+'</h3>'+grid(field(prefix+'good','잘한 일과 그 영향'),field(prefix+'hard','아쉬웠던 일과 그 영향'),numberBox(prefix+'score','나의 만족도 (0~10점)',0,10,1)),areaNotes[selectedArea]+'을 떠올려요. 점수는 비워도 돼요.');
- const scene=f('scene'+selectedArea);
- return panel(year+'년 스케치',pick+'<h3>'+area+'</h3>'+(scene?'<p>미래 자서전에 쓴 장면 · '+E(scene)+'</p>':'')+grid(field(prefix+'vision','이 영역에서 원하는 변화'),field(prefix+'new','작년과 다르게 시도할 방법'),field(prefix+'cycle','끊고 싶은 악순환 또는 이어갈 선순환')));
+ const stage=n===1?'sketch':'review',prefix='review.'+selectedArea+'.',area=lifeAreas[selectedArea];
+ if(n===2)return panel('지난해와 새해의 연결','<h3>지난해 회고</h3>'+edgeRecords('review')+'<h3>새해 스케치</h3>'+edgeRecords('sketch'));
+ const overview=panel(n?year+'년의 변화':(year-1)+'년의 만족도',relationshipMap(stage)+edgeRecords(stage),n?'각 영역에 올해 바라는 점수를 적고, 바꾸고 싶은 흐름을 연결해요.':'여덟 영역의 점수를 함께 보고, 어떤 영역이 다른 영역에 영향을 주었는지 화살표로 남겨요.');
+ const before='<div class="recap"><b>지난해 '+area+' · '+scoreText(selectedArea,'review')+'</b><p>잘한 점　'+E(f(prefix+'good')||'미작성')+'</p><p>아쉬운 점　'+E(f(prefix+'hard')||'미작성')+'</p></div>';
+ const priorEdges=reviewLinks('review').filter(k=>f(k+'from')===area||f(k+'to')===area);
+ const prior=priorEdges.map(k=>'<div class="carry-link"><span>'+E(f(k+'from'))+' → '+E(f(k+'to'))+' · '+E(f(k+'effect'))+'　'+E(f(k+'why'))+'</span><button class="plain" data-carry="'+k+'">'+(f(k+'effect')==='방해'?'새해에는 도움으로 바꾸기':'새해에도 이어가기')+'</button></div>').join('');
+ return overview+panel(area+' 기록',scorePicker(stage)+(n?before+prior+(f('scene'+selectedArea)?'<p>미래 자서전 · '+E(f('scene'+selectedArea))+'</p>':'')+grid(field(prefix+'vision','원하는 변화'),field(prefix+'new','작년과 다르게 시도할 방법'),field(prefix+'cycle','끊거나 이어갈 흐름')):grid(field(prefix+'good','잘한 일과 그 영향'),field(prefix+'hard','아쉬웠던 일과 그 영향')))+'<a class="btn jumpstage" href="#review/'+(n?0:1)+'">'+area+' · '+(n?'지난해 회고 보기':'새해 스케치 이어 쓰기')+' →</a>');
+}
+function mapClick(el){
+ const d=el.dataset,stage=route()[1]===1?'sketch':'review';
+ if('mapMode' in d){mapMode=d.mapMode;linkSource=null;activeLink=null}
+ else if('rating' in d){data.fields['review.'+selectedArea+'.'+(stage==='review'?'score':'targetScore')]=d.rating;persist()}
+ else if('removeEdge' in d){data.fields[d.removeEdge+'deleted']='1';activeLink=null;persist()}
+ else{
+   const i=Number(d.lifeNode);
+   if(mapMode==='기록'){selectedArea=i;render();app.querySelector('.ratings')?.scrollIntoView({block:'center'});return}
+   else if(linkSource===null){linkSource=i}
+   else if(linkSource===i){linkSource=null}
+   else{
+     const from=lifeAreas[linkSource],to=lifeAreas[i],existing=reviewLinks(stage).find(k=>f(k+'from')===from&&f(k+'to')===to&&f(k+'effect')===mapMode);
+     if(!existing){const index=rowCount('links'),k='links.'+index+'.';Object.assign(data.fields,{['rows.links']:String(index+1),[k+'stage']:stage,[k+'from']:from,[k+'to']:to,[k+'effect']:mapMode});persist();notice(from+' → '+to+' 연결됨')}
+     else notice('이미 있는 연결이에요.');
+     linkSource=null;
+   }
+ }
+ render();
 }
 function areaView(n){
  const intro=(title,labels,key)=>panel(title,inputGroup(key,labels));
@@ -108,31 +171,54 @@ function calendarView(){
  const months=Array.from({length:12},(_,m)=>{const first=(new Date(y,m,1).getDay()+6)%7,end=new Date(y,m+1,0).getDate();return '<section><h3>'+(m+1)+'월</h3><div class="month">'+['월','화','수','목','금','토','일'].map(d=>'<b>'+d+'</b>').join('')+'<i></i>'.repeat(first)+Array.from({length:end},(_,i)=>'<span>'+(i+1)+'</span>').join('')+'</div></section>'}).join('');
  return '<a href="#home">← 한눈에 보기</a><h1>3개년 달력</h1>'+toggle('calYear',[year-1,year,year+1],calendarOffset+1)+'<div class="calgrid">'+months+'</div>'
 }
-function pointOnSpiral(t){const a=t*Math.PI*6-Math.PI/2,r=107*t;return [150+r*Math.cos(a),150+r*Math.sin(a)]}
+function pointOnSpiral(t){const a=t*Math.PI*10-Math.PI/2,r=107*t;return [150+r*Math.cos(a),150+r*Math.sin(a)]}
 function pointPos(i){
  const k='point.'+i+'.';
  if(f(k+'x')&&f(k+'y'))return [Number(f(k+'x')),Number(f(k+'y'))];
  return pointOnSpiral(Math.min(.98,.055+i*.094));
 }
+const defaultAxes=['사람','음식','음악','장소','취미','일','배움','기억'];
+function axisLabel(i){return f('axis.'+i).trim()||defaultAxes[i]}
+const angleStep=Math.PI/4;
+function polar(angle,r){return [150+Math.cos(angle)*r,150+Math.sin(angle)*r]}
+function sectorFor(x,y){return Math.floor(((Math.atan2(y-150,x-150)+2.5*Math.PI)%(2*Math.PI))/angleStep)}
+function sectorPos(i,r){return polar((i+.5)*angleStep-Math.PI/2,r)}
+function currentRadius(){const [x,y]=pointPos(selectedPoint);return Math.hypot(x-150,y-150)}
 function spiralView(){
  const count=rowCount('point');selectedPoint=Math.min(selectedPoint,count-1);
- const k='point.'+selectedPoint+'.',pos=pointPos(selectedPoint);
- const line=Array.from({length:241},(_,i)=>(i?'L':'M')+pointOnSpiral(i/240).map(x=>x.toFixed(2)).join(' ')).join(' ');
- const markers=Array.from({length:count},(_,i)=>{const [x,y]=pointPos(i);return '<g transform="translate('+x+' '+y+')" class="point '+(i===selectedPoint?'selected':'')+'" data-point="'+i+'"><circle r="8"/><text y="3">'+(i+1)+'</text></g>'}).join('');
+ const k='point.'+selectedPoint+'.',pos=pointPos(selectedPoint),sector=sectorFor(...pos);
+ const line=Array.from({length:361},(_,i)=>(i?'L':'M')+pointOnSpiral(i/360).map(x=>x.toFixed(2)).join(' ')).join(' ');
+ let axes='';
+ for(let i=0;i<8;i++){
+   const a=i*angleStep-Math.PI/2,[x,y]=polar(a,114),[lx,ly]=polar(a+.13,128);
+   axes+='<path class="spoke" d="M150 150L'+x+' '+y+'"/><g class="axis-label" data-axis-edit="'+i+'" tabindex="0" role="button" aria-label="'+E(axisLabel(i))+' 분류명 편집" transform="translate('+lx+' '+ly+')"><rect x="-18" y="-6" width="36" height="12" rx="5"/><text text-anchor="middle" y="2">'+E(shortLabel(axisLabel(i),6))+'</text><title>'+E(axisLabel(i))+'</title></g>';
+ }
+ const markers=Array.from({length:count},(_,i)=>{const [x,y]=pointPos(i),name=f('point.'+i+'.name'),left=x>230;return '<g transform="translate('+x+' '+y+')" class="point '+(i===selectedPoint?'selected':'')+'" data-point="'+i+'"><circle r="4.4"/><text class="point-index" y="1.6">'+(i+1)+'</text>'+(name?'<text class="point-name" x="'+(left?-6:6)+'" y="1.9" style="text-anchor:'+(left?'end':'start')+'">'+E(shortLabel(name,12))+'</text>':'')+'</g>'}).join('');
  const options=Array.from({length:count},(_,i)=>'<option value="'+i+'" '+(i===selectedPoint?'selected':'')+'>'+(i+1)+'. '+E(f('point.'+i+'.name')||'새 대상')+'</option>').join('');
- const outside=Math.hypot(pos[0]-150,pos[1]-150)>111;
+ const axisOptions=defaultAxes.map((_,i)=>'<option value="'+i+'" '+(i===sector?'selected':'')+'>'+E(axisLabel(i))+'</option>').join('');
  const previous=[0,1,2,3].filter(i=>f('ring'+i));
- return '<div class="spiral-layout"><div><svg id="spiral-map" viewBox="0 0 300 300" aria-label="선택한 대상의 위치를 누르는 나선 지도"><rect width="300" height="300" rx="18" fill="#faf3ed"/><circle cx="150" cy="150" r="112" fill="#f2ecf8" stroke="#b9a9bd" stroke-dasharray="3 4"/><path d="'+line+'" fill="none" stroke="#a38cae" stroke-width="1.7"/><text x="15" y="23">경계 밖 · 멀리 둘 것</text>'+markers+'</svg><p class="sub">선택한 대상의 위치를 그림에서 눌러 옮길 수 있어요.</p></div><div><label class="field"><span>편집할 대상</span><select id="point-select">'+options+'</select></label>'+field(k+'name','대상 이름','',true)+field(k+'axis','직접 정한 분류','사람, 취향, 장소 등',true)+'<div class="controls"><button data-place="center">중심 가까이</button><button data-place="edge">가장자리</button><button data-place="outside">경계 밖</button></div><small>현재 위치　'+(outside?'경계 밖':'나선 안')+'</small><p><button class="plain" data-more="point">＋ 대상 추가</button></p></div></div>'+
- (previous.length?'<details class="fold"><summary>기존에 적은 답</summary>'+previous.map(i=>field('ring'+i,rings[i])).join('')+'</details>':'');
+ return '<div class="spiral-stage"><svg id="spiral-map" viewBox="0 0 300 300" aria-label="여덟 개 분류와 선호 거리 나선"><rect width="300" height="300" rx="7" fill="#fcf8f5"/><circle cx="150" cy="150" r="112" fill="#f5eff7" stroke="#b9a9bd" stroke-width=".5" stroke-dasharray="2 2"/><path d="'+line+'" fill="none" stroke="#a98eb6" stroke-width=".8"/>'+axes+markers+'</svg><p class="sub">분류 이름을 누르면 바꿀 수 있어요. 빈 곳을 누르면 선택한 대상이 그 위치로 이동해요.</p></div><div class="point-editor">'+grid('<label class="field"><span>편집할 대상</span><select id="point-select">'+options+'</select></label>',field(k+'name','대상 이름','',true),'<label class="field"><span>현재 분류</span><select id="point-sector">'+axisOptions+'</select></label>')+(f(k+'axis')?'<p class="sub">이전에 적은 분류 · '+E(f(k+'axis'))+'</p>':'')+'<div class="controls"><button data-place="center">중심 가까이</button><button data-place="edge">가장자리</button><button data-place="outside">경계 밖</button><button data-more="point">＋ 대상 추가</button></div><small>'+E(axisLabel(sector))+' · '+(currentRadius()>112?'경계 밖':'나선 안')+'</small></div>'+(previous.length?'<details class="fold"><summary>기존에 적은 답</summary>'+previous.map(i=>field('ring'+i,rings[i])).join('')+'</details>':'');
 }
+function shortLabel(value,max){return value.length>max?value.slice(0,max-1)+'…':value}
 function placePoint(x,y){const k='point.'+selectedPoint+'.';data.fields[k+'x']=String(Math.max(9,Math.min(291,x)));data.fields[k+'y']=String(Math.max(9,Math.min(291,y)));persist();render()}
 function annualClick(ev){
+ const carry=ev.target.closest('[data-carry]');
+ if(carry){
+   const old=carry.dataset.carry,from=f(old+'from'),to=f(old+'to');
+   if(!lifeAreas.includes(from)||!lifeAreas.includes(to)||from===to){notice('먼저 두 영역을 지정해 주세요.');return true}
+   let k=reviewLinks('sketch').find(k=>f(k+'from')===from&&f(k+'to')===to&&f(k+'effect')==='도움');
+   if(!k){const i=rowCount('links');k='links.'+i+'.';Object.assign(data.fields,{['rows.links']:String(i+1),[k+'stage']:'sketch',[k+'from']:from,[k+'to']:to,[k+'effect']:'도움',[k+'change']:f(old+'change')});persist()}
+   activeLink=k;render();app.querySelector('.edge-row[open]')?.scrollIntoView({block:'center'});return true
+ }
+ const control=ev.target.closest('[data-life-node],[data-map-mode],[data-rating],[data-remove-edge]');if(control){mapClick(control);return true}
+ const axis=ev.target.closest('[data-axis-edit]');
+ if(axis){const i=Number(axis.dataset.axisEdit),name=prompt('이 축에 표시할 분류 이름',axisLabel(i));if(name?.trim()){data.fields['axis.'+i]=name.trim().slice(0,40);persist();render()}return true}
  const el=ev.target.closest('[data-more],[data-point],[data-place],[data-print],#spiral-map');
  if(!el)return false;
  if(el.hasAttribute('data-print')){window.print();return true}
  if(el.dataset.more){const k=el.dataset.more,n=rowCount(k);data.fields['rows.'+k]=String(n+1);if(k==='point')selectedPoint=n;persist();render();return true}
  if(el.dataset.point!==undefined){selectedPoint=Number(el.dataset.point);render();return true}
- if(el.dataset.place){const pos={center:pointOnSpiral(.07),edge:pointOnSpiral(.96),outside:[265,75]}[el.dataset.place];placePoint(...pos);return true}
+ if(el.dataset.place){const i=sectorFor(...pointPos(selectedPoint));placePoint(...sectorPos(i,{center:16,edge:103,outside:135}[el.dataset.place]));return true}
  const pt=new DOMPoint(ev.clientX,ev.clientY).matrixTransform(el.getScreenCTM().inverse());placePoint(pt.x,pt.y);return true
 }
 
@@ -189,7 +275,7 @@ function activate(y,replacement){
     const next=replacement||loadYear(y);
     localStorage.setItem(yearKey(y),JSON.stringify(next));
     localStorage.setItem('orbit-active-year',String(y));
-    data=next;year=y;readable=true;saveOK=true;
+    data=next;year=y;mapMode='기록';linkSource=activeLink=null;readable=true;saveOK=true;
     selectedPoint=selectedArea=calendarOffset=ring=era=story=person=bucket=0;
     refreshYears();location.hash='home';render();window.scrollTo(0,0);
     $('#save').textContent=y+'년 기록 열림';
@@ -258,15 +344,15 @@ function render(){const [c,n]=route();
  updateTotals();
 }
 function switchWord(k,v){const arr=data[k],max={prior:9,six:6,three:3}[k];if(arr.includes(v)){data[k]=arr.filter(w=>w!==v);if(k==='interest')data.prior=data.prior.filter(w=>w!==v);if(k==='six')data.three=data.three.filter(w=>w!==v)}else{if(max&&arr.length>=max){notice(max+'개까지 고를 수 있어요. 다른 단어를 먼저 해제해 주세요.');return}arr.push(v)}persist();render()}
-app.addEventListener('input',e=>{if(e.target.dataset.field){data.fields[e.target.dataset.field]=e.target.value;persist();updateTotals();if(e.target.dataset.field==='point.'+selectedPoint+'.name'&&$('#point-select'))$('#point-select').selectedOptions[0].textContent=(selectedPoint+1)+'. '+(e.target.value||'새 대상')}});
+app.addEventListener('input',e=>{if(e.target.dataset.field){data.fields[e.target.dataset.field]=e.target.value;persist();updateTotals();if(e.target.dataset.field==='point.'+selectedPoint+'.name'&&$('#point-select')){$('#point-select').selectedOptions[0].textContent=(selectedPoint+1)+'. '+(e.target.value||'새 대상');const svg=$('#spiral-map');const tmp=document.createElement('div');tmp.innerHTML=spiralView();svg.replaceWith(tmp.querySelector('svg'))}}});
 app.addEventListener('click',e=>{if(annualClick(e))return;const t=e.target.closest('[data-act],[data-list],[data-hash]');if(!t)return;const d=t.dataset;
  if(d.hash){location.hash=d.hash;return}if(d.list){switchWord(d.list,d.word);return}
  if(d.act==='backup'){const u=URL.createObjectURL(new Blob([JSON.stringify({format:'orbit-annual-v1',year,data},null,2)],{type:'application/json'}));const a=document.createElement('a');a.href=u;a.download='LIFE-PLANNER-'+year+'.json';a.click();setTimeout(()=>URL.revokeObjectURL(u),1000);return}
  if(d.act==='add'){const v=$('#newword').value.trim();if(!v)return;const k=d.key;if(k==='custom'&&(data.custom.length>=8||Object.values(GROUPS).flat().includes(v))){notice('이미 목록에 있거나 추가 가능한 여덟 칸이 찼어요.');return}if(!data[k].includes(v))data[k].push(v);if(k==='custom'&&!data.interest.includes(v))data.interest.push(v);if(k==='extra'&&data.six.length<6&&!data.six.includes(v))data.six.push(v);persist();render();return}
  const i=Number(d.index);if(d.act==='reviewArea')selectedArea=i;if(d.act==='calYear')calendarOffset=i-1;if(d.act==='ring')ring=i;if(d.act==='bucket')bucket=i;if(d.act==='person')person=i;if(d.act==='era')era=i;if(d.act==='story')story=i;render()
 });
-app.addEventListener('keydown',e=>{if(e.target.matches('.orb [role=button]')&&['Enter',' '].includes(e.key)){e.preventDefault();e.target.dispatchEvent(new MouseEvent('click',{bubbles:true}))}if(e.target.id==='newword'&&e.key==='Enter')app.querySelector('[data-act=add]').click()});
-app.addEventListener('change',async e=>{if(e.target.id==='point-select'){selectedPoint=Number(e.target.value);render();return}if(e.target.id!=='restore'||!e.target.files[0])return;try{const x=JSON.parse(await e.target.files[0].text());const target=x.format==='orbit2027'?defaultYear:x.year;if(!['orbit2027','orbit-annual-v1'].includes(x.format)||!yearOK(target)||!valid(x.data))throw Error();if(!confirm(target+'년 기록을 이 백업 파일의 내용으로 바꿀까요?'))return;activate(target,x.data)}catch{notice('이 플래너에서 내보낸 백업 파일을 골라 주세요.')}finally{e.target.value=''}});
+app.addEventListener('keydown',e=>{if(e.target.matches('[data-axis-edit]')&&['Enter',' '].includes(e.key)){e.preventDefault();e.target.dispatchEvent(new MouseEvent('click',{bubbles:true}))}if(e.target.id==='newword'&&e.key==='Enter')app.querySelector('[data-act=add]').click()});
+app.addEventListener('change',async e=>{if(e.target.matches('.edge-row select')){render();return}if(e.target.id==='point-sector'){placePoint(...sectorPos(Number(e.target.value),Math.max(8,currentRadius())));return}if(e.target.id==='point-select'){selectedPoint=Number(e.target.value);render();return}if(e.target.id!=='restore'||!e.target.files[0])return;try{const x=JSON.parse(await e.target.files[0].text());const target=x.format==='orbit2027'?defaultYear:x.year;if(!['orbit2027','orbit-annual-v1'].includes(x.format)||!yearOK(target)||!valid(x.data))throw Error();if(!confirm(target+'년 기록을 이 백업 파일의 내용으로 바꿀까요?'))return;activate(target,x.data)}catch{notice('이 플래너에서 내보낸 백업 파일을 골라 주세요.')}finally{e.target.value=''}});
 $('#years').addEventListener('change',e=>{
   if(e.target.value!=='new'){activate(Number(e.target.value));return}
   e.target.value=year;$('#newyear').value=Math.min(year+1,9999);$('#year-dialog').showModal();$('#newyear').select()
@@ -274,7 +360,7 @@ $('#years').addEventListener('change',e=>{
 $('#cancel-year').onclick=()=>$('#year-dialog').close();
 $('#year-form').onsubmit=e=>{e.preventDefault();const y=Number($('#newyear').value);if(yearOK(y)){$('#year-dialog').close();activate(y)}};
 window.addEventListener('storage',e=>{if(e.key===yearKey(year)&&e.newValue){try{const updated=JSON.parse(e.newValue);if(valid(updated)){data=updated;render()}}catch{}}});
-window.addEventListener('hashchange',()=>{render();if(route()[0])persist();window.scrollTo(0,0)});
+window.addEventListener('hashchange',()=>{mapMode='기록';linkSource=activeLink=null;render();if(route()[0])persist();window.scrollTo(0,0)});
 refreshYears();render()
 
 </script></body></html>
