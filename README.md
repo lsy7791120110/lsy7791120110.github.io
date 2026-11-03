@@ -1,5 +1,12 @@
 # Soyeon Lee — public portfolio
 
+## 내 사이트 모음
+
+[내 사이트 모음 열기](https://lsy7791120110.github.io/start/)
+
+포트폴리오, LIFE PLANNER, 취업 대시보드와 수업 도구의 바로가기를 모았습니다.
+일부 도구는 기존 계정 로그인이 필요합니다.
+
 Bilingual portfolio and public CV.
 
 Live: https://lsy7791120110.github.io/
