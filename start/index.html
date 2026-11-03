@@ -1,19 +1,76 @@
 <!doctype html>
-<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#f7f4ee"><meta name="robots" content="noindex"><title>내 사이트 모음</title>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#203749">
+<meta name="robots" content="noindex">
+<meta name="description" content="이소연의 포트폴리오와 LIFE PLANNER, 자주 쓰는 작업 도구를 한곳에서 열어보세요.">
+<title>이소연의 링크 모음</title>
 <style>
 @font-face{font-family:Dream;src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-4Regular.woff');font-weight:400;font-display:swap}
 @font-face{font-family:Dream;src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-6Bold.woff');font-weight:600;font-display:swap}
-*{box-sizing:border-box}body{margin:0;background:#f7f4ee;color:#35434f;font:400 15px/1.65 Dream,system-ui,sans-serif;word-break:keep-all}main{width:min(720px,calc(100% - 36px));margin:40px auto 48px}header{padding:24px 0 22px;border-top:2px solid #758f9b;border-bottom:1px solid #c7bfb4}.eyebrow{font-size:11px;letter-spacing:.18em;color:#627b88}h1{font-size:30px;font-weight:600;letter-spacing:-.06em;margin:8px 0}header p{margin:0;color:#697078;font-size:14px}.group{margin-top:28px}h2{font-size:14px;font-weight:600;border-bottom:1px solid #cdc5ba;padding-bottom:7px}.entry{display:grid;grid-template-columns:32px 1fr 22px;gap:10px;align-items:center;padding:20px 14px;margin:10px 0;border:1px solid #d8d2c7;background:#fffdf7;border-radius:4px;color:inherit;text-decoration:none;box-shadow:0 2px 0 #e3ded5}.entry:hover{background:#eaf0f2;border-color:#9cb0b8}.entry:focus-visible{outline:3px solid #7f9ca9;outline-offset:3px}.number{font-size:13px;color:#84939b}.entry b{font-size:18px;font-weight:600;display:block}.entry small{display:block;font-size:12px;color:#727875;margin-top:2px}.arrow{color:#6d8491}.badge{display:inline-block;margin-left:6px;padding:1px 6px;font-size:10px;font-weight:400;vertical-align:middle;background:#eee6e7;color:#725b62;border-radius:3px}.secondary{margin-top:8px;font-size:12px;color:#617b89;text-align:right}.secondary a{color:inherit;padding:8px;display:inline-block}footer{margin-top:30px;padding-top:12px;border-top:1px solid #cdc5ba;font-size:12px;color:#747871}@media(max-width:450px){main{margin-top:24px}.entry{padding:17px 10px}.entry b{font-size:16px}h1{font-size:26px}}
-</style></head><body><main><header><span class="eyebrow">MY BOOKMARKS</span><h1>내 사이트 모음</h1><p>이 페이지 하나만 즐겨찾기해두세요.</p></header>
-<section class="group"><h2>자주 쓰는 사이트</h2>
-<a class="entry" href="https://lsy7791120110.github.io/life-planner/"><span class="number">01</span><span><b>LIFE PLANNER</b><small>나의 가치 · 연간 계획 · 목표 선언문</small></span><span class="arrow">↗</span></a>
-<a class="entry" href="https://lsy7791120110.github.io/"><span class="number">02</span><span><b>포트폴리오</b><small>연구 경험 · 이력서 · 활동</small></span><span class="arrow">↗</span></a>
-<div class="secondary"><a href="https://lsy7791120110.github.io/en/">영문 포트폴리오 ↗</a></div>
-<a class="entry" href="https://soyeon-job-tracker.lsy779112.chatgpt.site/"><span class="number">03</span><span><b>취업 대시보드 <span class="badge">로그인 필요</span></b><small>지원 현황과 전형 일정</small></span><span class="arrow">↗</span></a>
+:root{color-scheme:dark;--navy:#203749;--cream:#f6f2e9;--muted:#b6c3cb;--line:#526574;--ink:#253d4d}
+*{box-sizing:border-box}
+body{margin:0;background:var(--navy);color:var(--cream);font:400 14px/1.7 Dream,system-ui,sans-serif;word-break:keep-all;-webkit-font-smoothing:antialiased}
+main{width:min(580px,calc(100% - 40px));margin:0 auto;padding:64px 0 32px}
+header{text-align:center;padding:0 0 38px}
+.signature{display:inline-flex;align-items:center;gap:12px;font-size:11px;letter-spacing:.22em;color:var(--muted)}
+.signature::before,.signature::after{content:"";width:28px;height:1px;background:var(--line)}
+h1{font-size:38px;line-height:1.35;letter-spacing:-.06em;font-weight:600;margin:18px 0 14px}
+header p{margin:0;color:#d2d9dc;font-size:14px;line-height:1.9}
+.group{margin:0 0 28px}
+.group-heading{display:flex;align-items:center;gap:14px;margin:0 0 12px}
+h2{margin:0;font-size:11px;font-weight:400;letter-spacing:.05em;color:var(--muted);white-space:nowrap}
+.group-heading::after{content:"";height:1px;flex:1;background:var(--line)}
+.links{display:grid;gap:12px}
+.entry{display:grid;grid-template-columns:1fr 24px;align-items:center;gap:14px;min-height:91px;padding:20px 24px;background:var(--cream);border:1px solid var(--cream);border-radius:3px;color:var(--ink);text-decoration:none;transition:background .16s,transform .16s}
+.entry b{display:block;font-size:18px;line-height:1.5;font-weight:600;letter-spacing:-.035em}
+.entry small{display:block;margin-top:4px;color:#61707a;font-size:12px;line-height:1.65}
+.arrow{justify-self:end;font-family:system-ui,sans-serif;font-size:23px;line-height:1;color:#6d818e}
+.entry.featured{background:#dfe9ed;border-color:#dfe9ed}
+.entry.featured small{color:#4d6573}
+.portfolio{display:grid;grid-template-columns:1fr 67px;gap:8px}
+.portfolio .entry{padding-right:18px}
+.language{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;background:transparent;border:1px solid #82939f;border-radius:3px;color:var(--cream);text-decoration:none;font-size:14px;min-height:91px}
+.language small{font-size:10px;color:var(--muted)}
+.badge{display:inline-block;margin-left:8px;border:1px solid #c6cdd0;border-radius:3px;padding:1px 5px;vertical-align:middle;color:#667581;font-size:10px;font-weight:400;line-height:1.6;letter-spacing:0}
+footer{text-align:center;border-top:1px solid var(--line);padding:22px 0 0;color:var(--muted);font-size:11px;line-height:1.9}
+footer p{margin:0 0 7px}
+footer .name{color:#d2d9dc;font-size:10px;letter-spacing:.16em}
+a:focus-visible{outline:3px solid #edc8a8;outline-offset:4px}
+@media(hover:hover){.entry:hover{background:#fffaf0;transform:translateY(-2px)}.entry.featured:hover{background:#edf4f6}.language:hover{background:#314b5f}}
+@media(min-width:1000px){main{padding-top:76px}header{padding-bottom:44px}h1{font-size:42px}}
+@media(max-width:420px){main{width:calc(100% - 32px);padding-top:40px}header{padding-bottom:30px}h1{font-size:32px;margin-top:16px}header p{font-size:12px}.entry{padding:18px;min-height:88px;gap:8px}.entry b{font-size:16px}.entry small{font-size:11px}.portfolio{grid-template-columns:1fr 60px}.language{min-height:88px}.badge{font-size:9px;margin-left:5px}}
+@media(prefers-reduced-motion:reduce){.entry{transition:none}}
+</style>
+</head>
+<body>
+<main>
+<header>
+<div class="signature">SOYEON LEE</div>
+<h1>이소연의 링크 모음</h1>
+<p>포트폴리오부터 매일 쓰는 작업 도구까지.<br>필요한 페이지를 여기서 열어보세요.</p>
+</header>
+<section class="group" aria-labelledby="daily-heading">
+<div class="group-heading"><h2 id="daily-heading">소개와 기록</h2></div>
+<div class="links">
+<a class="entry featured" href="https://lsy7791120110.github.io/life-planner/"><span><b>LIFE PLANNER</b><small>나의 가치 · 연간 계획 · 목표 선언문</small></span><span class="arrow" aria-hidden="true">↗</span></a>
+<div class="portfolio">
+<a class="entry" href="https://lsy7791120110.github.io/"><span><b>포트폴리오</b><small>연구 경험 · 이력서 · 활동</small></span><span class="arrow" aria-hidden="true">↗</span></a>
+<a class="language" href="https://lsy7791120110.github.io/en/" aria-label="영문 포트폴리오"><span lang="en">EN ↗</span><small>영문</small></a>
+</div>
+</div>
 </section>
-<section class="group"><h2>수업과 자료 작업</h2>
-<a class="entry" href="https://sorabbit-question-studio.lsy779112.chatgpt.site/"><span class="number">04</span><span><b>문제 작업실 <span class="badge">로그인 필요</span></b><small>문항과 교재 작업</small></span><span class="arrow">↗</span></a>
-<a class="entry" href="https://grades-note.lsy779112.chatgpt.site/"><span class="number">05</span><span><b>성적노트 <span class="badge">로그인 필요</span></b><small>성적 입력과 관리</small></span><span class="arrow">↗</span></a>
+<section class="group" aria-labelledby="tools-heading">
+<div class="group-heading"><h2 id="tools-heading">작업 도구</h2></div>
+<div class="links">
+<a class="entry" href="https://soyeon-job-tracker.lsy779112.chatgpt.site/"><span><b>취업 대시보드<span class="badge">로그인 필요</span></b><small>지원 현황과 전형 일정</small></span><span class="arrow" aria-hidden="true">↗</span></a>
+<a class="entry" href="https://sorabbit-question-studio.lsy779112.chatgpt.site/"><span><b>문제 작업실<span class="badge">로그인 필요</span></b><small>문항과 교재 작업</small></span><span class="arrow" aria-hidden="true">↗</span></a>
+<a class="entry" href="https://grades-note.lsy779112.chatgpt.site/"><span><b>성적노트<span class="badge">로그인 필요</span></b><small>성적 입력과 관리</small></span><span class="arrow" aria-hidden="true">↗</span></a>
+</div>
 </section>
-<footer>이 목록은 사이트를 여는 바로가기입니다. 각 사이트의 기록은 해당 사이트에서 이어서 작성하세요.</footer>
-</main></body></html>
+<footer><p>이 주소 하나를 즐겨찾기해두세요.<br>각 사이트의 기록은 해당 사이트에서 이어집니다.</p><span class="name" lang="en">SOYEON LEE · LINKS</span></footer>
+</main>
+</body>
+</html>
