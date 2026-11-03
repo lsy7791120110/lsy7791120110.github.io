@@ -323,3 +323,10 @@ h1,h2,h3,h4,.brand,.footer-name,.project h3,.timeline-item h3,.hero h1,.educatio
 .binding-results th{background:#edf0f4;color:#344962}
 a:focus-visible,button:focus-visible{outline-color:#344962}
 @media(max-width:760px){.section-head h2,.closing h2{font-size:28px;letter-spacing:-1px}}
+
+/* Download the public portfolio in the current language. */
+.portfolio-downloads{display:flex;align-items:baseline;flex-wrap:wrap;gap:4px 18px;margin-top:18px;font-size:14px}
+.portfolio-downloads>span{color:var(--muted)}
+.portfolio-downloads a{color:var(--ink);font-weight:600;text-decoration:underline;text-underline-offset:4px;padding-block:6px}
+.portfolio-downloads a:hover,.portfolio-downloads a:focus-visible{color:var(--purple)}
+@media print{.portfolio-downloads{display:none}}
