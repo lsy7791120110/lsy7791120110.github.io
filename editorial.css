@@ -38,3 +38,19 @@ dialog{width:min(790px,calc(100% - 32px));max-height:88dvh;inset:0;position:fixe
 .credential-support strong{font-weight:600;color:var(--purple-dark)}.credential-support span{color:var(--muted)}
 @media(max-width:760px){.hero-copy{width:100%}.hero-alias{font-size:12px;margin-left:7px}.hero-specialty{font-size:12px;margin-top:5px}.hero-evidence{gap:9px}.hero-evidence li{grid-template-columns:83px minmax(0,1fr);gap:10px;font-size:12px}.hero-experience-title{font-size:12px;margin-bottom:9px}.credential-degree{padding:9px 0}.credential-degree h2{font-size:15px}.credential-degree p{font-size:11px;margin-top:3px}.credential-gpa strong{font-size:19px}.credential-support{gap:7px;padding-top:9px}.credential-support p{font-size:10px}.hero-dossier .dossier-top{margin-bottom:4px;font-size:10px}.brand{font-size:15px}.section-head>p{font-size:13px}.portfolio-downloads>span{display:none}}
 @media(max-width:380px){.credential-degree h2{font-size:14px}.credential-gpa strong{font-size:18px}.credential-degree{gap:10px}.hero-evidence li{grid-template-columns:78px minmax(0,1fr);gap:8px}.hero-alias{font-size:11px}.brand{font-size:14px}.credential-support p{font-size:10px}}
+
+/* Direct contact links, matching the white and navy portfolio. */
+.hero-contacts{display:flex;flex-wrap:wrap;align-items:center;gap:7px 19px;margin-top:12px;font-size:11px;color:var(--muted)}
+.hero-contacts a{display:inline-flex;align-items:center;gap:7px;min-height:30px;overflow-wrap:anywhere}
+.hero-contacts a:hover{text-decoration:underline;text-underline-offset:4px;color:var(--purple-dark)}
+.contact-section{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.2fr);gap:50px;padding-block:32px 38px;border-top:1px solid var(--line);margin-top:8px}
+.contact-intro h2{font-family:var(--font);font-size:25px;font-weight:600;line-height:1.5;letter-spacing:-.035em;margin-top:8px}
+.contact-intro p{font-size:13px;line-height:1.9;color:var(--muted);margin-top:11px;max-width:370px}
+.contact-list{margin:0;min-width:0}
+.contact-list>div{display:grid;grid-template-columns:74px minmax(0,1fr);gap:16px;align-items:baseline;padding:17px 0;border-bottom:1px solid var(--line)}
+.contact-list dt{font-size:12px;font-weight:400;color:var(--muted)}
+.contact-list dd{margin:0;min-width:0;font-size:14px;color:var(--purple-dark)}
+.contact-list a{display:flex;align-items:baseline;justify-content:space-between;gap:12px;min-height:28px;overflow-wrap:anywhere}
+.contact-list a:hover{text-decoration:underline;text-underline-offset:4px}
+.contact-list a>span:last-child{flex:none}
+@media(max-width:760px){.contact-section{grid-template-columns:1fr;gap:14px;padding-block:27px 31px}.contact-intro h2{font-size:23px}.contact-intro p{font-size:12px;margin-top:9px;max-width:none}.contact-list>div{grid-template-columns:64px minmax(0,1fr);gap:12px;padding:14px 0}.contact-list dt{font-size:11px}.contact-list dd{font-size:12px}.hero-contacts{gap:5px 17px;margin-top:9px;font-size:11px}}
