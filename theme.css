@@ -1,5 +1,5 @@
-@font-face{font-family:'Pretendard';src:url('/assets/fonts/Pretendard-Medium.subset.woff') format('woff');font-weight:400 500;font-style:normal;font-display:swap}
-@font-face{font-family:'Pretendard';src:url('/assets/fonts/Pretendard-SemiBold.subset.woff') format('woff');font-weight:600 900;font-style:normal;font-display:swap}
-:root{--font:'Pretendard',-apple-system,BlinkMacSystemFont,'Segoe UI','Malgun Gothic',sans-serif;--purple:#344962;--purple-dark:#23374e;--lavender:#f3f4f6;--lavender-line:#d4d9df;--sky:#f3f4f6;--ink:#252d38;--muted:#596371;--line:#d1d6dd}
-html,body,button,input,select,textarea{font-family:var(--font);font-synthesis:none;font-weight:500}
+@font-face{font-family:Dream;src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-4Regular.woff') format('woff');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:Dream;src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-6Bold.woff') format('woff');font-weight:600 800;font-style:normal;font-display:swap}
+:root{--font:Dream,'Apple SD Gothic Neo','Malgun Gothic',sans-serif;--purple:#2e435e;--purple-dark:#2e435e;--lavender:#ffffff;--lavender-line:#e1e4e8;--sky:#ffffff;--ink:#2d3545;--muted:#68717d;--line:#e1e4e8}
+html,body,button,input,select,textarea{font-family:var(--font);font-synthesis:none;font-weight:400}
 h1,h2,h3,h4,h5,h6,strong,b,dt{font-weight:600}

@@ -1,5 +1,5 @@
 *{box-sizing:border-box}
-body{margin:0;background:#f3f4f6;color:#212b37;font:500 15px/1.62 var(--font);-webkit-font-smoothing:antialiased}
+body{margin:0;background:#f3f4f6;color:#212b37;font:400 15px/1.62 var(--font);-webkit-font-smoothing:antialiased}
 a{color:inherit;text-decoration:none}
 h1,h2,h3,p{margin:0}
 .cv-toolbar,.cv-sheet{width:min(850px,calc(100% - 40px));margin-inline:auto}
@@ -11,7 +11,7 @@ a:focus-visible{outline:2px solid #344962;outline-offset:4px}
 .cv-sheet{background:white;border:1px solid #d9dde2;margin-bottom:40px;padding:40px 46px 28px}
 .cv-header{border-bottom:2px solid #364a60;padding-bottom:20px}
 .cv-header h1{font-size:clamp(29px,4vw,38px);font-weight:600;line-height:1.22;letter-spacing:-.035em}
-.cv-header h1 span{display:inline-block;margin-inline-start:.7em;font-size:17px;font-weight:500;letter-spacing:0;color:#465464}
+.cv-header h1 span{display:inline-block;margin-inline-start:.7em;font-size:17px;font-weight:400;letter-spacing:0;color:#465464}
 .cv-subtitle{margin-top:7px;font-weight:600;color:#354b62}
 .cv-summary{margin-top:15px;max-width:72ch}
 .cv-note{margin-top:7px;font-size:14px;color:#405060}
@@ -60,7 +60,7 @@ html[lang=ko] .cv-sheet{word-break:keep-all;overflow-wrap:break-word}
 .cv-header{display:grid;grid-template-columns:minmax(0,1fr) minmax(176px,27%);gap:16px 25px;align-items:start;border-bottom:0;padding-bottom:22px}
 .cv-edition{display:flex;align-items:center;gap:10px;margin-bottom:11px;text-transform:uppercase;letter-spacing:.16em;font-size:11px;font-weight:600;color:var(--folio-accent)}
 .cv-edition::before{content:"";width:30px;height:3px;background:#928ac7}
-.cv-header h1{font-size:clamp(40px,5.2vw,59px);line-height:1.08;color:var(--folio-ink)}
+.cv-header h1{font-size:clamp(29px,3.8vw,36px);line-height:1.08;color:var(--folio-ink)}
 .cv-header h1 span{font-size:16px;letter-spacing:-.01em;white-space:nowrap}
 .cv-header .cv-subtitle{margin-top:11px;color:#363a5b}
 .cv-header .cv-note{grid-column:1/-1;margin:0;padding:10px 14px;background:#f2f2fb;border-left:3px solid #9189bd;color:#29384c}
@@ -82,7 +82,7 @@ html[lang=ko] .cv-sheet{word-break:keep-all;overflow-wrap:break-word}
 .cv-footer{border-top:1px solid var(--folio-rule)}
 @media(max-width:720px){
  .cv-header{display:flex;flex-direction:column;gap:13px;padding-bottom:16px}
- .cv-header h1{font-size:39px}.cv-header .cv-subtitle{margin-top:8px}
+ .cv-header h1{font-size:28px}.cv-header .cv-subtitle{margin-top:8px}
  .yield-study{width:100%;display:grid;grid-template-columns:minmax(85px,.65fr) minmax(140px,1fr);align-items:center;gap:3px 8px;padding:10px 12px}
  .yield-study figcaption{align-self:end}.yield-study p{grid-column:1;grid-row:2;margin:0;align-self:start;font-size:11px}
  .yield-study ul{grid-column:2;grid-row:1/3;height:54px;margin:8px 0 17px}
