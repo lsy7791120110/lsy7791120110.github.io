@@ -330,3 +330,32 @@ a:focus-visible,button:focus-visible{outline-color:#344962}
 .portfolio-downloads a{color:var(--ink);font-weight:600;text-decoration:underline;text-underline-offset:4px;padding-block:6px}
 .portfolio-downloads a:hover,.portfolio-downloads a:focus-visible{color:var(--purple)}
 @media print{.portfolio-downloads{display:none}}
+
+/* Degree chronology and chapter typography. */
+.hero h1{color:#1e3049;letter-spacing:-.055em}
+.hero .intro-name{font-weight:600;color:#424b68}
+.hero .intro-name::before{content:"";display:inline-block;width:32px;height:3px;margin-right:11px;background:#8981b6;vertical-align:middle}
+.hero-dossier.education-dossier{isolation:isolate;position:relative;align-self:start;padding:23px 27px 22px;border:1px solid #d7d8e6;border-top:3px solid #343b57;background:#fafaff;box-shadow:5px 5px 0 #efedf9}
+.hero-dossier.education-dossier::after{content:"";display:block;position:absolute;top:0;right:0;width:33px;height:33px;border:0;border-radius:0;background:linear-gradient(45deg,transparent 49%,#e1ddf3 50%);pointer-events:none}
+.education-dossier .dossier-top{display:flex;justify-content:space-between;gap:12px;padding:0 8px 12px 0;margin-bottom:17px;border-bottom:1px solid #c8c8db;color:#424b68}
+.dossier-range{font-variant-numeric:tabular-nums;letter-spacing:.05em}
+.education-dossier .dossier-education{position:relative;padding:0 0 17px 18px;margin:0 0 0 4px;border:0;border-left:1px solid #aea8c9}
+.education-dossier .dossier-education::before{content:"";display:block;position:absolute;left:-4px;top:5px;height:7px;width:7px;border:1px solid #77729b;border-radius:50%;background:#77729b}
+.education-dossier .dossier-education.bachelor{border-color:transparent;padding-bottom:0}
+.education-dossier .dossier-education.bachelor::before{background:#fafaff}
+.education-dossier .dossier-education h2,.education-dossier .dossier-education h3{margin:6px 0 0;color:#29334c}
+.education-dossier .dossier-education p,.education-dossier .dossier-education.bachelor p{margin-top:6px}
+.education-dossier .dossier-education>span{margin-top:5px}
+.section-label{display:inline-flex;align-items:center;gap:12px;color:#434666}
+.section-label .folio-no{font-size:29px;line-height:1;color:#66608e;letter-spacing:-.075em;font-weight:500;font-variant-numeric:tabular-nums}
+.section-label .folio-no+span{border-left:1px solid #aba4c6;padding-left:12px}
+.contents-nav .contents-number{color:#625b91;font-size:16px;font-weight:600;font-variant-numeric:tabular-nums}
+.hero-actions .button.primary,.closing .button.primary{background:#eeedf9;border:1px solid #a8a2c4;color:#373653}
+.hero-actions .button.primary:hover,.closing .button.primary:hover{background:#e3e1f4}
+.project-graphic .project-visual,.project:hover .project-visual{border-top:2px solid #6f6a94;background:#f7f7fc}
+.project-graphic .bar.one{background:#d2cde7}.project-graphic .bar.two{background:#a69acb}.project-graphic .bar.three{background:#5c5987}
+.project-graphic .binding-track{background:#e1deed}.project-graphic .binding-track>span{background:#ada3ca}.project-graphic .binding-bar-row:nth-child(-n+2) .binding-track>span{background:#5c5987}
+@media(max-width:760px){
+ .hero-dossier.education-dossier{margin-top:27px;padding:19px 20px}
+ .section-label .folio-no{font-size:24px}.section-label{gap:9px}.section-label .folio-no+span{padding-left:9px}
+}
