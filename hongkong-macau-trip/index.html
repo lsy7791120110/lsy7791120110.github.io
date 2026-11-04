@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#7462a7">
+  <meta name="description" content="TUVE에서 시작하는 홍콩·마카오 4박 5일. 날짜별 일정, Google 지도, 이동 경로와 맛집 정보를 함께 확인하세요.">
+  <title>홍콩·마카오 · 우리의 여행 지도</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#contentPanel">일정으로 바로가기</a>
+  <header class="site-header">
+    <a href="./" class="brand" aria-label="홍콩 마카오 여행 홈">
+      <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none"><path d="M4 24V11l8-4 8 4 8-4v17l-8 4-8-4-8 4V24Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M12 7v17M20 11v17" stroke="currentColor" stroke-width="1.8"/><circle cx="19" cy="9" r="5" fill="#7462a7"/><path d="m17 9 1.5 1.5L21 8" stroke="white" stroke-width="1.5"/></svg></span>
+      <span>우리의 여행 지도<small>HONG KONG & MACAU</small></span>
+    </a>
+    <div class="header-links"><a id="sheetLink" class="text-link" target="_blank" rel="noopener">일정표 원본 <span aria-hidden="true">↗</span></a><button class="hotel-shortcut" data-action="hotel">숙소 TUVE</button></div>
+  </header>
+  <main>
+    <section class="intro">
+      <div><p class="eyebrow">2026.12.30 — 2027.01.03</p><h1>홍콩에서 보내는<br class="mobile-break"> 다섯 날.</h1><p class="intro-copy">맛있는 한 끼, 여유 있는 산책.<br class="mobile-break"> 지도와 함께 꺼내 보는 우리 일정.</p></div>
+      <div class="trip-facts"><span><b>4박 5일</b> TUVE에서</span><span><b>마카오</b> 1월 2일 당일치기</span><span><b>느긋하게</b> 긴 줄은 생략</span></div>
+    </section>
+    <nav class="view-nav" aria-label="여행 정보">
+      <button data-action="tab" data-tab="plan" class="active" aria-current="page">일정·지도</button>
+      <button data-action="tab" data-tab="food">맛집 찾기</button>
+      <button data-action="tab" data-tab="notes">여행 메모</button>
+    </nav>
+    <div id="dayNav" class="day-nav" aria-label="여행 날짜"></div>
+    <section id="daySummary" class="day-summary" aria-live="polite"></section>
+    <div id="workspace" class="workspace">
+      <section id="contentPanel" class="content-panel" aria-label="일정 목록">
+        <div class="loading"><span class="loading-dot"></span><p>여행 일정을 불러오고 있어요.</p></div>
+      </section>
+      <aside id="mapPanel" class="map-panel" aria-label="선택한 장소 지도">
+        <div class="map-heading"><div><p class="eyebrow">GOOGLE MAPS</p><h2 id="mapHeading">장소를 골라보세요</h2></div><button data-action="map-toggle" class="small-button" id="mapToggle">크게 보기</button></div>
+        <div class="map-frame-wrap">
+          <iframe id="googleMap" title="선택한 여행 장소의 Google 지도" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <div class="map-wait" id="mapWait"><span class="loading-dot"></span><span>Google 지도를 불러오는 중</span></div>
+        </div>
+        <div class="map-caption"><span>지도를 움직이거나 확대해 주변을 살펴보세요.</span><a id="mapExternal" target="_blank" rel="noopener">Google 지도에서 열기 ↗</a></div>
+        <div id="placeDetails" class="place-details"></div>
+      </aside>
+    </div>
+    <p class="data-note">일정·매장 정보는 2026.11.04 정리본 기준입니다. 계획한 이동 여유와 Google 지도의 예상시간은 다를 수 있어요.</p>
+  </main>
+  <footer><span>홍콩·마카오, 우리 속도로.</span><a href="https://scoreco.net/font/" target="_blank" rel="noopener">서체 S-Core Dream</a></footer>
+  <div id="toast" role="status" class="toast" aria-live="polite"></div>
+  <script type="module" src="app.js"></script>
+</body>
+</html>

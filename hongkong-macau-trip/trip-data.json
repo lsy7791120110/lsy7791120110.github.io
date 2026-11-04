@@ -1,0 +1,1370 @@
+{
+  "version": "2026-11-04",
+  "hotel": {
+    "name": "TUVE",
+    "query": "TUVE 16 Tsing Fung Street Hong Kong",
+    "address": "16 Tsing Fung Street, Tin Hau, Hong Kong",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=TUVE%2016%20Tsing%20Fung%20Street%20Hong%20Kong"
+  },
+  "sheetUrl": "https://docs.google.com/spreadsheets/d/1577x6LtDShZBWabthCpKgWdvCAGEix43o9-z5VUx-kw/edit",
+  "wishlistUrl": "https://maps.app.goo.gl/ikrXDudf7yFxZt1p8?g_st=ac",
+  "days": [
+    {
+      "id": "2026-12-30",
+      "dateLabel": "12.30",
+      "weekday": "수",
+      "title": "도착과 침사추이",
+      "subtitle": "공항 점심 · TUVE 체크인 · 하버와 선물",
+      "focusQuery": "Former Kowloon Canton Railway Clock Tower Hong Kong",
+      "tip": "제니 구매를 먼저. 입국이 늦거나 피곤하면 스타페리·하버 산책·Bakehouse를 줄여요.",
+      "segments": [
+        {
+          "id": "d1-r7",
+          "time": "09:15 한국\n12:05 홍콩",
+          "title": "인천 → 홍콩",
+          "description": "YP801 · 도착 후 입국·수하물\n13:20까지 여유",
+          "kind": "flight",
+          "query": "Hong Kong International Airport",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Hong%20Kong%20International%20Airport",
+          "optional": false,
+          "routeIds": []
+        },
+        {
+          "id": "d1-r8",
+          "time": "13:20–14:00",
+          "title": "can.teen · 홍콩공항",
+          "description": "입국 후 공항에서 가벼운 점심\nT1 일반구역 L7 F열 끝 · Visa/Master\n대기 길면 포장해 출발 시간 우선",
+          "kind": "food",
+          "query": "can.teen Hong Kong International Airport Terminal 1 7T090",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=can.teen%20Hong%20Kong%20International%20Airport%20Terminal%201%207T090",
+          "optional": false,
+          "foodName": "can.teen · 홍콩공항",
+          "foodId": "canteen-hkia",
+          "routeIds": [
+            "d1-route-24",
+            "d1-route-25"
+          ]
+        },
+        {
+          "id": "d1-r9",
+          "time": "14:00–15:45",
+          "title": "공항 → TUVE · 체크인",
+          "description": "공항철도 → MTR/택시 이동\n15시 이후 체크인·짧은 휴식\n입국 지연 시 침사추이 일정을 줄이기",
+          "kind": "hotel",
+          "query": "TUVE 16 Tsing Fung Street Hong Kong",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=TUVE%2016%20Tsing%20Fung%20Street%20Hong%20Kong",
+          "optional": false,
+          "routeIds": [
+            "d1-route-26"
+          ]
+        },
+        {
+          "id": "d1-r10",
+          "time": "16:00–16:55",
+          "title": "TUVE → 스타페리 → 침사추이",
+          "description": "호텔 출발부터 선착장 이동·승선 포함\n시간이 밀리면 MTR로 침사추이 직행\n이 구간 전체가 배 탑승시간은 아님",
+          "kind": "transport",
+          "query": "Central Star Ferry Pier Hong Kong",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Central%20Star%20Ferry%20Pier%20Hong%20Kong",
+          "optional": false,
+          "routeIds": [
+            "d1-route-27",
+            "d1-route-28"
+          ]
+        },
+        {
+          "id": "d1-r11",
+          "time": "16:55–17:10",
+          "title": "시계탑 · 하버 사진",
+          "description": "선착장 주변에서 짧게 사진\n사람 많으면 머무는 시간을 줄이기",
+          "kind": "sight",
+          "query": "Former Kowloon Canton Railway Clock Tower Hong Kong",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Former%20Kowloon%20Canton%20Railway%20Clock%20Tower%20Hong%20Kong",
+          "optional": false,
+          "routeIds": [
+            "d1-route-29"
+          ]
+        },
+        {
+          "id": "d1-r12",
+          "time": "17:10–17:50",
+          "title": "제니베이커리 · 침사추이",
+          "description": "제니 구매 우선 · 현금/WeChat Pay만\nBakehouse는 시간이 남을 때 포장\n두 곳 모두 줄 서는 일정은 피하기",
+          "kind": "shopping",
+          "query": "Jenny Bakery Mirador Mansion 62 Nathan Road Tsim Sha Tsui Hong Kong",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Jenny%20Bakery%20Mirador%20Mansion%2062%20Nathan%20Road%20Tsim%20Sha%20Tsui%20Hong%20Kong",
+          "optional": false,
+          "foodId": "jenny-bakery-tst",
+          "foodName": "제니베이커리 · 침사추이",
+          "routeIds": [
+            "d1-route-30",
+            "d1-route-31",
+            "d1-route-32"
+          ]
+        },
+        {
+          "id": "d1-r13",
+          "time": "17:50–18:15",
+          "title": "The ONE 이동 · 식사 준비",
+          "description": "도보 이동·매장 확인·화장실 여유\n나베원 현재 육수·한국 카드 사전 확인",
+          "kind": "transport",
+          "query": "The ONE 100 Nathan Road Hong Kong",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=The%20ONE%20100%20Nathan%20Road%20Hong%20Kong",
+          "optional": false,
+          "routeIds": []
+        },
+        {
+          "id": "d1-r14",
+          "time": "18:15–19:30",
+          "title": "Nabe One · The ONE",
+          "description": "조건부 저녁 · The ONE 5/F L501\n맑은 육수·한국 카드 확인 후 선택\n마라·카레·흑마늘 제외 요청",
+          "kind": "food",
+          "query": "Nabe One The ONE L501 100 Nathan Road Tsim Sha Tsui Hong Kong",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Nabe%20One%20The%20ONE%20L501%20100%20Nathan%20Road%20Tsim%20Sha%20Tsui%20Hong%20Kong",
+          "optional": false,
+          "foodName": "Nabe One · The ONE",
+          "foodId": "nabe-one-the-one",
+          "routeIds": [
+            "d1-route-33",
+            "d1-route-34",
+            "d1-route-35"
+          ]
+        },
+        {
+          "id": "d1-r15",
+          "time": "19:30–21:00",
+          "title": "선택: 짧은 하버 산책 → TUVE",
+          "description": "식사가 제때 끝나고 체력이 남을 때만\n피곤하거나 붐비면 숙소로 바로 이동\n조던·야시장·추가 식사는 생략",
+          "kind": "hotel",
+          "query": "TUVE 16 Tsing Fung Street Hong Kong",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=TUVE%2016%20Tsing%20Fung%20Street%20Hong%20Kong",
+          "optional": false,
+          "routeIds": []
+        }
+      ],
+      "routes": [
+        {
+          "id": "d1-route-24",
+          "from": "홍콩공항 T1",
+          "to": "홍콩역 Airport Express",
+          "origin": "Hong Kong International Airport Terminal 1",
+          "destination": "Hong Kong Station Airport Express Hong Kong",
+          "mode": "transit",
+          "allowance": "40–50분 · 계획 여유",
+          "note": "입국·공항 점심 뒤 출발. Airport Express 선택; 역까지 걷기·대기 여유 포함.",
+          "url": "https://www.google.com/maps/dir/?api=1&origin=Hong%20Kong%20International%20Airport%20Terminal%201&destination=Hong%20Kong%20Station%20Airport%20Express%20Hong%20Kong&travelmode=transit"
+        },
+        {
+          "id": "d1-route-25",
+          "from": "홍콩역 Airport Express",
+          "to": "TUVE",
+          "origin": "Hong Kong Station Airport Express Hong Kong",
+          "destination": "TUVE 16 Tsing Fung Street Hong Kong",
+          "mode": "transit",
+          "allowance": "30–40분 · 계획 여유",
+          "note": "홍콩역→센트럴역 연결통로와 틴하우역→호텔 도보 포함. 체크인 시간 별도.",
+          "url": "https://www.google.com/maps/dir/?api=1&origin=Hong%20Kong%20Station%20Airport%20Express%20Hong%20Kong&destination=TUVE%2016%20Tsing%20Fung%20Street%20Hong%20Kong&travelmode=transit"
+        },
+        {
+          "id": "d1-route-26",
+          "from": "TUVE",
+          "to": "센트럴 스타페리 선착장",
+          "origin": "TUVE 16 Tsing Fung Street Hong Kong",
+          "destination": "Central Star Ferry Pier Hong Kong",
+          "mode": "transit",
+          "allowance": "30–40분 · 계획 여유",
+          "note": "16시 호텔 출발 기준. MTR와 센트럴 선착장까지의 도보 이동.",
+          "url": "https://www.google.com/maps/dir/?api=1&origin=TUVE%2016%20Tsing%20Fung%20Street%20Hong%20Kong&destination=Central%20Star%20Ferry%20Pier%20Hong%20Kong&travelmode=transit"
+        },
+        {
+          "id": "d1-route-27",
+          "from": "센트럴 스타페리 선착장",
+          "to": "침사추이 스타페리 선착장",
+          "origin": "Central Star Ferry Pier Hong Kong",
+          "destination": "Tsim Sha Tsui Star Ferry Pier Hong Kong",
+          "mode": "ferry",
+          "allowance": "15–20분 · 계획 여유",
+          "note": "스타페리 승선 대기 포함 계획. 출입국 수속 없는 시내 하버 구간.",
+          "url": "https://www.starferry.com.hk/en/service"
+        },
+        {
+          "id": "d1-route-28",
+          "from": "침사추이 스타페리 선착장",
+          "to": "침사추이 시계탑",
+          "origin": "Tsim Sha Tsui Star Ferry Pier Hong Kong",
+          "destination": "Former Kowloon Canton Railway Clock Tower Hong Kong",
+          "mode": "walking",
+          "allowance": "5분 · 계획 여유",
+          "note": "선착장 주변 이동. 사진·관람 시간은 별도.",
+          "url": "https://www.google.com/maps/dir/?api=1&origin=Tsim%20Sha%20Tsui%20Star%20Ferry%20Pier%20Hong%20Kong&destination=Former%20Kowloon%20Canton%20Railway%20Clock%20Tower%20Hong%20Kong&travelmode=walking"
+        },
+        {
+          "id": "d1-route-29",
+          "from": "침사추이 시계탑",
+          "to": "제니베이커리 침사추이",
+          "origin": "Former Kowloon Canton Railway Clock Tower Hong Kong",
+          "destination": "Jenny Bakery Shop 42 1F Mirador Mansion 62 Nathan Road Hong Kong",
+          "mode": "walking",
+          "allowance": "10–15분 · 계획 여유",
+          "note": "Mirador Mansion 1층 Shop 42까지. 매장 계단·구매 대기는 별도.",
+          "url": "https://www.google.com/maps/dir/?api=1&origin=Former%20Kowloon%20Canton%20Railway%20Clock%20Tower%20Hong%20Kong&destination=Jenny%20Bakery%20Shop%2042%201F%20Mirador%20Mansion%2062%20Nathan%20Road%20Hong%20Kong&travelmode=walking"
+        },
+        {
+          "id": "d1-route-30",
+          "from": "제니베이커리 침사추이",
+          "to": "Bakehouse 침사추이",
+          "origin": "Jenny Bakery Shop 42 1F Mirador Mansion 62 Nathan Road Hong Kong",
+          "destination": "Bakehouse 44 Hankow Road Hong Kong",
+          "mode": "walking",
+          "allowance": "5–10분 · 계획 여유",
+          "note": "[선택·대안] 베이크하우스 포장을 선택했을 때만. 구매 대기 시간은 별도.",
+          "url": "https://www.google.com/maps/dir/?api=1&origin=Jenny%20Bakery%20Shop%2042%201F%20Mirador%20Mansion%2062%20Nathan%20Road%20Hong%20Kong&destination=Bakehouse%2044%20Hankow%20Road%20Hong%20Kong&travelmode=walking"
+        },
+        {
+          "id": "d1-route-31",
+          "from": "Bakehouse 침사추이",
+          "to": "Nabe One The ONE",
+          "origin": "Bakehouse 44 Hankow Road Hong Kong",
+          "destination": "Nabe One The ONE L501 100 Nathan Road Hong Kong",
+          "mode": "walking",
+          "allowance": "10–15분 · 계획 여유",
+          "note": "[선택·대안] 포장 후 The ONE 5층 L501로 이동. 나베원 육수·카드 조건 확인 전제.",
+          "url": "https://www.google.com/maps/dir/?api=1&origin=Bakehouse%2044%20Hankow%20Road%20Hong%20Kong&destination=Nabe%20One%20The%20ONE%20L501%20100%20Nathan%20Road%20Hong%20Kong&travelmode=walking"
+        },
+        {
+          "id": "d1-route-32",
+          "from": "제니베이커리 침사추이",
+          "to": "Nabe One The ONE",
+          "origin": "Jenny Bakery Shop 42 1F Mirador Mansion 62 Nathan Road Hong Kong",
+          "destination": "Nabe One The ONE L501 100 Nathan Road Hong Kong",
+          "mode": "walking",
+          "allowance": "10–15분 · 계획 여유",
+          "note": "[선택·대안] 베이크하우스를 생략하면 제니에서 식당으로 직행. 18:15 조건부 저녁.",
+          "url": "https://www.google.com/maps/dir/?api=1&origin=Jenny%20Bakery%20Shop%2042%201F%20Mirador%20Mansion%2062%20Nathan%20Road%20Hong%20Kong&destination=Nabe%20One%20The%20ONE%20L501%20100%20Nathan%20Road%20Hong%20Kong&travelmode=walking"
+        },
+        {
+          "id": "d1-route-33",
+          "from": "Nabe One The ONE",
+          "to": "스타의 거리",
+          "origin": "Nabe One The ONE L501 100 Nathan Road Hong Kong",
+          "destination": "Avenue of Stars Hong Kong",
+          "mode": "walking",
+          "allowance": "15–20분 · 계획 여유",
+          "note": "[선택·대안] 저녁이 제때 끝나고 체력이 남을 때만 하버 산책. 인파 많으면 생략.",
+          "url": "https://www.google.com/maps/dir/?api=1&origin=Nabe%20One%20The%20ONE%20L501%20100%20Nathan%20Road%20Hong%20Kong&destination=Avenue%20of%20Stars%20Hong%20Kong&travelmode=walking"
+        },
+        {
+          "id": "d1-route-34",
+          "from": "스타의 거리",
+          "to": "TUVE",
+          "origin": "Avenue of Stars Hong Kong",
+          "destination": "TUVE 16 Tsing Fung Street Hong Kong",
+          "mode": "transit",
+          "allowance": "35–45분 · 계획 여유",
+          "note": "[선택·대안] 하버 산책을 선택한 경우 숙소로 복귀. 역까지 걷기·환승 여유 포함.",
+          "url": "https://www.google.com/maps/dir/?api=1&origin=Avenue%20of%20Stars%20Hong%20Kong&destination=TUVE%2016%20Tsing%20Fung%20Street%20Hong%20Kong&travelmode=transit"
+        },
+        {
+          "id": "d1-route-35",
+          "from": "Nabe One The ONE",
+          "to": "TUVE",
+          "origin": "Nabe One The ONE L501 100 Nathan Road Hong Kong",
+          "destination": "TUVE 16 Tsing Fung Street Hong Kong",
+          "mode": "transit",
+          "allowance": "30–40분 · 계획 여유",
+          "note": "[선택·대안] 하버 산책을 생략할 때 숙소로 바로 복귀.",
+          "url": "https://www.google.com/maps/dir/?api=1&origin=Nabe%20One%20The%20ONE%20L501%20100%20Nathan%20Road%20Hong%20Kong&destination=TUVE%2016%20Tsing%20Fung%20Street%20Hong%20Kong&travelmode=transit"
+        }
+      ],
+      "areaMaps": [
+        {
+          "label": "침사추이 도보 지도",
+          "url": "https://www.google.com/maps/dir/?api=1&origin=Former%20Kowloon%20Canton%20Railway%20Clock%20Tower%20Hong%20Kong&destination=Avenue%20of%20Stars%20Hong%20Kong&travelmode=walking&waypoints=Jenny%20Bakery%20Shop%2042%201F%20Mirador%20Mansion%2062%20Nathan%20Road%20Hong%20Kong%7CBakehouse%2044%20Hankow%20Road%20Hong%20Kong%7CNabe%20One%20The%20ONE%20L501%20100%20Nathan%20Road%20Hong%20Kong",
+          "note": "시계탑→제니→Bakehouse(선택)→Nabe One→스타의 거리(선택). 산책만 표시; 공항·호텔은 아래."
+        }
+      ]
+    },
+    {
+      "id": "2026-12-31",
+      "dateLabel": "12.31",
+      "weekday": "목",
+      "title": "센트럴 낮 산책",
+      "subtitle": "셩완 · IFC · 타이퀀 · 19시 숙소 복귀",
+      "focusQuery": "Tai Kwun Hong Kong",
+      "tip": "17시 이른 저녁 뒤 19시 TUVE로 돌아와요. 야외 카운트다운은 기본 일정에서 제외했어요.",
+      "segments": [
+        {
+          "id": "d2-r19",
+          "time": "09:30–10:30",
+          "title": "Halfway Coffee · 셩완",
+          "description": "TUVE → 셩완 이동·커피\nVisa/Master · 작은 카페, 만석이면 생략\n아침 메뉴는 당일 확인",
+          "kind": "food",
+          "query": "Halfway Coffee 26 Upper Lascar Row Sheung Wan Hong Kong",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Halfway%20Coffee%2026%20Upper%20Lascar%20Row%20Sheung%20Wan%20Hong%20Kong",
+          "optional": true,
+          "foodName": "Halfway Coffee · 셩완",
+          "foodId": "halfway-coffee-sheung-wan",
+          "routeIds": [
+            "d2-route-39",
+            "d2-route-40",
+            "d2-route-41"
+          ]
+        },
+        {
+          "id": "d2-r20",
+          "time": "10:30–11:30",
+          "title": "만모사원 · 소호 → IFC",
+          "description": "10:30–11:05 외관·골목 산책\n11:05–11:30 IFC 식당으로 이동\n벽화·에스컬레이터는 여유 있는 구간만",
+          "kind": "sight",
+          "query": "Man Mo Temple Hollywood Road Hong Kong",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Man%20Mo%20Temple%20Hollywood%20Road%20Hong%20Kong",
+          "optional": false,
+          "routeIds": [
+            "d2-route-42"
+          ]
+        },
+        {
+          "id": "d2-r21",
+          "time": "11:30–12:30",
+          "title": "Jiang Nan by Crystal Jade · IFC · 센트럴",
+          "description": "IFC L2 2018–20 · 이른 점심 예약 목표\n샤오롱바오·밥·채소, 향 강한 소스 제외\nVisa/Master 확인",
+          "kind": "food",
+          "query": "Jiang Nan by Crystal Jade IFC Mall 2018 2020 Hong Kong",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Jiang%20Nan%20by%20Crystal%20Jade%20IFC%20Mall%202018%202020%20Hong%20Kong",
+          "optional": false,
+          "foodName": "Jiang Nan by Crystal Jade · IFC · 센트럴",
+          "foodId": "jiang-nan-ifc",
+          "routeIds": [
+            "d2-route-43"
+          ]
+        },
+        {
+          "id": "d2-r22",
+          "time": "12:30–14:15",
+          "title": "타이퀀 · Messina(선택)",
+          "description": "12:30–13:00 타이퀀 이동\n13:00–14:15 산책·선택 젤라토\nMessina Visa/Master · 줄 길면 생략",
+          "kind": "sight",
+          "query": "Tai Kwun Hong Kong",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Tai%20Kwun%20Hong%20Kong",
+          "optional": false,
+          "routeIds": [
+            "d2-route-44",
+            "d2-route-45",
+            "d2-route-46"
+          ]
+        },
+        {
+          "id": "d2-r23-travel",
+          "time": "14:15–15:00",
+          "title": "TUVE로 이동",
+          "description": "타이퀀·선택 젤라토 뒤 숙소로 이동해요. 센트럴 밤 행사 동선은 잡지 않아요.",
+          "kind": "transport",
+          "query": "TUVE 16 Tsing Fung Street Hong Kong",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=TUVE%2016%20Tsing%20Fung%20Street%20Hong%20Kong",
+          "optional": false,
+          "routeIds": [
+            "d2-route-45",
+            "d2-route-46"
+          ]
+        },
+        {
+          "id": "d2-r23-rest",
+          "time": "15:00–16:30",
+          "title": "TUVE에서 휴식",
+          "description": "호텔에서 실제로 쉬는 시간. 16:30에 코즈웨이베이 저녁 식사로 출발해요.",
+          "kind": "hotel",
+          "query": "TUVE 16 Tsing Fung Street Hong Kong",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=TUVE%2016%20Tsing%20Fung%20Street%20Hong%20Kong",
+          "optional": false,
+          "routeIds": [
+            "d2-route-47"
+          ]
+        },
+        {
+          "id": "d2-r24",
+          "time": "17:00–18:15",
+          "title": "호흥키 · 코즈웨이베이",
+          "description": "16:30 출발 → 코즈웨이베이\nHysan Place 12/F · 완탕면·죽\nVisa 확인 / Master 미확인",
+          "kind": "food",
+          "query": "Ho Hung Kee Shop 1204–1205, 12/F, Hysan Place, 500 Hennessy Road, Causeway Bay Hong Kong",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Ho%20Hung%20Kee%20Shop%201204%E2%80%931205%2C%2012%2FF%2C%20Hysan%20Place%2C%20500%20Hennessy%20Road%2C%20Causeway%20Bay%20Hong%20Kong",
+          "optional": false,
+          "foodName": "호흥키 · 코즈웨이베이",
+          "foodId": "ho-hung-kee-hysan",
+          "routeIds": [
+            "d2-route-48"
+          ]
+        },
+        {
+          "id": "d2-r25",
+          "time": "18:15–19:00",
+          "title": "TUVE로 귀가",
+          "description": "쇼핑·하버 추가 이동 없이 숙소 방향\n연말 교통 변동을 고려해 이른 귀가",
+          "kind": "transport",
+          "query": "TUVE 16 Tsing Fung Street Hong Kong",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=TUVE%2016%20Tsing%20Fung%20Street%20Hong%20Kong",
+          "optional": false,
+          "routeIds": []
+        },
+        {
+          "id": "d2-r26",
+          "time": "19:00 이후",
+          "title": "숙소에서 쉬는 연말",
+          "description": "야외 카운트다운 관람은 기본안에서 제외\n간식·샤워·휴식, 원하면 실내에서 새해 맞기\n자정까지 밖에서 기다릴 필요 없음",
+          "kind": "hotel",
+          "query": "TUVE 16 Tsing Fung Street Hong Kong",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=TUVE%2016%20Tsing%20Fung%20Street%20Hong%20Kong",
+          "optional": false,
+          "routeIds": []
+        }
+      ],
+      "routes": [
+        {
+          "id": "d2-route-39",
+          "from": "TUVE",
+          "to": "Halfway Coffee 셩완",
+          "origin": "TUVE 16 Tsing Fung Street Hong Kong",
+          "destination": "Halfway Coffee 26 Upper Lascar Row Hong Kong",
+          "mode": "transit",
+          "allowance": "35–45분 · 계획 여유",
+          "note": "09:30–10:30 셩완 이동·커피 구간. 만석이면 카페를 생략.",
+          "url": "https://www.google.com/maps/dir/?api=1&origin=TUVE%2016%20Tsing%20Fung%20Street%20Hong%20Kong&destination=Halfway%20Coffee%2026%20Upper%20Lascar%20Row%20Hong%20Kong&travelmode=transit"
+        },
+        {
+          "id": "d2-route-40",
+          "from": "Halfway Coffee 셩완",
+          "to": "만모사원",
+          "origin": "Halfway Coffee 26 Upper Lascar Row Hong Kong",
+          "destination": "Man Mo Temple Hollywood Road Hong Kong",
+          "mode": "walking",
+          "allowance": "5–10분 · 계획 여유",
+          "note": "만모사원 외관·주변 골목으로 이동. 관람 시간 별도.",
+          "url": "https://www.google.com/maps/dir/?api=1&origin=Halfway%20Coffee%2026%20Upper%20Lascar%20Row%20Hong%20Kong&destination=Man%20Mo%20Temple%20Hollywood%20Road%20Hong%20Kong&travelmode=walking"
+        },
+        {
+          "id": "d2-route-41",
+          "from": "TUVE",
+          "to": "만모사원",
+          "origin": "TUVE 16 Tsing Fung Street Hong Kong",
+          "destination": "Man Mo Temple Hollywood Road Hong Kong",
+          "mode": "transit",
+          "allowance": "35–45분 · 계획 여유",
+          "note": "[선택·대안] Halfway 방문을 생략할 때 만모사원으로 직행.",
+          "url": "https://www.google.com/maps/dir/?api=1&origin=TUVE%2016%20Tsing%20Fung%20Street%20Hong%20Kong&destination=Man%20Mo%20Temple%20Hollywood%20Road%20Hong%20Kong&travelmode=transit"
+        },
+        {
+          "id": "d2-route-42",
+          "from": "만모사원",
+          "to": "Jiang Nan by Crystal Jade IFC",
+          "origin": "Man Mo Temple Hollywood Road Hong Kong",
+          "destination": "Jiang Nan by Crystal Jade Shop 2018-2020 IFC Mall Hong Kong",
+          "mode": "walking",
+          "allowance": "20–25분 · 계획 여유",
+          "note": "IFC L2 2018–20까지 이동. 링크는 두 지점 직접 경로이며 소호 산책·사진은 별도.",
+          "url": "https://www.google.com/maps/dir/?api=1&origin=Man%20Mo%20Temple%20Hollywood%20Road%20Hong%20Kong&destination=Jiang%20Nan%20by%20Crystal%20Jade%20Shop%202018-2020%20IFC%20Mall%20Hong%20Kong&travelmode=walking"
+        },
+        {
+          "id": "d2-route-43",
+          "from": "Jiang Nan by Crystal Jade IFC",
+          "to": "타이퀀",
+          "origin": "Jiang Nan by Crystal Jade Shop 2018-2020 IFC Mall Hong Kong",
+          "destination": "Tai Kwun Hong Kong",
+          "mode": "walking",
+          "allowance": "20–30분 · 계획 여유",
+          "note": "12:30 점심 후 타이퀀으로 이동. IFC 출구·오르막 도보 여유 포함.",
+          "url": "https://www.google.com/maps/dir/?api=1&origin=Jiang%20Nan%20by%20Crystal%20Jade%20Shop%202018-2020%20IFC%20Mall%20Hong%20Kong&destination=Tai%20Kwun%20Hong%20Kong&travelmode=walking"
+        },
+        {
+          "id": "d2-route-44",
+          "from": "타이퀀",
+          "to": "Messina 센트럴",
+          "origin": "Tai Kwun Hong Kong",
+          "destination": "Messina 37 Pottinger Street Hong Kong",
+          "mode": "walking",
+          "allowance": "5–10분 · 계획 여유",
+          "note": "[선택·대안] 젤라토를 선택할 때만 Pottinger Street 지점 방문.",
+          "url": "https://www.google.com/maps/dir/?api=1&origin=Tai%20Kwun%20Hong%20Kong&destination=Messina%2037%20Pottinger%20Street%20Hong%20Kong&travelmode=walking"
+        },
+        {
+          "id": "d2-route-45",
+          "from": "Messina 센트럴",
+          "to": "TUVE",
+          "origin": "Messina 37 Pottinger Street Hong Kong",
+          "destination": "TUVE 16 Tsing Fung Street Hong Kong",
+          "mode": "transit",
+          "allowance": "35–45분 · 계획 여유",
+          "note": "[선택·대안] 젤라토 후 호텔 이동. 15:00부터 실제 휴식 목표.",
+          "url": "https://www.google.com/maps/dir/?api=1&origin=Messina%2037%20Pottinger%20Street%20Hong%20Kong&destination=TUVE%2016%20Tsing%20Fung%20Street%20Hong%20Kong&travelmode=transit"
+        },
+        {
+          "id": "d2-route-46",
+          "from": "타이퀀",
+          "to": "TUVE",
+          "origin": "Tai Kwun Hong Kong",
+          "destination": "TUVE 16 Tsing Fung Street Hong Kong",
+          "mode": "transit",
+          "allowance": "35–45분 · 계획 여유",
+          "note": "[선택·대안] Messina를 생략할 때 타이퀀에서 숙소로 직행.",
+          "url": "https://www.google.com/maps/dir/?api=1&origin=Tai%20Kwun%20Hong%20Kong&destination=TUVE%2016%20Tsing%20Fung%20Street%20Hong%20Kong&travelmode=transit"
+        },
+        {
+          "id": "d2-route-47",
+          "from": "TUVE",
+          "to": "호흥키 Hysan Place",
+          "origin": "TUVE 16 Tsing Fung Street Hong Kong",
+          "destination": "Ho Hung Kee Hysan Place 12F 1204-1205 Hong Kong",
+          "mode": "transit",
+          "allowance": "20–30분 · 계획 여유",
+          "note": "16:30 호텔 출발 → 17시 저녁. Hysan Place 12층까지 이동 포함.",
+          "url": "https://www.google.com/maps/dir/?api=1&origin=TUVE%2016%20Tsing%20Fung%20Street%20Hong%20Kong&destination=Ho%20Hung%20Kee%20Hysan%20Place%2012F%201204-1205%20Hong%20Kong&travelmode=transit"
+        },
+        {
+          "id": "d2-route-48",
+          "from": "호흥키 Hysan Place",
+          "to": "TUVE",
+          "origin": "Ho Hung Kee Hysan Place 12F 1204-1205 Hong Kong",
+          "destination": "TUVE 16 Tsing Fung Street Hong Kong",
+          "mode": "transit",
+          "allowance": "20–30분 · 계획 여유",
+          "note": "18:15 식사 후 숙소 방향. 19시 복귀 목표; 야외 카운트다운 없음.",
+          "url": "https://www.google.com/maps/dir/?api=1&origin=Ho%20Hung%20Kee%20Hysan%20Place%2012F%201204-1205%20Hong%20Kong&destination=TUVE%2016%20Tsing%20Fung%20Street%20Hong%20Kong&travelmode=transit"
+        }
+      ],
+      "areaMaps": [
+        {
+          "label": "셩완·센트럴 도보 지도",
+          "url": "https://www.google.com/maps/dir/?api=1&origin=Halfway%20Coffee%2026%20Upper%20Lascar%20Row%20Hong%20Kong&destination=Messina%2037%20Pottinger%20Street%20Hong%20Kong&travelmode=walking&waypoints=Man%20Mo%20Temple%20Hollywood%20Road%20Hong%20Kong%7CJiang%20Nan%20by%20Crystal%20Jade%20Shop%202018-2020%20IFC%20Mall%20Hong%20Kong%7CTai%20Kwun%20Hong%20Kong",
+          "note": "Halfway→만모사원→IFC 점심→타이퀀→Messina(선택). 숙소 휴식·저녁 이동은 아래."
+        }
+      ]
+    },
+    {
+      "id": "2027-01-01",
+      "dateLabel": "01.01",
+      "weekday": "금",
+      "title": "브런치와 쇼핑",
+      "subtitle": "완차이 · 코즈웨이베이 · 호텔 휴식",
+      "focusQuery": "Hysan Place 500 Hennessy Road Hong Kong",
+      "tip": "13:30–15:00 쇼핑 90분을 확보했어요. 호텔에서 쉬었다가 18시 저녁을 먹어요.",
+      "segments": [
+        {
+          "id": "d3-r30",
+          "time": "09:30–11:30",
+          "title": "익청빌딩 → 완차이",
+          "description": "호텔 출발·이동·관람 포함 구간\n관람 20–30분, 현장 출입·촬영 안내 우선\n혼잡하면 생략하고 브런치로 이동",
+          "kind": "sight",
+          "query": "Yick Cheong Building Quarry Bay Hong Kong",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Yick%20Cheong%20Building%20Quarry%20Bay%20Hong%20Kong",
+          "optional": true,
+          "routeIds": [
+            "d3-route-52",
+            "d3-route-53",
+            "d3-route-54"
+          ]
+        },
+        {
+          "id": "d3-r31",
+          "time": "11:40–12:40",
+          "title": "Sour Dough · 완차이",
+          "description": "아보카도 치킨·참치계란 샌드위치 후보\n티카 치킨 제외 · 소스 별도\nVisa/Master · 만석이면 긴 줄은 생략",
+          "kind": "food",
+          "query": "Sour Dough 80 Queens Road East Wan Chai Hong Kong",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Sour%20Dough%2080%20Queens%20Road%20East%20Wan%20Chai%20Hong%20Kong",
+          "optional": false,
+          "foodName": "Sour Dough · 완차이",
+          "foodId": "sour-dough-wan-chai",
+          "routeIds": [
+            "d3-route-55",
+            "d3-route-57"
+          ]
+        },
+        {
+          "id": "d3-r32",
+          "time": "12:40–13:00",
+          "title": "Happy Bakery · 완차이",
+          "description": "Happy Bakery는 배고플 때만 포장\n현금·Octopus·QR 안내, 카드 미확인\n그냥 코즈웨이베이로 이동해도 됨",
+          "kind": "food",
+          "query": "Happy Bakery 66 68 Queens Road East Wan Chai Hong Kong",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Happy%20Bakery%2066%2068%20Queens%20Road%20East%20Wan%20Chai%20Hong%20Kong",
+          "optional": true,
+          "foodName": "Happy Bakery · 완차이",
+          "foodId": "happy-bakery-wan-chai",
+          "routeIds": [
+            "d3-route-56"
+          ]
+        },
+        {
+          "id": "d3-r33-travel-shopping",
+          "time": "13:00–13:30",
+          "title": "코즈웨이베이로 이동",
+          "description": "완차이에서 Hysan Place로 이동해요. Happy Bakery는 선택 포장이에요.",
+          "kind": "transport",
+          "query": "Hysan Place 500 Hennessy Road Hong Kong",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Hysan%20Place%20500%20Hennessy%20Road%20Hong%20Kong",
+          "optional": false,
+          "routeIds": [
+            "d3-route-56",
+            "d3-route-57"
+          ]
+        },
+        {
+          "id": "d3-r33-shopping",
+          "time": "13:30–15:00",
+          "title": "Hysan Place 뷰티 쇼핑",
+          "description": "시내 쇼핑 90분. 사고 싶은 용량·색상을 먼저 정하고 최종 결제 금액을 비교해요.",
+          "kind": "shopping",
+          "query": "Hysan Place 500 Hennessy Road Hong Kong",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Hysan%20Place%20500%20Hennessy%20Road%20Hong%20Kong",
+          "optional": false,
+          "routeIds": [
+            "d3-route-58"
+          ]
+        },
+        {
+          "id": "d3-r33-rest",
+          "time": "15:00–17:15",
+          "title": "TUVE 이동 · 휴식",
+          "description": "쇼핑을 마치고 숙소로 돌아가 쉬어요. 이 시간에는 호텔로 이동하는 시간도 포함돼요.",
+          "kind": "hotel",
+          "query": "TUVE 16 Tsing Fung Street Hong Kong",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=TUVE%2016%20Tsing%20Fung%20Street%20Hong%20Kong",
+          "optional": false,
+          "routeIds": [
+            "d3-route-59"
+          ]
+        },
+        {
+          "id": "d3-r33-travel-dinner",
+          "time": "17:15–18:00",
+          "title": "Times Square 식당으로 이동",
+          "description": "TUVE에서 코즈웨이베이로 이동. 18시 리 가든 저녁 예약 목표예요.",
+          "kind": "transport",
+          "query": "Lei Garden Times Square Shop 1003 10F 1 Matheson Street Hong Kong",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Lei%20Garden%20Times%20Square%20Shop%201003%2010F%201%20Matheson%20Street%20Hong%20Kong",
+          "optional": false,
+          "routeIds": [
+            "d3-route-59"
+          ]
+        },
+        {
+          "id": "d3-r34",
+          "time": "18:00–19:30",
+          "title": "리 가든 Lei Garden · 타임스퀘어",
+          "description": "Times Square 10/F 1003 · 예약 목표\n찜·구이류, XO·약재·강한 소스 제외\nVisa/Master · 조용한 2인석 요청",
+          "kind": "food",
+          "query": "Lei Garden Times Square Shop 1003 10F 1 Matheson Street Hong Kong",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Lei%20Garden%20Times%20Square%20Shop%201003%2010F%201%20Matheson%20Street%20Hong%20Kong",
+          "optional": false,
+          "foodName": "리 가든 Lei Garden · 타임스퀘어",
+          "foodId": "lei-garden-times-square",
+          "routeIds": [
+            "d3-route-60",
+            "d3-route-61",
+            "d3-route-62"
+          ]
+        },
+        {
+          "id": "d3-r35",
+          "time": "19:30–21:00",
+          "title": "TUVE 귀가 · 마카오 준비",
+          "description": "여권·왕복 페리·보조배터리 챙기기\n다음 날 이른 출발 대비 휴식\n앤티 스위트는 줄 없을 때만 선택",
+          "kind": "hotel",
+          "query": "TUVE 16 Tsing Fung Street Hong Kong",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=TUVE%2016%20Tsing%20Fung%20Street%20Hong%20Kong",
+          "optional": false,
+          "routeIds": []
+        }
+      ],
+      "routes": [
+        {
+          "id": "d3-route-52",
+          "from": "TUVE",
+          "to": "익청빌딩",
+          "origin": "TUVE 16 Tsing Fung Street Hong Kong",
+          "destination": "Yick Cheong Building Quarry Bay Hong Kong",
+          "mode": "transit",
+          "allowance": "25–35분 · 계획 여유",
+          "note": "09:30 출발. 현장 출입·촬영 안내 우선; 관람 시간 별도.",
+          "url": "https://www.google.com/maps/dir/?api=1&origin=TUVE%2016%20Tsing%20Fung%20Street%20Hong%20Kong&destination=Yick%20Cheong%20Building%20Quarry%20Bay%20Hong%20Kong&travelmode=transit"
+        },
+        {
+          "id": "d3-route-53",
+          "from": "익청빌딩",
+          "to": "Sour Dough 완차이",
+          "origin": "Yick Cheong Building Quarry Bay Hong Kong",
+          "destination": "Sour Dough 80 Queens Road East Hong Kong",
+          "mode": "transit",
+          "allowance": "35–45분 · 계획 여유",
+          "note": "쿼리베이에서 완차이 브런치로 이동. 11:40 식사 목표.",
+          "url": "https://www.google.com/maps/dir/?api=1&origin=Yick%20Cheong%20Building%20Quarry%20Bay%20Hong%20Kong&destination=Sour%20Dough%2080%20Queens%20Road%20East%20Hong%20Kong&travelmode=transit"
+        },
+        {
+          "id": "d3-route-54",
+          "from": "TUVE",
+          "to": "Sour Dough 완차이",
+          "origin": "TUVE 16 Tsing Fung Street Hong Kong",
+          "destination": "Sour Dough 80 Queens Road East Hong Kong",
+          "mode": "transit",
+          "allowance": "25–35분 · 계획 여유",
+          "note": "[선택·대안] 익청빌딩을 생략할 때 숙소에서 브런치로 직행.",
+          "url": "https://www.google.com/maps/dir/?api=1&origin=TUVE%2016%20Tsing%20Fung%20Street%20Hong%20Kong&destination=Sour%20Dough%2080%20Queens%20Road%20East%20Hong%20Kong&travelmode=transit"
+        },
+        {
+          "id": "d3-route-55",
+          "from": "Sour Dough 완차이",
+          "to": "Happy Bakery 완차이",
+          "origin": "Sour Dough 80 Queens Road East Hong Kong",
+          "destination": "Happy Bakery 66-68 Queens Road East Hong Kong",
+          "mode": "walking",
+          "allowance": "5분 · 계획 여유",
+          "note": "[선택·대안] 브런치 후 추가 포장을 원할 때만.",
+          "url": "https://www.google.com/maps/dir/?api=1&origin=Sour%20Dough%2080%20Queens%20Road%20East%20Hong%20Kong&destination=Happy%20Bakery%2066-68%20Queens%20Road%20East%20Hong%20Kong&travelmode=walking"
+        },
+        {
+          "id": "d3-route-56",
+          "from": "Happy Bakery 완차이",
+          "to": "Hysan Place 쇼핑",
+          "origin": "Happy Bakery 66-68 Queens Road East Hong Kong",
+          "destination": "Hysan Place 500 Hennessy Road Hong Kong",
+          "mode": "transit",
+          "allowance": "20–30분 · 계획 여유",
+          "note": "[선택·대안] 포장을 선택했을 때 코즈웨이베이로 이동. 13:30 쇼핑 시작 목표.",
+          "url": "https://www.google.com/maps/dir/?api=1&origin=Happy%20Bakery%2066-68%20Queens%20Road%20East%20Hong%20Kong&destination=Hysan%20Place%20500%20Hennessy%20Road%20Hong%20Kong&travelmode=transit"
+        },
+        {
+          "id": "d3-route-57",
+          "from": "Sour Dough 완차이",
+          "to": "Hysan Place 쇼핑",
+          "origin": "Sour Dough 80 Queens Road East Hong Kong",
+          "destination": "Hysan Place 500 Hennessy Road Hong Kong",
+          "mode": "transit",
+          "allowance": "20–30분 · 계획 여유",
+          "note": "[선택·대안] Happy Bakery를 생략하면 쇼핑몰로 바로 이동.",
+          "url": "https://www.google.com/maps/dir/?api=1&origin=Sour%20Dough%2080%20Queens%20Road%20East%20Hong%20Kong&destination=Hysan%20Place%20500%20Hennessy%20Road%20Hong%20Kong&travelmode=transit"
+        },
+        {
+          "id": "d3-route-58",
+          "from": "Hysan Place 쇼핑",
+          "to": "TUVE",
+          "origin": "Hysan Place 500 Hennessy Road Hong Kong",
+          "destination": "TUVE 16 Tsing Fung Street Hong Kong",
+          "mode": "transit",
+          "allowance": "20–30분 · 계획 여유",
+          "note": "15시 쇼핑 종료 후 숙소 이동·휴식. 휴식 시간은 이동시간과 별도.",
+          "url": "https://www.google.com/maps/dir/?api=1&origin=Hysan%20Place%20500%20Hennessy%20Road%20Hong%20Kong&destination=TUVE%2016%20Tsing%20Fung%20Street%20Hong%20Kong&travelmode=transit"
+        },
+        {
+          "id": "d3-route-59",
+          "from": "TUVE",
+          "to": "리 가든 Times Square",
+          "origin": "TUVE 16 Tsing Fung Street Hong Kong",
+          "destination": "Lei Garden Times Square 10F1003 1 Matheson Street Hong Kong",
+          "mode": "transit",
+          "allowance": "25–35분 · 계획 여유",
+          "note": "17:15 호텔 출발 → Times Square 10층 1003호. 18시 저녁 목표.",
+          "url": "https://www.google.com/maps/dir/?api=1&origin=TUVE%2016%20Tsing%20Fung%20Street%20Hong%20Kong&destination=Lei%20Garden%20Times%20Square%2010F1003%201%20Matheson%20Street%20Hong%20Kong&travelmode=transit"
+        },
+        {
+          "id": "d3-route-60",
+          "from": "리 가든 Times Square",
+          "to": "TUVE",
+          "origin": "Lei Garden Times Square 10F1003 1 Matheson Street Hong Kong",
+          "destination": "TUVE 16 Tsing Fung Street Hong Kong",
+          "mode": "transit",
+          "allowance": "25–35분 · 계획 여유",
+          "note": "19:30 식사 후 숙소 직행. 다음 날 마카오 준비.",
+          "url": "https://www.google.com/maps/dir/?api=1&origin=Lei%20Garden%20Times%20Square%2010F1003%201%20Matheson%20Street%20Hong%20Kong&destination=TUVE%2016%20Tsing%20Fung%20Street%20Hong%20Kong&travelmode=transit"
+        },
+        {
+          "id": "d3-route-61",
+          "from": "리 가든 Times Square",
+          "to": "앤티 스위트",
+          "origin": "Lei Garden Times Square 10F1003 1 Matheson Street Hong Kong",
+          "destination": "Auntie Sweet 13 Tsing Fung Street Hong Kong",
+          "mode": "transit",
+          "allowance": "25–35분 · 계획 여유",
+          "note": "[선택·대안] 숙소 근처 디저트를 선택할 때만. 줄이 길면 바로 TUVE로.",
+          "url": "https://www.google.com/maps/dir/?api=1&origin=Lei%20Garden%20Times%20Square%2010F1003%201%20Matheson%20Street%20Hong%20Kong&destination=Auntie%20Sweet%2013%20Tsing%20Fung%20Street%20Hong%20Kong&travelmode=transit"
+        },
+        {
+          "id": "d3-route-62",
+          "from": "앤티 스위트",
+          "to": "TUVE",
+          "origin": "Auntie Sweet 13 Tsing Fung Street Hong Kong",
+          "destination": "TUVE 16 Tsing Fung Street Hong Kong",
+          "mode": "walking",
+          "allowance": "5분 · 계획 여유",
+          "note": "[선택·대안] 같은 Tsing Fung Street의 숙소로 이동.",
+          "url": "https://www.google.com/maps/dir/?api=1&origin=Auntie%20Sweet%2013%20Tsing%20Fung%20Street%20Hong%20Kong&destination=TUVE%2016%20Tsing%20Fung%20Street%20Hong%20Kong&travelmode=walking"
+        }
+      ],
+      "areaMaps": [
+        {
+          "label": "브런치 주변 도보 지도",
+          "url": "https://www.google.com/maps/dir/?api=1&origin=Sour%20Dough%2080%20Queens%20Road%20East%20Hong%20Kong&destination=Happy%20Bakery%2066-68%20Queens%20Road%20East%20Hong%20Kong&travelmode=walking",
+          "note": "Sour Dough→Happy Bakery(선택). 익청빌딩·숙소·쇼핑몰 이동은 아래 대중교통 버튼."
+        },
+        {
+          "label": "쇼핑·저녁 위치 도보 비교",
+          "url": "https://www.google.com/maps/dir/?api=1&origin=Hysan%20Place%20500%20Hennessy%20Road%20Hong%20Kong&destination=Lei%20Garden%20Times%20Square%2010F1003%201%20Matheson%20Street%20Hong%20Kong&travelmode=walking",
+          "note": "Hysan Place↔Times Square 위치 비교용. 실제 일정에는 중간 TUVE 휴식이 있어 아래 구간대로 이동."
+        }
+      ]
+    },
+    {
+      "id": "2027-01-02",
+      "dateLabel": "01.02",
+      "weekday": "토",
+      "title": "마카오 당일치기",
+      "subtitle": "구시가 · 타이파 · 코타이 · 밤에 TUVE 복귀",
+      "focusQuery": "Senado Square Macau",
+      "tip": "외항으로 들어가 타이파에서 돌아와요. 19시 타이파 터미널 도착 목표이며 09시·20시 페리는 예약 전 목표편이에요.",
+      "segments": [
+        {
+          "id": "d4-r39",
+          "time": "07:15–09:00",
+          "title": "TUVE → 상환 터미널",
+          "description": "08시 도착 목표 → 출국 수속\n실물 여권·두 사람 예약정보",
+          "kind": "transport",
+          "query": "Hong Kong Macau Ferry Terminal Sheung Wan",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Hong%20Kong%20Macau%20Ferry%20Terminal%20Sheung%20Wan",
+          "optional": false,
+          "routeIds": [
+            "d4-route-66",
+            "d4-route-67"
+          ]
+        },
+        {
+          "id": "d4-r40",
+          "time": "09:00–10:00\n목표편",
+          "title": "상환 → 마카오 외항",
+          "description": "TurboJET · 약 1시간\nOuter Harbour 도착 / 예약 전",
+          "kind": "transport",
+          "query": "Macau Outer Harbour Ferry Terminal",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Macau%20Outer%20Harbour%20Ferry%20Terminal",
+          "optional": false,
+          "routeIds": [
+            "d4-route-68"
+          ]
+        },
+        {
+          "id": "d4-r41",
+          "time": "10:00–12:00",
+          "title": "세나도 · 성바울",
+          "description": "입국 후 택시 → 구시가\n세나도 → 육포거리 → 성바울",
+          "kind": "sight",
+          "query": "Senado Square Macau",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Senado%20Square%20Macau",
+          "optional": false,
+          "routeIds": [
+            "d4-route-69"
+          ]
+        },
+        {
+          "id": "d4-r42",
+          "time": "12:00–12:30",
+          "title": "구시가 산책 · 이동 준비",
+          "description": "성바울 주변에서 짧게 더 둘러보기\n이순밀크는 기본 간식에서 제외\n12:30 타이파행 택시 출발 목표",
+          "kind": "free",
+          "query": "Ruins of St Paul's Macau",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Ruins%20of%20St%20Paul%27s%20Macau",
+          "optional": false,
+          "routeIds": [
+            "d4-route-70"
+          ]
+        },
+        {
+          "id": "d4-r43-travel",
+          "time": "12:30–13:10",
+          "title": "구시가 → 타이파",
+          "description": "차량 접근 가능한 곳에서 택시를 타고 António로 이동해요. 택시 대기 여유가 필요해요.",
+          "kind": "transport",
+          "query": "Antonio 18A 18B Rua dos Clerigos Taipa Macau",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Antonio%2018A%2018B%20Rua%20dos%20Clerigos%20Taipa%20Macau",
+          "optional": false,
+          "routeIds": [
+            "d4-route-70"
+          ]
+        },
+        {
+          "id": "d4-r43-lunch",
+          "time": "13:10–14:15",
+          "title": "António · 타이파",
+          "description": "점심 예약 목표. Visa/Master 안내. 구이·감자 위주로 고르고 소스·향신료를 확인해요.",
+          "kind": "food",
+          "query": "Antonio 18A 18B Rua dos Clerigos Taipa Macau",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Antonio%2018A%2018B%20Rua%20dos%20Clerigos%20Taipa%20Macau",
+          "optional": false,
+          "foodName": "António · 타이파",
+          "foodId": "antonio-taipa",
+          "routeIds": [
+            "d4-route-71",
+            "d4-route-73"
+          ]
+        },
+        {
+          "id": "d4-r44-village",
+          "time": "14:15–14:40",
+          "title": "타이파 빌리지 · 선택 타르트",
+          "description": "빌리지를 산책하고 줄이 짧으면 로드스토우를 포장해요. 타이파점은 카드 미확인이라 현금을 준비해요. 런더너 카페와 한 곳만 선택.",
+          "kind": "sight",
+          "query": "Taipa Village Macau",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Taipa%20Village%20Macau",
+          "optional": false,
+          "routeIds": [
+            "d4-route-72"
+          ]
+        },
+        {
+          "id": "d4-r44-travel",
+          "time": "14:40–15:10",
+          "title": "베네시안으로 이동",
+          "description": "타이파 빌리지에서 베네시안으로 걸어요. 대형 몰 입구에서 운하 구역까지 이동 여유를 둬요.",
+          "kind": "transport",
+          "query": "The Venetian Macao",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=The%20Venetian%20Macao",
+          "optional": false,
+          "routeIds": [
+            "d4-route-72",
+            "d4-route-73"
+          ]
+        },
+        {
+          "id": "d4-r45-venetian",
+          "time": "15:10–16:00",
+          "title": "베네시안 운하 · 실내 산책",
+          "description": "베네시안 실내 운하 구역을 둘러봐요.",
+          "kind": "sight",
+          "query": "The Venetian Macao",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=The%20Venetian%20Macao",
+          "optional": false,
+          "routeIds": [
+            "d4-route-74",
+            "d4-route-76"
+          ]
+        },
+        {
+          "id": "d4-r45-travel",
+          "time": "16:00–16:20",
+          "title": "런더너로 이동",
+          "description": "베네시안에서 런더너로 이동해요.",
+          "kind": "transport",
+          "query": "The Londoner Macao",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=The%20Londoner%20Macao",
+          "optional": false,
+          "routeIds": [
+            "d4-route-74",
+            "d4-route-76"
+          ]
+        },
+        {
+          "id": "d4-r45-rest",
+          "time": "16:20–16:50",
+          "title": "런더너에서 휴식",
+          "description": "타르트를 타이파에서 사지 않았다면 로드스토우 런더너 카페를 선택해요. 두 지점 모두 방문하지 않아요. 카드 수납은 미확인이에요.",
+          "kind": "free",
+          "query": "The Londoner Macao",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=The%20Londoner%20Macao",
+          "optional": false,
+          "routeIds": [
+            "d4-route-75"
+          ]
+        },
+        {
+          "id": "d4-r46",
+          "time": "17:00–18:00",
+          "title": "The Conservatory · Chaan · 런더너 그랜드",
+          "description": "Londoner Grand L1 · Chaan 구역\n죽·볶음면·채소 · Visa/Master\n바에서 먼 좌석 요청, 예약 목표",
+          "kind": "food",
+          "query": "The Conservatory Londoner Grand Macau Chaan",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=The%20Conservatory%20Londoner%20Grand%20Macau%20Chaan",
+          "optional": false,
+          "foodName": "The Conservatory · Chaan · 런더너 그랜드",
+          "foodId": "conservatory-chaan",
+          "routeIds": [
+            "d4-route-77"
+          ]
+        },
+        {
+          "id": "d4-r47",
+          "time": "18:00–19:00",
+          "title": "런더너 → 타이파 터미널",
+          "description": "여유 있으면 런더너 앞 사진만 짧게\n18:20 전후 택시 탑승 시도 → 19시 도착\n지연 시 사진을 생략하고 바로 이동",
+          "kind": "transport",
+          "query": "Taipa Ferry Terminal Macau",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Taipa%20Ferry%20Terminal%20Macau",
+          "optional": false,
+          "routeIds": [
+            "d4-route-77",
+            "d4-route-78"
+          ]
+        },
+        {
+          "id": "d4-r48",
+          "time": "19:00–20:00",
+          "title": "타이파 귀환 수속",
+          "description": "발권·출국·승선\n실제 예약편의 승선 마감 우선",
+          "kind": "transport",
+          "query": "Taipa Ferry Terminal Macau",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Taipa%20Ferry%20Terminal%20Macau",
+          "optional": false,
+          "routeIds": [
+            "d4-route-78"
+          ]
+        },
+        {
+          "id": "d4-r49",
+          "time": "20:00–21:00\n목표편",
+          "title": "타이파 → 홍콩 상환",
+          "description": "Cotai Water Jet · 예약 전\n아침 도착 항구와 다른 터미널",
+          "kind": "transport",
+          "query": "Hong Kong Macau Ferry Terminal Sheung Wan",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Hong%20Kong%20Macau%20Ferry%20Terminal%20Sheung%20Wan",
+          "optional": false,
+          "routeIds": [
+            "d4-route-79"
+          ]
+        },
+        {
+          "id": "d4-r50",
+          "time": "21:00–22:30",
+          "title": "홍콩 입국 → TUVE",
+          "description": "상환 → 틴하우 MTR·호텔 복귀\n홍콩 숙박 후 다음 날 귀국",
+          "kind": "hotel",
+          "query": "TUVE 16 Tsing Fung Street Hong Kong",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=TUVE%2016%20Tsing%20Fung%20Street%20Hong%20Kong",
+          "optional": false,
+          "routeIds": []
+        }
+      ],
+      "routes": [
+        {
+          "id": "d4-route-66",
+          "from": "TUVE",
+          "to": "상환 홍콩마카오 페리터미널",
+          "origin": "TUVE 16 Tsing Fung Street Hong Kong",
+          "destination": "Hong Kong Macau Ferry Terminal Sheung Wan",
+          "mode": "transit",
+          "allowance": "35–45분 · 계획 여유",
+          "note": "07:15 출발 → 08시 상환 터미널 도착 목표. 출국·승선 수속은 별도.",
+          "url": "https://www.google.com/maps/dir/?api=1&origin=TUVE%2016%20Tsing%20Fung%20Street%20Hong%20Kong&destination=Hong%20Kong%20Macau%20Ferry%20Terminal%20Sheung%20Wan&travelmode=transit"
+        },
+        {
+          "id": "d4-route-67",
+          "from": "상환 홍콩마카오 페리터미널",
+          "to": "마카오 외항 페리터미널",
+          "origin": "Hong Kong Macau Ferry Terminal Sheung Wan",
+          "destination": "Macau Outer Harbour Ferry Terminal",
+          "mode": "ferry",
+          "allowance": "승선 약 60분 · 수속 별도",
+          "note": "09시 출발·10시 도착 목표, 예약 전. 출입국·승선 대기는 별도이며 선사 시간표 우선.",
+          "url": "https://www2.turbojet.com.hk/travel-with-us-sea-ferry/"
+        },
+        {
+          "id": "d4-route-68",
+          "from": "마카오 외항 페리터미널",
+          "to": "세나도 광장",
+          "origin": "Macau Outer Harbour Ferry Terminal",
+          "destination": "Senado Square Macau",
+          "mode": "driving",
+          "allowance": "15–25분 · 계획 여유",
+          "note": "입국 후 택시로 구시가 이동. 입국심사·택시 대기 시간은 별도.",
+          "url": "https://www.google.com/maps/dir/?api=1&origin=Macau%20Outer%20Harbour%20Ferry%20Terminal&destination=Senado%20Square%20Macau&travelmode=driving"
+        },
+        {
+          "id": "d4-route-69",
+          "from": "세나도 광장",
+          "to": "성바울 성당 유적",
+          "origin": "Senado Square Macau",
+          "destination": "Ruins of St Paul's Macau",
+          "mode": "walking",
+          "allowance": "15–20분 · 계획 여유",
+          "note": "구시가 골목을 따라 이동. 사진·관광·상점 체류는 별도.",
+          "url": "https://www.google.com/maps/dir/?api=1&origin=Senado%20Square%20Macau&destination=Ruins%20of%20St%20Paul's%20Macau&travelmode=walking"
+        },
+        {
+          "id": "d4-route-70",
+          "from": "성바울 성당 유적",
+          "to": "António 타이파",
+          "origin": "Ruins of St Paul's Macau",
+          "destination": "Antonio 18A-18B Rua dos Clerigos Taipa Macau",
+          "mode": "driving",
+          "allowance": "30–40분 · 계획 여유",
+          "note": "12:30 전후 구시가 출발 → 13:10 점심 목표. 차량 접근 가능한 탑승 위치까지 이동·택시 대기 여유 필요.",
+          "url": "https://www.google.com/maps/dir/?api=1&origin=Ruins%20of%20St%20Paul's%20Macau&destination=Antonio%2018A-18B%20Rua%20dos%20Clerigos%20Taipa%20Macau&travelmode=driving"
+        },
+        {
+          "id": "d4-route-71",
+          "from": "António 타이파",
+          "to": "로드스토우 타이파",
+          "origin": "Antonio 18A-18B Rua dos Clerigos Taipa Macau",
+          "destination": "Lord Stow's Bakery 9-E Rua do Cunha Taipa Macau",
+          "mode": "walking",
+          "allowance": "5–10분 · 계획 여유",
+          "note": "[선택·대안] 타이파 타르트 포장을 선택할 때만. 런더너 카페와 한 곳만 방문.",
+          "url": "https://www.google.com/maps/dir/?api=1&origin=Antonio%2018A-18B%20Rua%20dos%20Clerigos%20Taipa%20Macau&destination=Lord%20Stow's%20Bakery%209-E%20Rua%20do%20Cunha%20Taipa%20Macau&travelmode=walking"
+        },
+        {
+          "id": "d4-route-72",
+          "from": "로드스토우 타이파",
+          "to": "베네시안 마카오",
+          "origin": "Lord Stow's Bakery 9-E Rua do Cunha Taipa Macau",
+          "destination": "The Venetian Macao",
+          "mode": "walking",
+          "allowance": "25–30분 · 계획 여유",
+          "note": "[선택·대안] 포장 후 베네시안으로 이동. 대형 몰 입구에서 운하 구역까지 여유 포함.",
+          "url": "https://www.google.com/maps/dir/?api=1&origin=Lord%20Stow's%20Bakery%209-E%20Rua%20do%20Cunha%20Taipa%20Macau&destination=The%20Venetian%20Macao&travelmode=walking"
+        },
+        {
+          "id": "d4-route-73",
+          "from": "António 타이파",
+          "to": "베네시안 마카오",
+          "origin": "Antonio 18A-18B Rua dos Clerigos Taipa Macau",
+          "destination": "The Venetian Macao",
+          "mode": "walking",
+          "allowance": "25–30분 · 계획 여유",
+          "note": "[선택·대안] 타이파 타르트를 생략하면 점심 후 빌리지 산책을 마치고 베네시안으로.",
+          "url": "https://www.google.com/maps/dir/?api=1&origin=Antonio%2018A-18B%20Rua%20dos%20Clerigos%20Taipa%20Macau&destination=The%20Venetian%20Macao&travelmode=walking"
+        },
+        {
+          "id": "d4-route-74",
+          "from": "베네시안 마카오",
+          "to": "로드스토우 런더너 카페",
+          "origin": "The Venetian Macao",
+          "destination": "Lord Stow's Bakery Cafe Londoner Shop2113 Level2 Macau",
+          "mode": "walking",
+          "allowance": "20–30분 · 계획 여유",
+          "note": "[선택·대안] 타이파 포장 대신 실내 카페 휴식을 선택할 때만. 런더너 L2 2113호.",
+          "url": "https://www.google.com/maps/dir/?api=1&origin=The%20Venetian%20Macao&destination=Lord%20Stow's%20Bakery%20Cafe%20Londoner%20Shop2113%20Level2%20Macau&travelmode=walking"
+        },
+        {
+          "id": "d4-route-75",
+          "from": "로드스토우 런더너 카페",
+          "to": "The Conservatory · Chaan",
+          "origin": "Lord Stow's Bakery Cafe Londoner Shop2113 Level2 Macau",
+          "destination": "The Conservatory Londoner Grand Level1 Macau",
+          "mode": "walking",
+          "allowance": "10–15분 · 계획 여유",
+          "note": "[선택·대안] 카페를 이용한 경우 Londoner Grand L1의 Chaan 구역으로 이동.",
+          "url": "https://www.google.com/maps/dir/?api=1&origin=Lord%20Stow's%20Bakery%20Cafe%20Londoner%20Shop2113%20Level2%20Macau&destination=The%20Conservatory%20Londoner%20Grand%20Level1%20Macau&travelmode=walking"
+        },
+        {
+          "id": "d4-route-76",
+          "from": "베네시안 마카오",
+          "to": "The Conservatory · Chaan",
+          "origin": "The Venetian Macao",
+          "destination": "The Conservatory Londoner Grand Level1 Macau",
+          "mode": "walking",
+          "allowance": "20–30분 · 계획 여유",
+          "note": "[선택·대안] 런더너 카페를 생략할 때 저녁 식당으로 직접 이동. 17시 식사 목표.",
+          "url": "https://www.google.com/maps/dir/?api=1&origin=The%20Venetian%20Macao&destination=The%20Conservatory%20Londoner%20Grand%20Level1%20Macau&travelmode=walking"
+        },
+        {
+          "id": "d4-route-77",
+          "from": "The Conservatory · Chaan",
+          "to": "타이파 페리터미널",
+          "origin": "The Conservatory Londoner Grand Level1 Macau",
+          "destination": "Taipa Ferry Terminal Macau",
+          "mode": "driving",
+          "allowance": "20–30분 · 계획 여유",
+          "note": "18:20 전후 택시 탑승 시도 → 19시 터미널 도착 목표. 택시 대기·승선 수속은 별도.",
+          "url": "https://www.google.com/maps/dir/?api=1&origin=The%20Conservatory%20Londoner%20Grand%20Level1%20Macau&destination=Taipa%20Ferry%20Terminal%20Macau&travelmode=driving"
+        },
+        {
+          "id": "d4-route-78",
+          "from": "타이파 페리터미널",
+          "to": "상환 홍콩마카오 페리터미널",
+          "origin": "Taipa Ferry Terminal Macau",
+          "destination": "Hong Kong Macau Ferry Terminal Sheung Wan",
+          "mode": "ferry",
+          "allowance": "승선 약 60분 · 수속 별도",
+          "note": "20시 출발·21시 홍콩 도착 목표, 예약 전. 출발 1시간 전 터미널 목표이며 실제 수속 마감은 예약편 기준.",
+          "url": "https://www.cotaiwaterjet.com/ferry-schedule/hongkong-macau-taipa.html"
+        },
+        {
+          "id": "d4-route-79",
+          "from": "상환 홍콩마카오 페리터미널",
+          "to": "TUVE",
+          "origin": "Hong Kong Macau Ferry Terminal Sheung Wan",
+          "destination": "TUVE 16 Tsing Fung Street Hong Kong",
+          "mode": "transit",
+          "allowance": "35–45분 · 계획 여유",
+          "note": "홍콩 입국심사 후 숙소로 복귀. 입국심사 시간은 이 이동 계획과 별도.",
+          "url": "https://www.google.com/maps/dir/?api=1&origin=Hong%20Kong%20Macau%20Ferry%20Terminal%20Sheung%20Wan&destination=TUVE%2016%20Tsing%20Fung%20Street%20Hong%20Kong&travelmode=transit"
+        }
+      ],
+      "areaMaps": [
+        {
+          "label": "세나도·성바울 도보 지도",
+          "url": "https://www.google.com/maps/dir/?api=1&origin=Senado%20Square%20Macau&destination=Ruins%20of%20St%20Paul's%20Macau&travelmode=walking",
+          "note": "세나도 광장→성바울 유적. 관광·사진 시간은 지도에 나오는 이동시간과 별도."
+        },
+        {
+          "label": "빌리지·리조트 도보 지도",
+          "url": "https://www.google.com/maps/dir/?api=1&origin=Antonio%2018A-18B%20Rua%20dos%20Clerigos%20Taipa%20Macau&destination=The%20Conservatory%20Londoner%20Grand%20Level1%20Macau&travelmode=walking&waypoints=Lord%20Stow's%20Bakery%209-E%20Rua%20do%20Cunha%20Taipa%20Macau%7CThe%20Venetian%20Macao",
+          "note": "António→로드스토우 타이파(선택)→베네시안→런더너 저녁. 실내 층 이동·매장 찾는 여유 별도."
+        }
+      ]
+    },
+    {
+      "id": "2027-01-03",
+      "dateLabel": "01.03",
+      "weekday": "일",
+      "title": "공항 쇼핑과 귀국",
+      "subtitle": "10시 공항 도착 목표 · 13:40 홍콩 출발",
+      "focusQuery": "Hong Kong International Airport Terminal 1",
+      "tip": "12:30 쇼핑을 마치고 13:00 탑승구에 도착하는 계획이에요. 실제 탑승권의 시각과 게이트가 우선이에요.",
+      "segments": [
+        {
+          "id": "d5-r54",
+          "time": "07:45–08:30",
+          "title": "아침 · 체크아웃",
+          "description": "가벼운 아침·짐 점검\n08:45 호텔 출발 준비",
+          "kind": "hotel",
+          "query": "TUVE 16 Tsing Fung Street Hong Kong",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=TUVE%2016%20Tsing%20Fung%20Street%20Hong%20Kong",
+          "optional": false,
+          "routeIds": [
+            "d5-route-83",
+            "d5-route-84"
+          ]
+        },
+        {
+          "id": "d5-r55",
+          "time": "08:45–10:00",
+          "title": "TUVE → 홍콩공항",
+          "description": "틴하우 → 센트럴/홍콩역 → 공항철도\n10:00 공항 도착 목표",
+          "kind": "transport",
+          "query": "Hong Kong International Airport",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Hong%20Kong%20International%20Airport",
+          "optional": false,
+          "routeIds": [
+            "d5-route-83",
+            "d5-route-84"
+          ]
+        },
+        {
+          "id": "d5-r56",
+          "time": "10:00–10:25",
+          "title": "can.teen · 홍콩공항",
+          "description": "T1 일반구역 L7 F열 끝 · Visa/Master\n체크인 전 짧은 식사, 카레·매운 메뉴 제외\n대기 길면 바로 살 수 있는 메뉴 선택",
+          "kind": "food",
+          "query": "can.teen Hong Kong International Airport Terminal 1 7T090",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=can.teen%20Hong%20Kong%20International%20Airport%20Terminal%201%207T090",
+          "optional": false,
+          "foodName": "can.teen · 홍콩공항",
+          "foodId": "canteen-hkia",
+          "routeIds": []
+        },
+        {
+          "id": "d5-r57",
+          "time": "10:25–11:30",
+          "title": "체크인 · 출국 수속",
+          "description": "카운터 10:40 오픈 예상(일반 안내)\n짐 위탁 → 보안·출국 수속",
+          "kind": "transport",
+          "query": "Hong Kong International Airport Terminal 1",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Hong%20Kong%20International%20Airport%20Terminal%201",
+          "optional": false,
+          "routeIds": []
+        },
+        {
+          "id": "d5-r58",
+          "time": "11:30–12:30",
+          "title": "공항 면세 쇼핑",
+          "description": "BEAUTY&YOU · T1 6층 East Hall\n60분 목표 / 수속 지연 시 단축",
+          "kind": "shopping",
+          "query": "Hong Kong International Airport Terminal 1",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Hong%20Kong%20International%20Airport%20Terminal%201",
+          "optional": false,
+          "routeIds": []
+        },
+        {
+          "id": "d5-r59",
+          "time": "12:30–13:00",
+          "title": "탑승구로 이동",
+          "description": "12:30 쇼핑 종료 → 13:00 도착\n실제 게이트·이동 열차 여부 확인",
+          "kind": "transport",
+          "query": "Hong Kong International Airport Terminal 1",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Hong%20Kong%20International%20Airport%20Terminal%201",
+          "optional": false,
+          "routeIds": []
+        },
+        {
+          "id": "d5-r60",
+          "time": "13:00–13:40",
+          "title": "탑승 대기",
+          "description": "탑승권·안내방송의 탑승 시각 우선\n탑승구에서 대기 후 탑승",
+          "kind": "transport",
+          "query": "Hong Kong International Airport Terminal 1",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Hong%20Kong%20International%20Airport%20Terminal%201",
+          "optional": false,
+          "routeIds": []
+        },
+        {
+          "id": "d5-r61",
+          "time": "13:40 홍콩\n18:20 한국",
+          "title": "홍콩 → 인천",
+          "description": "YP802 · 항공권 변경 여부 재확인",
+          "kind": "flight",
+          "query": "Incheon International Airport",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Incheon%20International%20Airport",
+          "optional": false,
+          "routeIds": []
+        }
+      ],
+      "routes": [
+        {
+          "id": "d5-route-83",
+          "from": "TUVE",
+          "to": "홍콩역 Airport Express",
+          "origin": "TUVE 16 Tsing Fung Street Hong Kong",
+          "destination": "Hong Kong Station Airport Express Hong Kong",
+          "mode": "transit",
+          "allowance": "30–40분 · 계획 여유",
+          "note": "08:45 호텔 출발. 센트럴역→홍콩역 연결통로와 짐 이동 여유 포함.",
+          "url": "https://www.google.com/maps/dir/?api=1&origin=TUVE%2016%20Tsing%20Fung%20Street%20Hong%20Kong&destination=Hong%20Kong%20Station%20Airport%20Express%20Hong%20Kong&travelmode=transit"
+        },
+        {
+          "id": "d5-route-84",
+          "from": "홍콩역 Airport Express",
+          "to": "홍콩공항 T1",
+          "origin": "Hong Kong Station Airport Express Hong Kong",
+          "destination": "Hong Kong International Airport Terminal1",
+          "mode": "transit",
+          "allowance": "35–45분 · 계획 여유",
+          "note": "Airport Express 선택 → 10시 공항 도착 목표. 공항역에서 T1 이동 포함; 체크인·출국 수속·쇼핑은 별도.",
+          "url": "https://www.google.com/maps/dir/?api=1&origin=Hong%20Kong%20Station%20Airport%20Express%20Hong%20Kong&destination=Hong%20Kong%20International%20Airport%20Terminal1&travelmode=transit"
+        }
+      ],
+      "areaMaps": [
+        {
+          "label": "숙소→공항 대중교통",
+          "url": "https://www.google.com/maps/dir/?api=1&origin=TUVE%2016%20Tsing%20Fung%20Street%20Hong%20Kong&destination=Hong%20Kong%20International%20Airport%20Terminal%201&travelmode=transit",
+          "note": "대안 비교용. 일정은 홍콩역 Airport Express 경유이며, 정확한 두 구간 링크는 아래에 분리."
+        }
+      ]
+    }
+  ],
+  "notes": [
+    {
+      "title": "음식 취향 전달하기",
+      "body": "마라·카레·향 강한 소스는 제외하고 소스는 따로 요청해요. 맑은 국물도 약재·향신료 재료를 확인해요.\nNo mala or curry, please. Could you recommend a mild dish? Please serve sauces separately.\n不要麻辣、花椒或咖喱。請推薦味道清淡的菜，醬汁另放。"
+    },
+    {
+      "title": "카드와 화장실",
+      "body": "카드 확인 매장을 우선으로 골랐어요. ‘미확인’은 카드 불가 확정이 아니에요. 매장·몰 내부라도 조용함과 화장실의 현재 청결은 현장에서 확인해요."
+    },
+    {
+      "title": "제니쿠키는 시내에서",
+      "body": "12/30 침사추이 Mirador Mansion 1/F Shop 42 구매 계획이에요. 공식 안내는 현금 또는 WeChat Pay만, 신용카드는 불가예요. 공항점 구매를 전제로 잡지 않았어요. 쿠키 선물 비용은 식비 합계와 별도예요."
+    },
+    {
+      "title": "쇼핑 시간 확보",
+      "body": "1/1 Hysan Place 뷰티 쇼핑 13:30–15:00, 1/3 공항 BEAUTY&YOU 쇼핑 11:30–12:30 목표예요. 출국 수속이 늦으면 쇼핑을 줄이고 12:30에 탑승구로 출발해요. 시내·공항·온라인의 최종 결제 금액을 비교해요."
+    },
+    {
+      "title": "마카오 왕복 페리",
+      "body": "갈 때는 홍콩 셩완→마카오 외항, 올 때는 타이파→홍콩 셩완이에요. 공항 SkyPier와 다른 도심 터미널이에요. 실물 여권과 두 사람 예약정보를 준비하고, 실제 예약편의 수속·승선 마감이 우선이에요."
+    }
+  ]
+}
