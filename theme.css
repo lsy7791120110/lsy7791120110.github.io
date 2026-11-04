@@ -6,3 +6,5 @@ h1,h2,h3,h4,h5,h6,strong,b,dt{font-weight:600}
 
 /* Apply the same family to all text, including SVG diagrams and controls. */
 body *,body *::before,body *::after{font-family:var(--font);font-synthesis:none}
+
+html,body,body :not(.katex):not(.katex *):not(math):not(math *){font-family:var(--font)!important;font-synthesis:none}
