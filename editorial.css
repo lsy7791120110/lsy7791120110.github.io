@@ -28,16 +28,16 @@ dialog{width:min(790px,calc(100% - 32px));max-height:88dvh;inset:0;position:fixe
 .credential-degree+.credential-degree{border-top:1px solid var(--line)}
 .credential-degree>div:first-child{min-width:0}
 .credential-degree h2{font-size:16px;font-weight:600;letter-spacing:-.025em;line-height:1.6;margin:0;color:var(--ink)}
-.credential-degree p{font-size:11px;color:var(--muted);margin:4px 0 0;line-height:1.8}
-.credential-gpa{display:flex;align-items:baseline;gap:4px;white-space:nowrap;font-variant-numeric:tabular-nums}
-.credential-gpa strong{font-size:21px;font-weight:600;letter-spacing:-.03em;color:var(--purple-dark)}
-.credential-gpa span{font-size:11px;color:var(--muted)}
-.credential-honor{font-weight:600;color:var(--purple-dark)}
-.credential-support{border-top:1px solid var(--line);margin-top:7px;padding-top:11px;display:grid;gap:8px}
-.credential-support p{display:flex;gap:7px 14px;justify-content:space-between;flex-wrap:wrap;margin:0;font-size:11px;line-height:1.8}
-.credential-support strong{font-weight:600;color:var(--purple-dark)}.credential-support span{color:var(--muted)}
-@media(max-width:760px){.hero-copy{width:100%}.hero-alias{font-size:12px;margin-left:7px}.hero-specialty{font-size:12px;margin-top:5px}.hero-evidence{gap:9px}.hero-evidence li{grid-template-columns:83px minmax(0,1fr);gap:10px;font-size:12px}.hero-experience-title{font-size:12px;margin-bottom:9px}.credential-degree{padding:9px 0}.credential-degree h2{font-size:15px}.credential-degree p{font-size:11px;margin-top:3px}.credential-gpa strong{font-size:19px}.credential-support{gap:7px;padding-top:9px}.credential-support p{font-size:10px}.hero-dossier .dossier-top{margin-bottom:4px;font-size:10px}.brand{font-size:15px}.section-head>p{font-size:13px}.portfolio-downloads>span{display:none}}
-@media(max-width:380px){.credential-degree h2{font-size:14px}.credential-gpa strong{font-size:18px}.credential-degree{gap:10px}.hero-evidence li{grid-template-columns:78px minmax(0,1fr);gap:8px}.hero-alias{font-size:11px}.brand{font-size:14px}.credential-support p{font-size:10px}}
+.credential-degree p{font-size:13px;font-weight:400;color:var(--muted);margin:4px 0 0;line-height:1.8}
+.credential-gpa{display:flex;align-items:baseline;gap:4px;white-space:nowrap;font-size:16px;line-height:1.6;font-variant-numeric:tabular-nums}
+.credential-gpa strong{font-size:inherit;font-weight:600;letter-spacing:0;color:var(--purple-dark)}
+.credential-gpa span{font-size:inherit;font-weight:400;color:var(--muted)}
+.credential-honor{font-weight:400;color:inherit}
+.credential-support{border-top:1px solid var(--line);margin:10px 0 0;padding-top:12px;display:grid;gap:12px;font-size:13px;font-weight:400;line-height:1.8}
+
+
+@media(max-width:760px){.hero-copy{width:100%}.hero-alias{font-size:12px;margin-left:7px}.hero-specialty{font-size:12px;margin-top:5px}.hero-evidence{gap:9px}.hero-evidence li{grid-template-columns:83px minmax(0,1fr);gap:10px;font-size:12px}.hero-experience-title{font-size:12px;margin-bottom:9px}.credential-degree{padding:9px 0}.credential-degree h2{font-size:15px}.credential-degree p{font-size:12px;margin-top:3px}.credential-gpa{font-size:15px}.credential-support{font-size:12px;gap:11px;padding-top:11px}.hero-dossier .dossier-top{margin-bottom:4px;font-size:10px}.brand{font-size:15px}.section-head>p{font-size:13px}.portfolio-downloads>span{display:none}}
+@media(max-width:380px){.credential-degree h2{font-size:14px}.credential-gpa{font-size:14px}.credential-degree{gap:10px}.hero-evidence li{grid-template-columns:78px minmax(0,1fr);gap:8px}.hero-alias{font-size:11px}.brand{font-size:14px}}
 
 /* Direct contact links, matching the white and navy portfolio. */
 .hero-contacts{display:flex;flex-wrap:wrap;align-items:center;gap:7px 19px;margin-top:12px;font-size:11px;color:var(--muted)}
@@ -54,3 +54,17 @@ dialog{width:min(790px,calc(100% - 32px));max-height:88dvh;inset:0;position:fixe
 .contact-list a:hover{text-decoration:underline;text-underline-offset:4px}
 .contact-list a>span:last-child{flex:none}
 @media(max-width:760px){.contact-section{grid-template-columns:1fr;gap:14px;padding-block:27px 31px}.contact-intro h2{font-size:23px}.contact-intro p{font-size:12px;margin-top:9px;max-width:none}.contact-list>div{grid-template-columns:64px minmax(0,1fr);gap:12px;padding:14px 0}.contact-list dt{font-size:11px}.contact-list dd{font-size:12px}.hero-contacts{gap:5px 17px;margin-top:9px;font-size:11px}}
+
+/* Two weights with a consistent body size; qualification entries share one column. */
+.hero-evidence .evidence-label{font-weight:400;color:var(--ink)}
+.credential-row{display:grid;grid-template-columns:68px minmax(0,1fr);gap:12px;align-items:baseline}
+.credential-row dt{margin:0;font-size:inherit;font-weight:400;color:var(--muted)}
+.credential-row dd{margin:0;min-width:0;font-size:inherit;font-weight:400;color:var(--ink)}
+.credential-item{font-size:inherit;font-weight:400;color:var(--ink)}
+.credential-row .credential-note{display:block;font-size:inherit;font-weight:400;line-height:1.8;color:var(--muted);margin:3px 0 0}
+.credential-certificates{list-style:none;display:grid;gap:5px;padding:0;margin:0;font-size:inherit;font-weight:400}
+.credential-certificates li{font-size:inherit;font-weight:400;line-height:1.8}
+html[lang="en"] .credential-row{grid-template-columns:84px minmax(0,1fr)}
+.credential-row dt{white-space:nowrap}
+@media(max-width:760px){.credential-row{grid-template-columns:52px minmax(0,1fr);gap:10px}.credential-degree h2{font-size:15px}.credential-support{font-size:12px}.hero-evidence li{font-size:12px}.hero-evidence span{font-size:inherit}.dossier-top{font-size:12px}.hero-dossier .dossier-top{font-size:11px}}
+@media(max-width:380px){.credential-degree h2{font-size:14px}.credential-row{grid-template-columns:44px minmax(0,1fr);gap:8px}}
