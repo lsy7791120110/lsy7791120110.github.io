@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="theme-color" content="#f8f7fc">
-  <meta name="description" content="후쿠오카, 삿포로, 오사카, 도쿄. 가고 싶은 장소를 모으고 Google 지도와 함께 나만의 일본 여행을 계획하세요.">
-  <title>일본 여행 노트 · 가고 싶은 곳부터, 차근차근</title>
+  <meta name="description" content="후쿠오카, 삿포로, 오사카, 도쿄. Google 지도 공유 링크로 장소를 추가하고 날짜별 경로와 여행 예산을 관리하세요.">
+  <title>일본 여행 플래너 · 지도·일정·예산</title>
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="preconnect" href="https://lsy7791120110.github.io">
   <link rel="stylesheet" href="style.css">
@@ -18,14 +18,14 @@
   </header>
   <main id="mainContent" class="main">
     <section class="intro">
-      <div><p class="eyebrow"><span class="red-dot"></span> MY NEXT JOURNEY</p><h1>가고 싶은 곳부터,<br class="mobile-only"> 차근차근.</h1><p class="intro-copy">맛있는 한 끼, 마음에 드는 거리.<br class="mobile-only"> 나의 다음 일본 여행을 모아두세요.</p></div>
-      <div class="collection-summary"><span class="summary-icon" data-icon="heart"></span><div><span>나의 일본 위시리스트</span><p><strong id="totalSaved">0</strong><small>곳을 모았어요</small></p></div></div>
+      <div><p class="eyebrow"><span class="red-dot"></span> MY NEXT JOURNEY</p><h1>장소를 담고,<br class="mobile-only"> 동선을 짜고.</h1><p class="intro-copy">Google 지도 링크로 장소를 추가하고,<br class="mobile-only"> 일정과 예산을 한곳에서 관리해요.</p></div>
+      <div class="collection-summary"><span class="summary-icon" data-icon="heart"></span><div><span>직접 저장한 장소</span><p><strong id="totalSaved">0</strong><small>곳을 모았어요</small></p></div></div>
     </section>
     <nav id="cityNav" class="city-grid" aria-label="여행 도시"></nav>
     <section class="city-heading"><div><p id="cityEyebrow" class="eyebrow"></p><h2 id="cityHeading"></h2><p id="citySubtitle" class="city-subtitle"></p></div><button class="button" data-action="settings"><span data-icon="calendar"></span>날짜·숙소 설정</button></section>
-    <nav class="tabs" aria-label="여행 노트 메뉴"><button data-action="tab" data-tab="places" class="active"><span data-icon="pin"></span>장소 모으기<span id="savedBadge" class="tab-count">0</span></button><button data-action="tab" data-tab="plan"><span data-icon="route"></span>일정·지도</button><button data-action="tab" data-tab="prep"><span data-icon="checklist"></span>여행 준비</button><button data-action="tab" data-tab="budget"><span data-icon="wallet"></span>예산·지출</button></nav>
+    <nav class="tabs" aria-label="여행 노트 메뉴"><button data-action="tab" data-tab="places" class="active"><span data-icon="pin"></span>내 장소<span id="savedBadge" class="tab-count">0</span></button><button data-action="tab" data-tab="plan"><span data-icon="route"></span>일정·지도</button><button data-action="tab" data-tab="prep"><span data-icon="checklist"></span>여행 준비</button><button data-action="tab" data-tab="budget"><span data-icon="wallet"></span>여행 예산</button></nav>
     <div id="workspace" class="workspace"><section id="contentPanel" class="content-panel" aria-label="여행 노트 내용"><div class="initial-loading">여행 노트를 불러오고 있어요.</div></section><aside id="mapPanel" class="map-panel" aria-label="장소 지도와 상세 정보"></aside></div>
-    <footer class="footer"><span>어느 도시든, 우리 속도로.</span><button data-action="help">저장·백업 안내</button><button data-action="credits">장소 출처·사진·서체</button><a href="https://lsy7791120110.github.io/hongkong-macau-trip/" target="_blank" rel="noopener">홍콩·마카오 여행 ↗</a></footer>
+    <footer class="footer"><span>어느 도시든, 우리 속도로.</span><button data-action="help">저장·백업 안내</button><button data-action="credits">사진·서체 출처</button><a href="https://lsy7791120110.github.io/hongkong-macau-trip/" target="_blank" rel="noopener">홍콩·마카오 여행 ↗</a></footer>
   </main>
   <dialog id="dialog" class="dialog" aria-labelledby="dialogTitle"><div class="dialog-head"><h2 id="dialogTitle"></h2><button class="icon-button" data-action="close-dialog" aria-label="닫기"><span data-icon="close"></span></button></div><div id="dialogBody"></div></dialog>
   <input type="file" id="importFile" accept="application/json,.json" hidden>
