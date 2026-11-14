@@ -39,3 +39,7 @@ dialog.addEventListener('close',()=>{document.body.style.overflow='';lastTrigger
 document.querySelectorAll('[data-filter]').forEach(button=>button.addEventListener('click',()=>{const filter=button.dataset.filter;document.querySelectorAll('[data-filter]').forEach(item=>{item.classList.toggle('active',item===button);item.setAttribute('aria-pressed',String(item===button));});let count=0;document.querySelectorAll('[data-category]').forEach(item=>{item.hidden=filter!=='all'&&item.dataset.category!==filter;if(!item.hidden)count++;});$('#filter-status').textContent=t(`프로젝트 ${count}개가 표시됩니다.`,`${count} ${count===1?'project':'projects'} shown.`);}));
 const shareButton=$('#share-site');shareButton.addEventListener('click',async()=>{const url=new URL(en?'/en/':'/',window.location.origin).href;try{await navigator.clipboard.writeText(url);shareButton.textContent=t('복사 완료 ✓','Copied ✓');$('#share-feedback').textContent=t('공유 링크를 복사했습니다.','Portfolio link copied.');}catch{window.prompt(t('이 주소를 복사해 주세요.','Copy this link:'),url);}});
 document.querySelectorAll('.language-switch a').forEach(link=>{link.href+=window.location.hash;});
+
+
+const softwareProficiency=document.querySelector('#software-proficiency');
+if(softwareProficiency&&profile.software) softwareProficiency.textContent=profile.software.map(s=>`${s.name} (${s.level})`).join(' · ');

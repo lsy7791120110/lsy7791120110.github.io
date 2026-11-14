@@ -235,5 +235,31 @@ window.PUBLIC_PROFILE = {
     "Schrödinger 정기 교육 기초과정 · 2025.02.21 · 6시간 · 엘앤피솔루션·슈뢰딩거코리아",
     "Gaussian DFT 계산 · 계산화학 수업 실습",
     "제약바이오품질실무 5기 · QC·QA 직무교육 · 2021.08.08–08.09 · 14시간"
-  ]
+  ],
+  "resumeSummary": "서울대학교 약학석사 · 동국대학교 화학 학사. 대학원에서 유도체 합성과 구조 분석을 수행했습니다. 과학을 가르치며 교재를 만들고, 생성형 AI로 문항 DB, PDF→HWPX 변환 도구와 성적표를 제작했습니다.",
+  "contact": {
+    "email": "lsy779112@gmail.com",
+    "linkedin": "https://www.linkedin.com/in/soyeon-lee-558439242/",
+    "portfolio": "https://lsy7791120110.github.io/"
+  },
+  "software": [
+    {
+      "name": "ChemDraw",
+      "level": "중급"
+    },
+    {
+      "name": "Mnova",
+      "level": "중급"
+    },
+    {
+      "name": "Schrödinger",
+      "level": "입문"
+    },
+    {
+      "name": "Gaussian",
+      "level": "초급"
+    }
+  ],
+  "labSkills": "유기합성 · 정제 · NMR · HRMS/LRMS 해석",
+  "officeSkills": "Word · Excel · PowerPoint · 한글 · 생성형 AI"
 };

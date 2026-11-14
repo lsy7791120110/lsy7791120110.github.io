@@ -236,5 +236,31 @@ window.PUBLIC_PROFILE = {
     "Gaussian DFT calculations · computational chemistry coursework",
     "Pharmaceutical & Biopharmaceutical Quality Training · QC/QA · 2021.08.08–08.09 · 14 h"
   ],
-  "locale": "en"
+  "locale": "en",
+  "resumeSummary": "M.S. in Pharmacy, Seoul National University, and B.S. in Chemistry, Dongguk University. Experience in organic synthesis, structure verification and science teaching. Uses AI to prepare teaching materials and build a question database, a PDF-to-HWPX converter and score-report tools.",
+  "contact": {
+    "email": "lsy779112@gmail.com",
+    "linkedin": "https://www.linkedin.com/in/soyeon-lee-558439242/",
+    "portfolio": "https://lsy7791120110.github.io/"
+  },
+  "software": [
+    {
+      "name": "ChemDraw",
+      "level": "Intermediate"
+    },
+    {
+      "name": "Mnova",
+      "level": "Intermediate"
+    },
+    {
+      "name": "Schrödinger",
+      "level": "Introductory"
+    },
+    {
+      "name": "Gaussian",
+      "level": "Beginner"
+    }
+  ],
+  "labSkills": "Organic synthesis · Purification · NMR · HRMS/LRMS data review",
+  "officeSkills": "Word · Excel · PowerPoint · Hangul · Generative AI"
 };
