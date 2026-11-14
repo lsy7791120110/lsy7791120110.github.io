@@ -6,7 +6,7 @@ window.PUBLIC_PROFILE = {
     "school": "서울대학교 대학원",
     "department": "약학과 · 약학전공",
     "degree": "약학석사",
-    "field": "약화학 연구",
+    "field": "의약화학 연구",
     "period": "2024.03 – 2026.02",
     "gpa": "4.00 / 4.3"
   },
@@ -26,7 +26,7 @@ window.PUBLIC_PROFILE = {
       "period": "2024.03 – 2025.09",
       "title": "2',2'-Difluoro Carbocyclic Nucleoside",
       "subtitle": "뉴클레오사이드 유도체 합성",
-      "description": "Nucleobase coupling 수율을 10%에서 35%로 높이고, 최종 유도체 10종의 구조를 확인했습니다.",
+      "description": "결합 반응 조건을 바꿔 nucleobase coupling 수율을 10%에서 35%로 높였습니다. 최종 유도체 10종을 합성하고 NMR로 구조를 확인했습니다.",
       "metric": "10종",
       "metricLabel": "최종 유도체 합성 및 구조 확인",
       "sections": [
@@ -149,7 +149,7 @@ window.PUBLIC_PROFILE = {
       "period": "2025.12 – 2026.12",
       "title": "수업 자료와 성적 관리",
       "subtitle": "문항 DB · PDF→HWPX 변환 · 성적표",
-      "description": "생성형 AI로 문항 DB, PDF→HWPX 변환 도구, Excel 성적표를 제작했습니다. 수업자료 편집과 매주 주간테스트의 성적 관리에 사용합니다.",
+      "description": "AI로 문항 DB와 PDF→HWPX 변환 도구, Excel 성적표를 만들었습니다. 수업자료를 편집하고 매주 테스트 결과를 정리할 때 사용합니다.",
       "metric": "300종 이상",
       "metricLabel": "생성형 AI를 활용한 교재용 그림 제작",
       "sections": [
