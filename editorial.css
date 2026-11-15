@@ -80,3 +80,6 @@ html[lang="en"] .credential-row{grid-template-columns:84px minmax(0,1fr)}
 
 /* Career interests are always visible. */
 .profile-details .interests-heading{margin:0;min-height:34px;display:flex;align-items:center;font-size:12px;font-weight:400;line-height:1.6;color:var(--muted)}
+
+/* Direct application-ready resume downloads. */
+.resume-downloads{margin-top:18px;max-width:550px}.resume-downloads h3{font-size:12px;font-weight:600;margin:0 0 8px;color:var(--ink)}.resume-download-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.resume-download-grid>a{display:flex;align-items:center;justify-content:space-between;gap:10px;min-height:46px;padding:10px 13px;border:1px solid #cbd2db;border-radius:6px;font-size:12px;color:#2e435e;line-height:1.5}.resume-download-grid>a:hover{background:#f4f6f8}.resume-download-grid .file-type{white-space:nowrap;font-size:10px;color:#68717d}.resume-downloads+.portfolio-downloads{margin-top:10px}

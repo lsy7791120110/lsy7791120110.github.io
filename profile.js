@@ -263,7 +263,6 @@ window.PUBLIC_PROFILE = {
   "labSkills": "유기합성 · 정제 · NMR 측정·해석 · 외부 HRMS/LRMS 결과 검토",
   "officeSkills": "Word · Excel · PowerPoint · 한글 · 생성형 AI",
   "interests": {
-    "industries": "제약 · 화장품 · 화학",
-    "roles": "연구기획 · 제품개발(Product Development) · 인허가(RA) · 의학정보(MI) · 약물감시(PV)"
+    "industries": "제약 · 화장품 · 화학"
   }
 };

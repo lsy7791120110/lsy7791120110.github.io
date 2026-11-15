@@ -37,3 +37,29 @@ When the owner explicitly requests publication:
 The switch controls navigation visibility only; it is not access control.
 Never upload private drafts to this public repository. Disabling the switch
 after a page has been published does not make that page or its Git history private.
+
+## Resume downloads and profile updates
+
+The portfolio is shared across applications. It lists industries of interest;
+there is no target-role list. Resumes contain no employer-specific objective.
+
+Application-ready PDFs are available without sign-in:
+
+- Korean: `/files/Soyeon-Lee-Resume-KO.pdf`
+- English: `/files/Soyeon-Lee-Resume-EN.pdf`
+
+Each resume has two A4 pages, selectable text, embedded S-Core Dream fonts and
+clickable contact links. `/resume/` and `/en/resume/` remain the web versions.
+
+`profile.js`, `profile.en.js` and `resume-render.js` are the shared source for
+both the web resumes and downloadable resumes. After changing the profile:
+
+```sh
+python3 -m pip install PyMuPDF fonttools
+node scripts/build-public-files.cjs
+```
+
+Review both resume PDFs before publishing. Commit updated HTML and PDF outputs
+with their source changes. Bump the download/script query versions in the HTML
+to refresh cached copies. The build also refreshes the four-page portfolio PDFs
+from their printable HTML editions.

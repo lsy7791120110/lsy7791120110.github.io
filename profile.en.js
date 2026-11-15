@@ -264,7 +264,6 @@ window.PUBLIC_PROFILE = {
   "labSkills": "Organic synthesis · Purification · NMR acquisition and interpretation · Review of external HRMS/LRMS results",
   "officeSkills": "Word · Excel · PowerPoint · Hangul · Generative AI",
   "interests": {
-    "industries": "Pharmaceuticals · Cosmetics · Chemicals",
-    "roles": "Research Planning · Product Development · Regulatory Affairs · Medical Information · Pharmacovigilance"
+    "industries": "Pharmaceuticals · Cosmetics · Chemicals"
   }
 };
