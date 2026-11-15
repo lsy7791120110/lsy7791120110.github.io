@@ -7,7 +7,7 @@ const scienceHTML=value=>escapeHTML(value)
  .replace(/\b(h?)A(2A|2B|1|3)(AR)?\b/g,(_,human,suffix,receptor)=>`${human}A<sub>${suffix}</sub>${receptor||''}`)
  .replace(/\b(Cs2CO3|K2CO3)\b/g,formula=>formula.replace(/(\d+)/g,'<sub>$1</sub>'))
  .replace(/\b(1|13|19)(H|C|F)\b/g,'<sup>$1</sup>$2')
- .replace(/\bIC50\b/g,'IC<sub>50</sub>');
+ .replace(/\bIC50\b/g,'IC<sub>50</sub>').replace(/\bCH2\b/g,'CH<sub>2</sub>');
 const $=selector=>document.querySelector(selector);
 const fillLines=(selector,lines)=>{$(selector).innerHTML=lines.map(line=>`<p>${escapeHTML(line)}</p>`).join('');};
 const visuals={
@@ -17,7 +17,7 @@ const visuals={
  ai:`<div class="project-visual ai-visual"><div class="visual-top"><span>${t('수업 준비 · 성적 관리','MATERIALS & SCORE MANAGEMENT')}</span><span>04</span></div><div class="ai-tool-list">${[
 [t('문항 DB','Question database'),t('유형별 문항 분류 · 학생별 연습자료 구성','Organize questions by topic and prepare practice sets')],
 [t('PDF → HWPX','PDF → HWPX'),t('시험지 PDF를 편집 가능한 한글 문서로 변환','Convert PDF exam papers into editable Hangul documents')],
-[t('성적표 도구','Score-report tool'),t('점수·정답률 집계 · 학생별 성적표 출력','Calculate scores and answer rates; generate student reports')],
+[t('성적표 도구','Score-report tool'),t('점수·정답률 집계 · 학생별 성적표 출력','Calculate scores and percentages correct; generate student reports')],
 [t('교재 제작','Teaching materials'),t('AI로 그림 제작 · 개념과 풀이의 오류 검토','Create illustrations with AI and check explanations')]
 ].map(([title,body],i)=>`<div class="ai-tool"><span class="ai-tool-number">0${i+1}</span><div><strong>${title}</strong><p>${body}</p></div></div>`).join('')}</div></div>`
 };
@@ -43,3 +43,4 @@ document.querySelectorAll('.language-switch a').forEach(link=>{link.href+=window
 
 const softwareProficiency=document.querySelector('#software-proficiency');
 if(softwareProficiency&&profile.software) softwareProficiency.textContent=profile.software.map(s=>`${s.name} (${s.level})`).join(' · ');
+

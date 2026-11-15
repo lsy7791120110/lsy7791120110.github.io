@@ -1,7 +1,7 @@
 window.PUBLIC_PROFILE = {
   "name": "이소연",
   "englishName": "Soyeon Lee",
-  "updated": "2026-10-30",
+  "updated": "2026-11-15",
   "master": {
     "school": "서울대학교 대학원",
     "department": "약학과 · 약학전공",
@@ -26,13 +26,13 @@ window.PUBLIC_PROFILE = {
       "period": "2024.03 – 2025.09",
       "title": "2',2'-Difluoro Carbocyclic Nucleoside",
       "subtitle": "뉴클레오사이드 유도체 합성",
-      "description": "결합 반응 조건을 바꿔 nucleobase coupling 수율을 10%에서 35%로 높였습니다. 최종 유도체 10종을 합성하고 NMR로 구조를 확인했습니다.",
+      "description": "Nucleobase coupling 조건을 비교해 수율을 10%에서 35%로 높였습니다. 최종 유도체 10종을 합성하고 NMR과 외부 HRMS 결과로 구조를 확인했습니다.",
       "metric": "10종",
       "metricLabel": "최종 유도체 합성 및 구조 확인",
       "sections": [
         {
-          "title": "연구 목표",
-          "body": "Gemcitabine의 구조적 특징에 착안해 두 불소 치환기를 유지하면서 고리 내 산소를 탄소로 대체한 carbocyclic nucleoside 유도체를 합성했습니다. D-ribose에서 출발해 adenine, guanine, cytosine, uracil 계열 유도체 10종을 확보했습니다."
+          "title": "유도체 설계와 합성",
+          "body": "Gemcitabine의 두 불소 치환기는 유지하고, oxo-sugar 고리의 O를 CH2로 치환한 carbocyclic nucleoside 유도체를 합성했습니다. D-ribose에서 출발해 adenine, guanine, cytosine, uracil 계열 유도체 10종을 얻었습니다."
         },
         {
           "title": "결합 반응의 조건 검토",
@@ -43,7 +43,7 @@ window.PUBLIC_PROFILE = {
           ]
         },
         {
-          "title": "분석과 결과 정리",
+          "title": "구조 분석과 논문 작성",
           "body": "1H, 13C, 19F NMR을 직접 측정하고 해석했으며, 외부에 의뢰한 HRMS의 계산값과 측정값을 대조해 구조를 확인했습니다. 실험 절차와 수율, 구조 분석 및 외부 평가 결과를 영문 학위논문으로 정리했습니다."
         },
         {
@@ -59,7 +59,7 @@ window.PUBLIC_PROFILE = {
       "tag": "공동연구",
       "period": "2025.01 – 2025.09",
       "title": "A2A Adenosine Receptor",
-      "subtitle": "C2 aryl 유도체 합성과 수용체 결합 평가",
+      "subtitle": "C2 aryl 유도체 합성과 결합평가 결과 정리",
       "description": "유도체 10종을 합성했습니다. 외부 결합평가에서 phenyl(13a)과 meta-cyano(13h) 유도체는 10 μM에서 hA2AAR 결합 억제율 90%를 보였습니다.",
       "metric": "90%",
       "metricLabel": "13a·13h의 hA2AAR 결합 억제율 · 10 μM",
@@ -123,7 +123,7 @@ window.PUBLIC_PROFILE = {
       "period": "2021.12 – 2022.12",
       "title": "Heterocyclic Compound Library",
       "subtitle": "헤테로고리 기반 저분자 라이브러리",
-      "description": "약물성 저분자 화합물 약 50종을 합성하고, 21종의 조건과 분석 결과를 졸업논문에 수록했습니다.",
+      "description": "저분자 화합물 약 50종을 합성하고, 21종의 조건과 분석 결과를 졸업논문에 수록했습니다.",
       "metric": "약 50종",
       "metricLabel": "학부 연구 전체 합성 화합물",
       "sections": [
@@ -146,8 +146,8 @@ window.PUBLIC_PROFILE = {
       "id": "ai",
       "type": "digital",
       "tag": "생성형 AI · 교육 업무",
-      "period": "2025.12 – 2026.12",
-      "title": "수업 자료와 성적 관리",
+      "period": "2025.12 – 현재",
+      "title": "AI를 활용한 교재와 수업 도구 제작",
       "subtitle": "문항 DB · PDF→HWPX 변환 · 성적표",
       "description": "AI로 문항 DB와 PDF→HWPX 변환 도구, Excel 성적표를 만들었습니다. 수업자료를 편집하고 매주 테스트 결과를 정리할 때 사용합니다.",
       "metric": "300종 이상",
@@ -167,18 +167,18 @@ window.PUBLIC_PROFILE = {
         },
         {
           "title": "도구 제작 과정",
-          "body": "수업에서 필요한 기능을 정해 AI에 요청하고, 결과를 확인하며 수정했습니다. 실제 성적 입력과 자료 제작에 써 보고 불편한 부분을 고쳤습니다."
+          "body": "수업 준비와 성적 관리에 필요한 기능을 정해 AI로 구현했습니다. 실제 문항과 성적을 입력해 결과를 확인하고, 오류가 나거나 사용하기 불편한 부분을 수정했습니다."
         }
       ],
-      "scope": "필요한 기능을 정하고 AI로 도구를 제작·수정했으며, 수업과 자료 제작에 사용했습니다."
+      "scope": "필요한 기능을 정하고, AI가 만든 결과를 검수·수정해 수업에 사용했습니다."
     }
   ],
   "jobs": [
     {
       "organization": "미래탐구 목동 중등센터",
       "role": "과학 전임강사",
-      "period": "2025.12 – 2026.12",
-      "description": "중등 과학 수업과 수업자료 제작, 성적 및 정답률 관리. 생성형 AI를 활용한 교재·문항 DB·업무 도구 제작."
+      "period": "2025.12 – 현재",
+      "description": "중등 과학 수업과 교재 제작을 담당합니다. AI로 교재용 그림을 만들고 문항 관리·문서 변환·성적표 도구를 제작해 사용합니다."
     },
     {
       "organization": "대림우등생학원",
@@ -236,7 +236,7 @@ window.PUBLIC_PROFILE = {
     "Gaussian DFT 계산 · 계산화학 수업 실습",
     "제약바이오품질실무 5기 · QC·QA 직무교육 · 2021.08.08–08.09 · 14시간"
   ],
-  "resumeSummary": "서울대학교 약학석사 · 동국대학교 화학 학사. 대학원에서 유도체 합성과 구조 분석을 수행했습니다. 과학을 가르치며 교재를 만들고, 생성형 AI로 문항 DB, PDF→HWPX 변환 도구와 성적표를 제작했습니다.",
+  "resumeSummary": "서울대학교 약학석사, 동국대학교 화학 학사. 대학원에서 화합물을 합성하고 구조를 분석했습니다. 현재 과학 강사로 일하며 AI로 교재와 문항 관리·문서 변환·성적표 도구를 만들고 있습니다.",
   "contact": {
     "email": "lsy779112@gmail.com",
     "linkedin": "https://www.linkedin.com/in/soyeon-lee-558439242/",
@@ -260,6 +260,10 @@ window.PUBLIC_PROFILE = {
       "level": "초급"
     }
   ],
-  "labSkills": "유기합성 · 정제 · NMR · HRMS/LRMS 해석",
-  "officeSkills": "Word · Excel · PowerPoint · 한글 · 생성형 AI"
+  "labSkills": "유기합성 · 정제 · NMR 측정·해석 · 외부 HRMS/LRMS 결과 검토",
+  "officeSkills": "Word · Excel · PowerPoint · 한글 · 생성형 AI",
+  "interests": {
+    "industries": "제약 · 화장품 · 화학",
+    "roles": "연구기획 · 제품개발(Product Development) · 인허가(RA) · 의학정보(MI) · 약물감시(PV)"
+  }
 };

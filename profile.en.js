@@ -1,12 +1,12 @@
 window.PUBLIC_PROFILE = {
   "name": "Soyeon Lee",
   "englishName": "Soyeon Lee",
-  "updated": "2026-10-30",
+  "updated": "2026-11-15",
   "master": {
     "school": "Seoul National University",
     "department": "Department of Pharmacy",
     "degree": "M.S. in Pharmacy",
-    "field": "Research in medicinal chemistry",
+    "field": "Medicinal chemistry research",
     "period": "2024.03 – 2026.02",
     "gpa": "4.00 / 4.3"
   },
@@ -26,20 +26,20 @@ window.PUBLIC_PROFILE = {
       "period": "2024.03 – 2025.09",
       "title": "2',2'-Difluoro Carbocyclic Nucleoside",
       "subtitle": "Synthesis of carbocyclic nucleoside analogues",
-      "description": "Improved nucleobase coupling yield from 10% to 35% and characterized 10 final analogues.",
+      "description": "Improved nucleobase coupling yield from 10% to 35%. Synthesized 10 final analogues and confirmed their structures by NMR and external HRMS.",
       "metric": "10",
       "metricLabel": "final analogues synthesized and characterized",
       "sections": [
         {
           "title": "Research objective",
-          "body": "Synthesized 10 carbocyclic nucleoside analogues from D-ribose, retaining the two fluorine substituents inspired by gemcitabine while replacing the ring oxygen with carbon. The series included adenine, guanine, cytosine and uracil derivatives."
+          "body": "Starting from D-ribose, synthesized 10 carbocyclic nucleoside analogues with adenine, guanine, cytosine or uracil bases. The design retained the two fluorine substituents found in gemcitabine while replacing the oxo-sugar ring oxygen with a methylene (CH2) group."
         },
         {
           "title": "Comparing coupling conditions",
           "items": [
             "When NaH/DMF and NaH/DMSO did not give the target product, I searched the literature for related coupling conditions.",
             "Adding 18-crown-6 under NaH conditions afforded the product in 10% yield.",
-            "With 18-crown-6 held as an additive, Cs2CO3 gave 25% and K2CO3 gave 35% yield. I used K2CO3/18-crown-6 in subsequent synthesis."
+            "With 18-crown-6 present, Cs2CO3 gave a 25% yield and K2CO3 gave 35%. Used K2CO3/18-crown-6 for subsequent synthesis."
           ]
         },
         {
@@ -51,7 +51,7 @@ window.PUBLIC_PROFILE = {
           "body": "An external laboratory tested nine compounds against six human cancer cell lines. All IC50 values were above 20 μM. In a lab meeting, I proposed antiviral testing based on related literature."
         }
       ],
-      "scope": "My contribution: literature review, synthesis, NMR acquisition and interpretation, comparison of MS results, and preparation of the thesis and poster. Biological evaluation was performed by an external laboratory."
+      "scope": "My contribution: literature review, synthesis, NMR acquisition and interpretation, review of external MS results, and preparation of the thesis and poster. Biological evaluation was performed by an external laboratory."
     },
     {
       "id": "a2a",
@@ -59,14 +59,14 @@ window.PUBLIC_PROFILE = {
       "tag": "Collaborative research",
       "period": "2025.01 – 2025.09",
       "title": "A2A Adenosine Receptor",
-      "subtitle": "C2-aryl analogue synthesis and receptor-binding results",
+      "subtitle": "C2-aryl analogue synthesis and binding-data analysis",
       "description": "Synthesized 10 analogues. In external binding assays, the phenyl (13a) and meta-cyano (13h) analogues showed 90% hA2AAR binding inhibition at 10 μM.",
       "metric": "90%",
       "metricLabel": "hA2AAR binding inhibition for 13a / 13h at 10 μM",
       "sections": [
         {
           "title": "Synthesis and characterization",
-          "body": "Agreed on target compounds with a collaborator and synthesized 10 C2-aryl analogues by Suzuki coupling and deprotection. Resynthesized ortho- and para-methyl analogues and added a phenyl analogue. Checked the structures using NMR spectra I acquired and external LRMS data."
+          "body": "Synthesized 10 C2-aryl analogues through Suzuki coupling and deprotection, working with a collaborator to select the target compounds. Resynthesized ortho- and para-methyl analogues and added an unsubstituted phenyl analogue. Confirmed their structures using NMR spectra I acquired and external LRMS results."
         },
         {
           "title": "Results by substituent",
@@ -123,13 +123,13 @@ window.PUBLIC_PROFILE = {
       "period": "2021.12 – 2022.12",
       "title": "Heterocyclic Compound Library",
       "subtitle": "Heterocyclic small-molecule library",
-      "description": "Synthesized approximately 50 compounds across the project and documented 21 in an undergraduate thesis.",
+      "description": "Synthesized approximately 50 compounds and documented the synthesis and analytical data for 21 in an undergraduate thesis.",
       "metric": "~50",
       "metricLabel": "compounds synthesized during undergraduate research",
       "sections": [
         {
           "title": "Research context",
-          "body": "Conducted undergraduate research at Dongguk University’s small-molecule drug-discovery library research center: 1,3,4-thiadiazole derivatives from December 2021 to June 2022, followed by 1,2,4-oxadiazole derivatives from June to December 2022."
+          "body": "Worked as an undergraduate researcher at Dongguk University, synthesizing 1,3,4-thiadiazole derivatives from December 2021 to June 2022 and 1,2,4-oxadiazole derivatives from June to December 2022."
         },
         {
           "title": "Synthesis and characterization",
@@ -146,10 +146,10 @@ window.PUBLIC_PROFILE = {
       "id": "ai",
       "type": "digital",
       "tag": "Applied AI · education",
-      "period": "2025.12 – 2026.12",
-      "title": "Teaching Materials & Score Management",
+      "period": "2025.12 – Present",
+      "title": "AI-Assisted Teaching Tools",
       "subtitle": "Question database · PDF-to-HWPX conversion · Score reports",
-      "description": "Used generative AI to build a question database, a PDF-to-HWPX converter and Excel score reports. I use them to edit teaching materials and manage weekly test results.",
+      "description": "Use generative AI to build and revise a question database, a PDF-to-HWPX converter and an Excel score-report tool. These tools support teaching-material preparation and weekly tests.",
       "metric": "300+",
       "metricLabel": "teaching illustrations created with generative AI",
       "sections": [
@@ -159,7 +159,7 @@ window.PUBLIC_PROFILE = {
         },
         {
           "title": "Scores and student reports",
-          "body": "Built an Excel tool to simplify score entry and apply consistent grading criteria. I use it in weekly tests to calculate scores and answer rates and print individual student reports."
+          "body": "Built an Excel tool to simplify score entry and apply consistent grading criteria. I use it in weekly tests to calculate scores and percentages correct and print individual student reports."
         },
         {
           "title": "Textbooks and visual materials",
@@ -167,18 +167,18 @@ window.PUBLIC_PROFILE = {
         },
         {
           "title": "Building the tools",
-          "body": "Specified the functions I needed, asked AI to build them, and checked the results. Tested the tools while entering scores and preparing materials, then revised the parts that were difficult to use."
+          "body": "Defined the features needed for class preparation and score reporting, used AI to build them, and tested the outputs in daily work. Revised the tools when the results or workflow did not match the requirements."
         }
       ],
-      "scope": "I specified the functions, built and revised the tools with AI, and used them in teaching and material preparation."
+      "scope": "Defined requirements, checked AI-generated outputs and revised the tools through classroom use."
     }
   ],
   "jobs": [
     {
       "organization": "Time Education — Mirae Tamgu",
-      "role": "Science Instructor, Mokdong Middle School Division",
-      "period": "2025.12 – 2026.12",
-      "description": "Teach middle school science, create materials, and manage scores and answer rates. Develop teaching resources, a question database and workflow tools with generative AI."
+      "role": "Science Instructor, Mokdong Center (Middle School Science)",
+      "period": "2025.12 – Present",
+      "description": "Teach middle school science and prepare lessons and textbooks. Use AI to create illustrations and build tools for question management, document conversion and student score reports."
     },
     {
       "organization": "Daerim Udeungsaeng Academy",
@@ -195,7 +195,7 @@ window.PUBLIC_PROFILE = {
   ],
   "volunteer": {
     "total": "107 h",
-    "label": "Recognized volunteer service",
+    "label": "Volunteer service",
     "items": [
       "Online science mentoring, Dongguk University · 2021",
       "Online science mentoring, Dongguk University · 2022",
@@ -237,7 +237,7 @@ window.PUBLIC_PROFILE = {
     "Pharmaceutical & Biopharmaceutical Quality Training · QC/QA · 2021.08.08–08.09 · 14 h"
   ],
   "locale": "en",
-  "resumeSummary": "M.S. in Pharmacy, Seoul National University, and B.S. in Chemistry, Dongguk University. Experience in organic synthesis, structure verification and science teaching. Uses AI to prepare teaching materials and build a question database, a PDF-to-HWPX converter and score-report tools.",
+  "resumeSummary": "M.S. in Pharmacy from Seoul National University and B.S. in Chemistry from Dongguk University. My graduate research focused on small-molecule synthesis and structural characterization. I now teach science and use generative AI to develop teaching materials and tools for question management, document conversion and score reporting.",
   "contact": {
     "email": "lsy779112@gmail.com",
     "linkedin": "https://www.linkedin.com/in/soyeon-lee-558439242/",
@@ -261,6 +261,10 @@ window.PUBLIC_PROFILE = {
       "level": "Beginner"
     }
   ],
-  "labSkills": "Organic synthesis · Purification · NMR · HRMS/LRMS data review",
-  "officeSkills": "Word · Excel · PowerPoint · Hangul · Generative AI"
+  "labSkills": "Organic synthesis · Purification · NMR acquisition and interpretation · Review of external HRMS/LRMS results",
+  "officeSkills": "Word · Excel · PowerPoint · Hangul · Generative AI",
+  "interests": {
+    "industries": "Pharmaceuticals · Cosmetics · Chemicals",
+    "roles": "Research Planning · Product Development · Regulatory Affairs · Medical Information · Pharmacovigilance"
+  }
 };
